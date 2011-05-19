@@ -1,0 +1,747 @@
+/*------------------------------------------*/
+/*--- BASE STYLES ---*/
+/*------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+blockquote, q { quotes: none }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+/*--- tables still need cellspacing="0" in the markup ---*/
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: middle }
+label, input[type=button], input[type=submit], button { cursor: pointer }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/*--- MINIMAL BASE STYLES ---*/
+html{
+	overflow-y:scroll;
+	font-size:100%;
+	font-family:Calibri, "Helvetica Neue", Arial, sans-serif; /* Swap these two lines around to switch between serif and sans */
+	font-family:Cambria, Georgia, "Times New Roman", serif; /* Swap these two lines around to switch between serif and sans */
+	line-height:1.5;
+	background:#fff;
+	color:#333;
+}
+body{
+	min-height:100%;
+	padding:10px;
+	margin:0 auto;
+}
+/*--- Show Layout ---*/
+body.gridshow{
+		background:url(../img/css/grid.png) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+strong, th { font-weight: bold; }
+td { vertical-align: top; } 
+pre { 
+		padding: 15px;
+		white-space: pre;
+		white-space: pre-wrap;
+		white-space: pre-line;
+		word-wrap: break-word;
+}
+textarea { overflow: auto; }
+.ie6 legend, .ie7 legend { margin-left: -7px; }
+input[type="radio"] { vertical-align: text-bottom; }
+/*input[type="checkbox"] { vertical-align: bottom; }*/
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+button, input, select, textarea { margin: 0; }
+input:valid, textarea:valid   {  }
+input:invalid, textarea:invalid { 
+-webkit-border-radius: 1px;
+ -khtml-border-radius: 1px;
+   -moz-border-radius: 1px;
+		border-radius: 1px;
+   -moz-box-shadow: 0px 0px 5px red; 
+-webkit-box-shadow: 0px 0px 5px red; 
+		box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+button {  width: auto; overflow: visible; }
+q:before,q:after{ content:''; }
+
+/*------------------------------------------*/
+/*--- TYPOGRAPHY ---*/
+/*------------------------------------------*/
+body{
+		 /*--- Swap these two lines around to switch between serif and sans ---*/
+		font-family:Calibri, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		font-family:Cambria, Georgia, "Times New Roman", serif;
+		
+		font-size:100%;
+		line-height:1.5;
+}
+body, select, input, textarea { 
+		color: #444;
+	}
+/*--- HEADINGS ---*/
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1{
+	font-size:2em;			/* 32px */
+	margin-bottom:0.75em;	/* 24px */
+	line-height:1.5;		/* 48px */
+}
+h2{
+	font-size:1.5em;		/* 24px */
+	margin-bottom:1em;		/* 24px */
+	line-height:1;			/* 24px */
+}
+h3{
+	font-size:1.25em;		/* 20px */
+	margin-bottom:1.2em;	/* 24px */
+	line-height:1.2;		/* 24px */
+}
+h4{
+	font-size:1.125em;		/* 18px */
+	margin-bottom:1.333em;	/* 24px */
+	line-height:1.333;		/* 24px */
+}
+h5,
+h6{
+	font-size:1em;			/* 16px */
+	margin-bottom:1.5em;	/* 24px */
+	line-height:1.5;		/* 24px */
+}
+
+/*--- PARAGRAPHS ---*/
+p{
+	margin-bottom:1.5em;
+}
+p+p{
+	text-indent:2em;
+	margin-top:-1.5em;
+}
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { 	top: -0.5em; }
+sub { 	bottom: -0.25em; }
+/*------------------------------------------*/
+/*--- LINK STYLES ---*/
+/*------------------------------------------*/
+a:link,a:visited{
+		color: #666666;
+		font-weight: bold;
+		text-decoration: none;
+	}
+a:visited {
+		opacity:0.8;
+}
+p a:link,p a:visited {
+		border-bottom-style: dotted;
+		border-bottom-width: 1px;
+	}
+a:hover {color: #a5a5a5;}
+a:hover, a:active { outline: none; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+a:active, a:focus {
+		position:relative;
+		top:1px;
+}
+a:focus {
+        text-shadow: #61a0ff 0 0 7px;
+		outline:none;
+}
+.more-link:after,
+.more-link::after{
+		content:" »";
+}
+/*------------------------------------------*/
+/*--- LISTS ---*/
+/*------------------------------------------*/
+ol { list-style-type: decimal; }
+nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+ul,
+ol{
+	margin:0 0 1.5em 45px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+	margin:0 0 0 45px;
+}
+dd{
+	margin-left:45px;
+}
+dl{
+		margin-bottom:1.5em;
+}
+dt{
+		font-weight:bold;
+}
+dt:after,
+dt::after{
+		content:":";
+}
+/* Create a list of keywords by adding a single class to a <ul>: */
+.keywords{
+		list-style:none;
+		margin:0 0 1.5em;
+}
+.keywords li{
+		display:inline;
+		text-transform:lowercase;
+}
+.keywords li:first-of-type{
+		text-transform:capitalize;
+}
+.keywords li:after,
+.keywords li::after{
+		content:", ";
+}
+.keywords li:last-of-type:after,
+.keywords li:last-of-type::after{
+		content:".";
+}
+
+/*--- QUOTES ---*/
+blockquote{
+		text-indent:-0.4em;
+}
+blockquote b,
+blockquote .source{
+	/* Mark the source up with either a <b> or another element of your choice with a class of source. */
+		display:block;
+		text-indent:0;
+}
+
+/*--- GENERAL ---*/
+q,
+i,
+em,
+cite{
+		font-style:italic;
+		font-weight:inherit;
+}
+b,
+strong{
+		font-weight:bold;
+		font-style:inherit;
+}
+mark{
+		background:#ffc;
+}
+s,
+del{
+		text-decoration:line-through;
+}
+small{
+		font-size:0.75em;
+		line-height:1;
+}
+
+/*--- CODE ---*/
+pre,
+code{
+		font-family:monospace;
+		font-size:1em;
+}
+pre{
+		overflow:auto;
+		margin-bottom:1.5em;
+		line-height:24px; /* Having to define explicit pixel values :( */
+}
+code{
+		line-height:1;
+}
+/*------------------------------------------*/
+/*--- IMAGES ---*/
+/*------------------------------------------*/
+img{
+		max-width:100%;
+		height:auto;
+	/* Give it some text styles to offset alt text */
+		font-style:italic;
+		color:#c00;
+}
+img.left	{ margin:0 20px 0 0; }
+img.right	{ margin:0 0 0 20px; }
+
+/*--- FLASH/VIDEO ---*/
+object,
+embed,
+video{
+		max-width:100%;
+		height:auto;
+}
+
+
+/*------------------------------------------*/
+/*--- LOGO ---*/
+/*------------------------------------------*/
+#logo,
+#logo img{
+		display:block;
+		width:auto; /* Width of your logo in pixels (ideally a round grid-number) */
+		height:auto; /* Height of your logo in pixels */
+}
+/* Based on the fact that we need to use an <img /> in our markup, let’s hide the actual image and use a background on the <a>--this gives us sematically sound markup and the ability to use sprites for hover effects! */
+#logo{
+		background:url(/path/to/logo);
+}
+#logo:hover{
+	/* Hover states */
+		background-position:0 -00px;
+}
+#logo img{
+		position:absolute;
+		left:-99999px;
+}
+/*--- FORMS - see formalize.css ---*/
+
+/*------------------------------------------*/
+/*--- TABLES ---*/
+/*------------------------------------------*/
+table{
+		margin-bottom:1.5em;
+		width:100%;
+		max-width:100%;
+}
+thead tr:last-of-type th{
+	/* Thicker border on the table-headers of the last row in the table head */
+		border-bottom-width:2px;
+}
+tbody th{
+	/* Thicker right border on table-headers in the table body */
+		border-right-width:2px;
+}
+th:empty{
+	/* Hide the borders on any empty table-headers */
+		border:none;
+}
+th,td{
+		vertical-align:top;
+		padding:0.75em;
+		border:1px solid #ccc;
+}
+th{
+		font-weight:bold;
+		text-align:center
+}
+td[colspan]{
+		text-align:center;
+}
+tbody tr:nth-of-type(odd){
+		background:rgba(0,0,0,0.05);
+}
+tfoot{
+		text-align:center;
+}
+tfoot td{
+		border-top-width:2px;
+}
+
+/*------------------------------------------*/
+/*--- MESSAGES ---*/
+/*------------------------------------------*/
+.message{
+	font-weight:normal;
+	display:block;
+	padding:10px 10px 10px 36px;
+	border:1px solid #ccc;
+	margin:0 0 1.5em 0;
+-webkit-border-radius: 3px;
+ -khtml-border-radius: 3px;
+   -moz-border-radius: 3px;
+		border-radius: 3px;
+-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+   -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+     -o-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+        box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+}
+/*--- With multiple errors it’s nice to group them. ---*/
+ul.message{
+		list-style:decimal outside;
+		padding:10px 10px 10px 56px;
+}
+.error{
+		border-color:#fb5766;
+		background:url(../img/css/icons/error.png) 10px center no-repeat #fab;
+}
+.success{
+		border-color:#83ba77;
+		background:url(../img/css/icons/success.png) 10px center no-repeat #d1feba;
+}
+.info{
+		border-color:#85a5be;
+		background:url(../img/css/icons/info.png) 10px center no-repeat #c4dbec;
+}
+.warning{
+		border-color:#d8d566;
+		background:url(../img/css/icons/warning.png) 10px center no-repeat #fef8c4;
+}
+/*------------------------------------------*/
+/*--- NAV ---*/
+/*------------------------------------------*/
+#nav{
+		list-style:none;
+		width:100%;
+		overflow:hidden;
+		margin:0 0 1.5em 0;
+}
+#nav li{
+		float:left;
+}
+#nav a{
+		display:block;
+}
+/*
+http://csswizardry.com/2011/01/create-a-centred-horizontal-navigation/
+Add a class of centred/centered to create a centred nav.
+*/
+#nav.centred,
+#nav.centered{
+		text-align:center;
+}
+#nav.centred li,
+#nav.centered li{
+		display:inline;
+		float:none;
+}
+#nav.centred a,
+#nav.centered a{
+		display:inline-block;
+}
+
+/*------------------------------------------*/
+/*--- CSS3 ---*/
+/*------------------------------------------*/
+/*Transitions*/
+a {
+-webkit-transition: all 0.12s ease-in-out;
+   -moz-transition: all 0.12s ease-in-out;
+	 -o-transition: all 0.12s ease-in-out;
+		transition: all 0.12s ease-in-out;
+}
+/*Border Radius*/
+hhh {
+-webkit-border-radius: 5px;
+ -khtml-border-radius: 5px;
+   -moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*--- SITE SPECIFIC STYLES ---*/
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*I'm using the mobile first/'320 and Up' methodology, put your base mobile styles here & then modify them if each particular Media qeury below - http://stuffandnonsense.co.uk/projects/320andup/ */
+/* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+/* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+
+#container {	
+		width: 90%;
+		margin: 0 auto;
+}
+.grid{
+		width:auto;
+		float:none;
+}
+
+/*-------------------------------------------*/
+/*--- Media queries for responsive design ---*/
+/*-------------------------------------------*/
+/*--- 480> ---*/
+@media screen and (min-width: 480px) {
+
+/*--- Show Layout ---*/
+body.gridshow{
+		background:none;
+}
+html{
+		font-size:1.125em;
+}
+#container{
+		padding:20px;
+		width:auto;
+		-webkit-text-size-adjust:none;
+		margin: 0 auto;
+}
+#logo{
+		margin:0 auto 1.5em;
+}
+
+
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 25px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+		margin:0 0 0 25px;
+}
+dd{
+		margin-left:25px;
+}
+/*--- IMAGES ---*/
+img.left,
+img.right	{ max-width:50%; height:auto; }
+}/*/mediaquery*/
+
+/*--- 768> ---*/
+@media screen and (min-width: 768px) {
+/*--- Show Layout ---*/
+body.gridshow{
+		background:url(../img/css/grid-720.png) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+#container {
+		width:720px;
+}
+
+/*------------------------------------------*/
+/*--- GRIDS ---*/
+/*------------------------------------------*/
+/* To use a series just wrap them all in <div class="grids">...</div> */
+.grids{
+		margin-left:-20px;
+		overflow:hidden;
+		clear:both;
+}
+ul.grids{
+		/* So we can make grids out of lists */
+		margin:0 0 0 -20px;
+		list-style:none;
+}
+.grid {
+		float:left;
+		margin:0 20px 0 0;
+}
+.grids .grid{
+		margin:0 0 0 20px;
+}
+.grid-1		{ width:25px; }
+.grid-2		{ width:70px; }
+.grid-3		{ width:115px; }
+.grid-4		{ width:160px; }
+
+.grid-5		{ width:205px; }
+.grid-6		{ width:250px; }
+.grid-7		{ width:295px; }
+.grid-8		{ width:340px; }
+
+.grid-9		{ width:385px; }
+.grid-10	{ width:430px; }
+.grid-11	{ width:475px; }
+.grid-12	{ width:520px; }
+
+.grid-13	{ width:565px; }
+.grid-14	{ width:610px; }
+.grid-15	{ width:655px; }
+.grid-16	{ width:700px; }
+
+
+
+
+/*------------------------------------------*/
+/* TYPE */
+/*------------------------------------------*/
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 60px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+	/* Let’s take care of lists in lists */
+		margin:0 0 0 60px;
+}
+dd{
+		margin-left:60px;
+}
+}/*/mediaquery*/
+/*--- end 768> ---*/
+/*--- 992> ---*/
+@media screen and (min-width: 992px){
+/*------------------------------------------*/
+/*--- MAIN ---*/
+/*------------------------------------------*/
+
+/*--- Show Layout ---*/
+body.gridshow{
+		background:url(../img/css/grid-720.png) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+#container {
+		width:940px;
+}
+/*------------------------------------------*/
+/*--- GRIDS ---*/
+/*------------------------------------------*/
+.grid-1		{ width:40px; }
+.grid-2		{ width:100px; }
+.grid-3		{ width:160px; }
+.grid-4		{ width:220px; }
+
+.grid-5		{ width:280px; }
+.grid-6		{ width:340px; }
+.grid-7		{ width:400px; }
+.grid-8		{ width:460px; }
+
+.grid-9		{ width:520px; }
+.grid-10	{ width:580px; }
+.grid-11	{ width:640px; }
+.grid-12	{ width:700px; }
+
+.grid-13	{ width:760px; }
+.grid-14	{ width:820px; }
+.grid-15	{ width:880px; }
+.grid-16	{ width:940px; margin:0; }
+/*------------------------------------------*/
+/*--- TYPE ---*/
+/*------------------------------------------*/
+
+}/*/mediaquery*/
+/*--- end 992> ---*/
+/*--- 1382> ---*/
+@media screen and (min-width: 1382px){
+/*------------------------------------------*/
+/*--- MAIN ---*/
+/*------------------------------------------*/
+
+/*--- Show Layout ---*/
+body.gridshow{
+		background:url(../img/css/grid.png) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+#container {
+		width:1200px;
+}
+/*--- GRIDS ---*/
+.grid-1		{ width:55px; }
+.grid-2		{ width:130px; }
+.grid-3		{ width:205px; }
+.grid-4		{ width:280px; }
+
+.grid-5		{ width:355px; }
+.grid-6		{ width:430px; }
+.grid-7		{ width:505px; }
+.grid-8		{ width:580px; }
+
+.grid-9		{ width:655px; }
+.grid-10	{ width:730px; }
+.grid-11	{ width:805px; }
+.grid-12	{ width:880px; }
+
+.grid-13	{ width:955px; }
+.grid-14	{ width:1030px; }
+.grid-15	{ width:1105px; }
+.grid-16	{ width:1080px; margin:0; }
+/*------------------------------------------*/
+/*--- TYPE ---*/
+/*------------------------------------------*/
+
+}/*/mediaquery*/
+/*--- end 1382> ---*/
+/*--- PORTRAIT ONLY ---*/
+
+
+
+/*------------------------------------------*/
+/*--- Non-semantic helper classes ---*/
+/*------------------------------------------*/
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden { display: none; visibility: hidden; }
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations. nicolasgallagher.com/micro-clearfix-hack/ */
+.group:before, .group:after { content: ""; display: table; }
+.group:after { clear: both; }
+.group { zoom: 1; }
+
+.left	{ float:left; }
+.right	{ float:right; }
+.clear	{ clear:both; float:none; }
+
+.text-left		{ text-align:left; }
+.text-right		{ text-align:right; }
+.text-center,
+.text-centre	{ text-align:center; }
+
+
+
+/*------------------------------------------*/
+/*--- Print styles ---*/
+/*------------------------------------------*/
+@media print {
+	*{
+		background:#fff;
+		color:#000;
+		text-shadow:none!important;
+		filter:none !important;
+		-ms-filter: none !important;
+	}
+	#container{
+		width:75%;
+		margin:0 auto;
+		font-size:0.75em; /* 12px (if base font-size was 16px) */
+	}
+	/* A list of things you don’t want printing. */
+	#nav,
+	#footer{
+		display:none;
+	}
+	#logo img{
+		position:static;
+	}
+	/*--- Linearise ---*/
+	.grid{
+		width:auto;
+		float:none;
+		clear:both;
+	}
+	img{
+		max-width:100%;
+		height:auto;
+	}
+	a, a:visited { color: #444 !important; text-decoration: underline; }
+	a[href]:after { content: " (" attr(href) ")"; font-size:smaller;}
+	abbr[title]:after { content: " (" attr(title) ")"; font-size:smaller;}
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+	tr, img { page-break-inside: avoid; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3, table{ page-break-after: avoid; }
+}
