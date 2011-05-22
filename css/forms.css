@@ -2,141 +2,189 @@
 /* INUIT.css form styles */
 /*------------------------------------------*/
 fieldset{
-	padding:10px;
-	border:1px solid #ccc;
-	margin-bottom:1.5em;
+		padding:10px;
+		border:1px solid #ccc;
+		margin-bottom:1.5em;
 }
 label{
-	display:block;
-	cursor:pointer;
+		display:block;
+		cursor:pointer;
 }
 label:after,
 label::after{
-	content:":";
+		content:":";
 }
 input,
 textarea{
-	font-family:inherit;
-	font-size:1em;
+		font-family:inherit;
+		font-size:1em;
+}
+[placeholder]{
+		cursor:pointer;
+}
+[placeholder]:active,
+[placeholder]:focus{
+		cursor:text;
 }
 .check-list{
-	width:100%;
-	overflow:hidden;
-	list-style:none;
-	margin:0 0 1.5em 0;
+		width:100%;
+		overflow:hidden;
+		list-style:none;
+		margin:0 0 1.5em 0;
 }
 .check-list li{
-	width:25%;
-	float:left;
+		width:25%;
+		float:left;
 }
 .check-label{
-	display:inline;
+		display:inline;
 }
 .check-label:after,
 .check-label::after{
-	content:normal;
+		content:normal;
 }
 .button{
-	cursor:pointer;
+		cursor:pointer;
 }
 fieldset > :last-child{
-	margin:0;
+		margin:0;
 }
 
 /*------------------------------------------*/
-/* WIDTHS */
+/*--- WIDTHS ---*/
 /*------------------------------------------*/
 .input_tiny {
-  width: 50px;
+		width: 50px;
 }
-
 .input_small {
-  width: 100px;
+		width: 100px;
 }
-
 .input_medium {
-  width: 150px;
+		width: 150px;
 }
-
 .input_large {
-  width: 200px;
+		width: 200px;
 }
-
 .input_xlarge {
-  width: 250px;
+		width: 250px;
 }
-
 .input_xxlarge {
-  width: 300px;
+		width: 300px;
 }
-
 .input_full {
-  width: 100%;
+		width: 100%;
 }
-
 /*
-  Added via JS to <textarea> and class="input_full".
-  Applies only to IE7. Other browsers don't need it.
+		Added via JS to <textarea> and class="input_full".
+		Applies only to IE7. Other browsers don't need it.
 */
 .input_full_wrap {
-  display: block;
-  padding-right: 8px;
+		display: block;
+		padding-right: 8px;
 }
 /*------------------------------------------*/
-/* UI CONSISTENCY */
+/*--- UI CONSISTENCY ---*/
 /*------------------------------------------*/
 ::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+		border: 0;
+		padding: 0;
 }
 
 input[type="search"]::-webkit-search-decoration {
-  display: none;
+		display: none;
 }
 
 input,
 button,
 select,
 textarea {
-  margin: 0;
-  vertical-align: middle;
+		margin: 0;
+		vertical-align: middle;
 }
-
+a.button,
 button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"] {
--webkit-appearance: none;
--webkit-background-clip: padding;
-   -moz-background-clip: padding;
-		background-clip: padding-box;
 -webkit-border-radius: 3px;
  -khtml-border-radius: 3px;
    -moz-border-radius: 3px;
 		border-radius: 3px;
-		background: #ddd url(../img/css/formalize/button.png) repeat-x;
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
-		background: -moz-linear-gradient(top center, #fff 0%, #ddd 100%);
+-webkit-appearance: none;
+-webkit-background-clip: padding;
+   -moz-background-clip: padding;
+		background-clip: padding-box;
+		background: #eee; /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+		background: linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
 		border: 1px solid;
 		border-color: #ddd #bbb #999;
+		color: #444;
+		display: inline-block;
+		font-size: 11px;
+		font-weight: bold;
+		text-decoration: none;
+		text-shadow: 0 1px rgba(255, 255, 255, .75);
 		cursor: pointer;
-		color: #333;
-		font: bold 1em/1.5 sans-serif;
-		outline: 0;
-		overflow: visible;
-		padding: 3px 10px 4px;
-		text-shadow: #fff 0 1px 1px;
+		margin-bottom: 20px;
+		line-height: 21px;
 		width: auto;
-
-/* IE7 */
-*padding-top: 2px;
-*padding-bottom: 0px;
+		font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		/* IE7 */
+		*padding-top: 2px;
+		*padding-bottom: 0px;
 }
-
+a.button:hover, 
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+		color: #222;
+		background: #eee; /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+		background: linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+		border: 1px solid #888;
+		border-top: 1px solid #aaa;
+		border-left: 1px solid #aaa;
+}
+a.button:active, 
+button:active,
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		input[type="button"]:active {
+		background: #eee; /* Old browsers */
+		background: -moz-linear-gradient(top, rgba(0,0,0,.3) 0%, rgba(255,255,255,.3) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,.3)), color-stop(100%,rgba(255,255,255,.3))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(0,0,0,.3) 0%,rgba(255,255,255,.3) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(0,0,0,.3) 0%,rgba(255,255,255,.3) 100%); /* Opera11.10+ */
+		background: -ms-linear-gradient(top, rgba(0,0,0,.3) 0%,rgba(255,255,255,.3) 100%); /* IE10+ */
+		background: linear-gradient(top, rgba(0,0,0,.3) 0%,rgba(255,255,255,.3) 100%); /* W3C */
+		border: 1px solid #888;
+		border-bottom: 1px solid #aaa;
+		border-right: 1px solid #aaa;
+}
+.button.full-width,
+button.full-width,
+input[type="submit"].full-width,
+input[type="reset"].full-width,
+input[type="button"].full-width {
+	width: 100%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	text-align: center;
+}
 button {
-  /* IE7 */
-  *padding-top: 1px;
-  *padding-bottom: 1px;
+		/* IE7 */
+		*padding-top: 1px;
+		*padding-bottom: 1px;
 }
 
 textarea,
@@ -154,16 +202,15 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
--webkit-appearance: none;
--webkit-border-radius: 0;
- -khtml-border-radius: 0;
-   -moz-border-radius: 0;
+		-webkit-appearance: none;
+		-moz-border-radius: 0;
+		-webkit-border-radius: 0;
 		border-radius: 0;
--webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
 		box-sizing: border-box;
--webkit-background-clip: padding;
-   -moz-background-clip: padding;
+		-moz-background-clip: padding;
+		-webkit-background-clip: padding;
 		background-clip: padding-box;
 		background-color: #fff;
 		border: 1px solid;
@@ -171,10 +218,10 @@ input[type="week"] {
 		color: #000;
 		outline: 0;
 		padding: 2px 3px;
-		font-size: 1em;
-		font-family: sans-serif;
+		font-size: 13px;
+		font-family: Arial, sans-serif;
 		height: 1.8em;
-		
+
 		/* IE7 */
 		*padding-top: 2px;
 		*padding-bottom: 1px;
@@ -182,18 +229,22 @@ input[type="week"] {
 }
 
 /*
-  Separate rule for Firefox.
-  Cannot stack with WebKit's.
+		Separate rule for Firefox.
+		Separate rule for IE, too.
+		Cannot stack with WebKit's.
 */
-input.placeholder_text,
-textarea.placeholder_text,
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-  color: #888;
+::-webkit-input-placeholder {
+		color: #888;
 }
 
-::-webkit-input-placeholder {
-  color: #888;
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+		color: #888;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+		color: #888;
 }
 
 button:focus,
@@ -204,13 +255,12 @@ select:focus,
 select:active,
 textarea:focus,
 textarea:active {
--webkit-box-shadow: #06f 0 0 7px;
-   -moz-box-shadow: #06f 0 0 7px;
-     -o-box-shadow: #06f 0 0 7px;
-        box-shadow: #06f 0 0 7px;
+		-moz-box-shadow: #06f 0 0 7px;
+		-webkit-box-shadow: #06f 0 0 7px;
+		box-shadow: #06f 0 0 7px;
 
-  /* for Opera */
-  z-index: 1;
+		/* for Opera */
+		z-index: 1;
 }
 
 input[type="file"]:focus,
@@ -219,9 +269,9 @@ input[type="radio"]:focus,
 input[type="radio"]:active,
 input[type="checkbox"]:focus,
 input[type="checkbox"]:active {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
 }
 
 select[disabled],
@@ -239,7 +289,7 @@ input[type="text"][disabled],
 input[type="time"][disabled],
 input[type="url"][disabled],
 input[type="week"][disabled] {
-  background-color: #eee;
+		background-color: #eee;
 }
 
 button[disabled],
@@ -248,115 +298,117 @@ select[disabled],
 select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled] {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  color: #888;
-  cursor: default;
-}
-
-.is_webkit select {
-  /* Tweaks for Safari + Chrome. */
-  background-image: url(../img/css/formalize/select_arrow.gif);
-  background-repeat: no-repeat;
-  background-position: right center;
-  padding-right: 20px;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none;
+		color: #888;
+		cursor: default;
 }
 
 textarea,
 select[size],
 select[multiple] {
-  height: auto;
+		height: auto;
 }
 
-.is_webkit select[size],
-.is_webkit select[multiple] {
-  background-image: none;
-  padding: 0;
+/* Tweaks for Safari + Chrome. */
+@media (-webkit-min-device-pixel-ratio: 0) {
+		select {
+	background-image: url(../css/img/forms/select_arrow.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 20px;
+		}
+
+		select[size],
+		select[multiple] {
+	background-image: none;
+	padding: 0;
+		}
 }
 
 textarea {
-  min-height: 40px;
-  overflow: auto;
-  resize: vertical;
-  width: 100%;
+		min-height: 40px;
+		overflow: auto;
+		resize: vertical;
+		width: 100%;
 }
 
 optgroup {
-  color: #000;
-  font-style: normal;
-  font-weight: normal;
+		color: #000;
+		font-style: normal;
+		font-weight: normal;
 }
 /*------------------------------------------*/
 /* IE6 */
 /*------------------------------------------*/
 
 /*
-  Everything below this line is for IE6.
-  Delete it if you don't support it! :)
+		Everything below this line is for IE6.
+		Delete it if you don't support it! :)
 
-  Classes are added dynamically via JS,
-  because IE6 doesn't support attribute
-  selectors: .ie6_button, .ie6_input, etc.
+		Classes are added dynamically via JS,
+		because IE6 doesn't support attribute
+		selectors: .ie6_button, .ie6_input, etc.
 
-  Note: These style rules are somewhat
-  duplicated because IE6 bombs out when
-  it sees attribute selectors. Example:
+		Note: These style rules are somewhat
+		duplicated because IE6 bombs out when
+		it sees attribute selectors. Example:
 
-  .ie6_button {
-    This works in IE6.
-  }
+		.ie6_button {
+	This works in IE6.
+		}
 
-  .ie6_button,
-  input[type=submit] {
-    This doesn't work.
-  }
+		.ie6_button,
+		input[type=submit] {
+	This doesn't work.
+		}
 */
 
 .ie6_button,
 * html button {
-  background: #ddd url(../img/css/formalize/button.png) repeat-x;
-  border: 1px solid;
-  border-color: #ddd #bbb #999;
-  cursor: pointer;
-  color: #333;
-  font: bold 12px/1.2 Arial, sans-serif;
-  padding: 2px 10px 0px;
-  overflow: visible;
-  width: auto;
+		background: #ddd url(../img/css/formalize/button.png) repeat-x;
+		border: 1px solid;
+		border-color: #ddd #bbb #999;
+		cursor: pointer;
+		color: #333;
+		font: bold 12px/1.2 Arial, sans-serif;
+		padding: 2px 10px 0px;
+		overflow: visible;
+		width: auto;
 }
 
 * html button {
-  padding-top: 1px;
-  padding-bottom: 1px;
+		padding-top: 1px;
+		padding-bottom: 1px;
 }
 
 .ie6_input,
 * html textarea,
 * html select {
-  background: #fff;
-  border: 1px solid;
-  border-color: #848484 #c1c1c1 #e1e1e1;
-  color: #000;
-  padding: 2px 3px 1px;
-  font-size: 13px;
-  font-family: Arial, sans-serif;
-  vertical-align: top;
+		background: #fff;
+		border: 1px solid;
+		border-color: #848484 #c1c1c1 #e1e1e1;
+		color: #000;
+		padding: 2px 3px 1px;
+		font-size: 13px;
+		font-family: Arial, sans-serif;
+		vertical-align: top;
 }
 
 * html select {
-  margin-top: 1px;
+		margin-top: 1px;
 }
 
 .placeholder_text,
 .ie6_input_disabled,
 .ie6_button_disabled {
-  color: #888;
+		color: #888;
 }
 
 .ie6_input_disabled {
-  background: #eee;
+		background: #eee;
 }

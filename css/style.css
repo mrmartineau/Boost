@@ -1,5 +1,5 @@
 /*------------------------------------------*/
-/*--- BASE STYLES ---*/
+/*--- BASE & RESET STYLES ---*/
 /*------------------------------------------*/
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -35,26 +35,15 @@ label, input[type=button], input[type=submit], button { cursor: pointer }
 /*--- MINIMAL BASE STYLES ---*/
 html{
 	overflow-y:scroll;
-	font-size:100%;
-	font-family:Calibri, "Helvetica Neue", Arial, sans-serif; /* Swap these two lines around to switch between serif and sans */
-	font-family:Cambria, Georgia, "Times New Roman", serif; /* Swap these two lines around to switch between serif and sans */
-	line-height:1.5;
-	background:#fff;
-	color:#333;
 }
 body{
 	min-height:100%;
 	padding:10px;
 	margin:0 auto;
 }
-/*--- Show Layout ---*/
-body.gridshow{
-		background:url(../img/css/grid.png) top center repeat-y,
-		url(../img/css/baseline.gif) 0 4px #fff;
-}
 strong, th { font-weight: bold; }
-td { vertical-align: top; } 
-pre { 
+td { vertical-align: top; }
+pre {
 		padding: 15px;
 		white-space: pre;
 		white-space: pre-wrap;
@@ -69,14 +58,14 @@ input[type="radio"] { vertical-align: text-bottom; }
 .ie6 input { vertical-align: text-bottom; }
 label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
 button, input, select, textarea { margin: 0; }
-input:valid, textarea:valid   {  }
-input:invalid, textarea:invalid { 
+input:valid, textarea:valid	  {	 }
+input:invalid, textarea:invalid {
 -webkit-border-radius: 1px;
  -khtml-border-radius: 1px;
    -moz-border-radius: 1px;
 		border-radius: 1px;
-   -moz-box-shadow: 0px 0px 5px red; 
--webkit-box-shadow: 0px 0px 5px red; 
+   -moz-box-shadow: 0px 0px 5px red;
+-webkit-box-shadow: 0px 0px 5px red;
 		box-shadow: 0px 0px 5px red;
 }
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
@@ -88,46 +77,44 @@ q:before,q:after{ content:''; }
 /*------------------------------------------*/
 /*--- TYPOGRAPHY ---*/
 /*------------------------------------------*/
-body{
-		 /*--- Swap these two lines around to switch between serif and sans ---*/
-		font-family:Calibri, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-		font-family:Cambria, Georgia, "Times New Roman", serif;
-		
+html{
 		font-size:100%;
+		font-family:Cambria, Georgia, "Times New Roman", serif; /* Swap these two lines around to switch between serif and sans */
+		font-family:Calibri, "Helvetica Neue", Arial, sans-serif; /* Swap these two lines around to switch between serif and sans */
 		line-height:1.5;
+		background:#fff;
 }
-body, select, input, textarea { 
+body, select, input, textarea {
 		color: #444;
-	}
+}
 /*--- HEADINGS ---*/
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 h1{
-	font-size:2em;			/* 32px */
-	margin-bottom:0.75em;	/* 24px */
-	line-height:1.5;		/* 48px */
+		font-size:2em;			/* 32px */
+		margin-bottom:0.75em;	/* 24px */
+		line-height:1.5;		/* 48px */
 }
 h2{
-	font-size:1.5em;		/* 24px */
-	margin-bottom:1em;		/* 24px */
-	line-height:1;			/* 24px */
+		font-size:1.5em;		/* 24px */
+		margin-bottom:1em;		/* 24px */
+		line-height:1;			/* 24px */
 }
 h3{
-	font-size:1.25em;		/* 20px */
-	margin-bottom:1.2em;	/* 24px */
-	line-height:1.2;		/* 24px */
+		font-size:1.25em;		/* 20px */
+		margin-bottom:1.2em;	/* 24px */
+		line-height:1.2;		/* 24px */
 }
 h4{
-	font-size:1.125em;		/* 18px */
-	margin-bottom:1.333em;	/* 24px */
-	line-height:1.333;		/* 24px */
+		font-size:1.125em;		/* 18px */
+		margin-bottom:1.333em;	/* 24px */
+		line-height:1.333;		/* 24px */
 }
 h5,
 h6{
-	font-size:1em;			/* 16px */
-	margin-bottom:1.5em;	/* 24px */
-	line-height:1.5;		/* 24px */
+		font-size:1em;			/* 16px */
+		margin-bottom:1.5em;	/* 24px */
+		line-height:1.5;		/* 24px */
 }
-
 /*--- PARAGRAPHS ---*/
 p{
 	margin-bottom:1.5em;
@@ -138,8 +125,8 @@ p+p{
 }
 small { font-size: 85%; }
 sub, sup { font-size: 75%; line-height: 0; position: relative; }
-sup { 	top: -0.5em; }
-sub { 	bottom: -0.25em; }
+sup {	top: -0.5em; }
+sub {	bottom: -0.25em; }
 /*------------------------------------------*/
 /*--- LINK STYLES ---*/
 /*------------------------------------------*/
@@ -163,7 +150,7 @@ a:active, a:focus {
 		top:1px;
 }
 a:focus {
-        text-shadow: #61a0ff 0 0 7px;
+		text-shadow: #61a0ff 0 0 7px;
 		outline:none;
 }
 .more-link:after,
@@ -177,16 +164,27 @@ ol { list-style-type: decimal; }
 nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
 ul,
 ol{
-	margin:0 0 1.5em 45px;
+		margin:0 0 1.5em 45px;
 }
 ul ul,
 ol ol,
 ul ol,
 ol ul{
-	margin:0 0 0 45px;
+		margin:0 0 0 45px;
+}
+/*--- No margins on lists ---*/
+ul.ui_list,
+ol.ui_list{
+		margin: 0 0 1.5em;
+}
+ul.ui_list ul,
+ol.ui_list ol,
+ul.ui_list ol,
+ol.ui_list ul{
+		margin:0 0 0 45px;
 }
 dd{
-	margin-left:45px;
+		margin-left:45px;
 }
 dl{
 		margin-bottom:1.5em;
@@ -305,7 +303,7 @@ video{
 		background:url(/path/to/logo);
 }
 #logo:hover{
-	/* Hover states */
+		/* Hover states */
 		background-position:0 -00px;
 }
 #logo img{
@@ -346,6 +344,9 @@ th{
 td[colspan]{
 		text-align:center;
 }
+td[rowspan]{
+		vertical-align:middle;
+}
 tbody tr:nth-of-type(odd){
 		background:rgba(0,0,0,0.05);
 }
@@ -360,19 +361,19 @@ tfoot td{
 /*--- MESSAGES ---*/
 /*------------------------------------------*/
 .message{
-	font-weight:normal;
-	display:block;
-	padding:10px 10px 10px 36px;
-	border:1px solid #ccc;
-	margin:0 0 1.5em 0;
+		font-weight:normal;
+		display:block;
+		padding:10px 10px 10px 36px;
+		border:1px solid #ccc;
+		margin:0 0 1.5em 0;
 -webkit-border-radius: 3px;
  -khtml-border-radius: 3px;
    -moz-border-radius: 3px;
 		border-radius: 3px;
 -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
    -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
-     -o-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
-        box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+	 -o-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+		box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
 }
 /*--- With multiple errors it’s nice to group them. ---*/
 ul.message{
@@ -455,7 +456,7 @@ hhh {
 /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
 /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 
-#container {	
+#container {
 		width: 90%;
 		margin: 0 auto;
 }
@@ -511,7 +512,7 @@ img.right	{ max-width:50%; height:auto; }
 @media screen and (min-width: 768px) {
 /*--- Show Layout ---*/
 body.gridshow{
-		background:url(../img/css/grid-720.png) top center repeat-y,
+		background:url(http://griddle.it/720-16-20) top center repeat-y,
 		url(../img/css/baseline.gif) 0 4px #fff;
 }
 #container {
@@ -522,12 +523,12 @@ body.gridshow{
 /*--- GRIDS ---*/
 /*------------------------------------------*/
 /* To use a series just wrap them all in <div class="grids">...</div> */
-.grids{
+.grids {
 		margin-left:-20px;
 		overflow:hidden;
 		clear:both;
 }
-ul.grids{
+ul.grids {
 		/* So we can make grids out of lists */
 		margin:0 0 0 -20px;
 		list-style:none;
@@ -590,7 +591,7 @@ dd{
 
 /*--- Show Layout ---*/
 body.gridshow{
-		background:url(../img/css/grid-720.png) top center repeat-y,
+		background:url(http://griddle.it/940-16-20) top center repeat-y,
 		url(../img/css/baseline.gif) 0 4px #fff;
 }
 #container {
@@ -632,11 +633,11 @@ body.gridshow{
 
 /*--- Show Layout ---*/
 body.gridshow{
-		background:url(../img/css/grid.png) top center repeat-y,
+		background:url(http://griddle.it/1180-16-20) top center repeat-y,
 		url(../img/css/baseline.gif) 0 4px #fff;
 }
 #container {
-		width:1200px;
+		width:1180px;
 }
 /*--- GRIDS ---*/
 .grid-1		{ width:55px; }
@@ -657,7 +658,7 @@ body.gridshow{
 .grid-13	{ width:955px; }
 .grid-14	{ width:1030px; }
 .grid-15	{ width:1105px; }
-.grid-16	{ width:1080px; margin:0; }
+.grid-16	{ width:1180px; margin:0; }
 /*------------------------------------------*/
 /*--- TYPE ---*/
 /*------------------------------------------*/
@@ -737,7 +738,7 @@ body.gridshow{
 	a, a:visited { color: #444 !important; text-decoration: underline; }
 	a[href]:after { content: " (" attr(href) ")"; font-size:smaller;}
 	abbr[title]:after { content: " (" attr(title) ")"; font-size:smaller;}
-	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }	/* Don't show links for images, or javascript/internal links */
 	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
 	thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
 	tr, img { page-break-inside: avoid; }

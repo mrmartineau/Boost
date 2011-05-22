@@ -3,41 +3,19 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
+	Zander Martineau
+	Site: http://boost.martineau.tv
+	Twitter: MrMartineau
+	Location: Peckham, South-East London
 
 /* THANKS */
-  Names (& URL): 
+  'Boost' could not be made possible without the help of these legendary people:
+	@h5bp - reset, base styles & any other HTML5 related stuff
+	@inuitcss - awesome CSS to enhance my base stylesheet
+	@malarkey - 320 & Up media queries.
+	@nathansmith (Formalize.me) - amazing form styles
 
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery
   Software:
-  
-
-                                    
-                               -o/-                       
-                               +oo//-                     
-                              :ooo+//:                    
-                             -ooooo///-                   
-                             /oooooo//:                   
-                            :ooooooo+//-                  
-                           -+oooooooo///-                 
-           -://////////////+oooooooooo++////////////::    
-            :+ooooooooooooooooooooooooooooooooooooo+:::-  
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-   
-                     -:+ooooooooooooooooo+:://////:--     
-                       /ooooooooooooooooo+//////:-        
-                      -ooooooooooooooooooo////-           
-                      /ooooooooo+oooooooooo//:            
-                     :ooooooo+/::/+oooooooo+//-           
-                    -oooooo/::///////+oooooo///-          
-                    /ooo+::://////:---:/+oooo//:          
-                   -o+/::///////:-      -:/+o+//-         
-                   :-:///////:-            -:/://         
-                     -////:-                 --//:        
-                       --                       -:        
