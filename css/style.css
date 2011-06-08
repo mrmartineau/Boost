@@ -161,7 +161,9 @@ a:focus {
 /*--- LISTS ---*/
 /*------------------------------------------*/
 ol { list-style-type: decimal; }
-nav ul, nav li { margin: 0; list-style:none; list-style-image: none; }
+nav ul,
+nav li,
+.ui_list { margin: 0; list-style:none; list-style-image: none; }
 ul,
 ol{
 		margin:0 0 1.5em 45px;

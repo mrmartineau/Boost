@@ -71,7 +71,7 @@
 		<!-- !Javascript - at the bottom for fast page loading -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 		<script>
-			window.jQuery || document.write("<script src='js/libs/jquery-1.6.1.min.js'>\x3C/script>")
+			window.jQuery || document.write("<script src='js/libs/jquery.min.js'>\x3C/script>")
 		</script>
 		<!--scripts concatenated and minified via ant build script -->
 			<script src="js/plugins.js?v=1"></script>
@@ -83,17 +83,11 @@
 		<script>
 			// iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
 			MBP.scaleFix();
-
-			// Media Queries Polyfill https://github.com/shichuan/mobile-html5-boilerplate/wiki/Media-Queries-Polyfill
-			yepnope({
-				test : Modernizr.mq('(min-width)'),
-				nope : ['js/libs/polyfills/respond.min.js']
-			});
 		</script>
 
 		<!--[if (lt IE 9) & (!IEMobile)]>
-			<script src="js/libs/polyfills/DOMAssistantCompressed-2.8.js"></script>
-			<script src="js/libs/polyfills/selectivizr-1.0.1.js"></script>
+			<script src="js/libs/polyfills/DOMAssistantCompressed.js"></script>
+			<script src="js/libs/polyfills/selectivizr.min.js"></script>
 		<![endif]-->
 
 		<!--[if lt IE 8 ]>
@@ -108,7 +102,7 @@
 
 		<!-- Asynchronous Google Analytics: mathiasbynens.be/notes/async-analytics-snippet -->
 		<script>
-			var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+			var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
 			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
 			g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
 			s.parentNode.insertBefore(g,s)}(document,"script"));
