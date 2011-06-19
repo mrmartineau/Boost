@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<!--[if IEMobile 7 ]>	<html class="no-js iem7" manifest="default.appcache?v=1"><![endif]-->
+<!--[if IEMobile 7 ]>	<html class="no-js iem7"><![endif]-->
 <!--[if lt IE 7 ]>		<html class="no-js ie6" lang="en"><![endif]-->
 <!--[if IE 7 ]>			<html class="no-js ie7" lang="en"><![endif]-->
 <!--[if IE 8 ]>			<html class="no-js ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
-<html class="no-js" manifest="default.appcache?v=1" lang="en"><!--<![endif]-->
+<html class="no-js" lang="en"><!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
 	<title>Boost boilerplate - Kitchen Sink</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
+	<!-- <meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"> -->
 	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1">
 	<!-- <base href=""></base> -->
 	
 	<!-- !CSS -->
-	<link rel="stylesheet" href="css/style.css?v=2">
-	<link rel="stylesheet" href="css/forms.css?v=2">
+	<link rel="stylesheet" href="css/boost.css?v=2">
+	<link rel="stylesheet" href="css/tools/1kbgrid.css?v=2">
+	<link rel="stylesheet" href="css/tools/forms.css?v=2">
 	<!-- !Modernizr - All other JS at bottom -->
 	<script src="js/libs/modernizr.js"></script>
 	
@@ -48,7 +49,7 @@
 <body>
 	
 	<div id="container">
-		<header id="header" class="grid grid-16">
+		<header id="header">
 			<a href="/" id="logo"><img src="img/logo.gif" alt="inuitcss logo" /></a>
 		</header>
 
@@ -60,8 +61,8 @@
 				<li><a href="#">Contact Us</a></li>
 			</ul>
 		</nav>
-		<div class="grids">
-		    <div class="grid grid-8">
+		<div class="row">
+		    <div class="column grid_6">
 		    	<h1>Heading one</h1>
 				<p>Lorem sheezy dolizzle yo mamma amizzle, cool adipiscing gangster. Nullam sapien velizzle, aliquet volutpizzle, shizzlin dizzle check it out, gravida vel, doggy. Pellentesque owned tortor. Sizzle erizzle. Sizzle i'm in the shizzle dolor dapibus that's the shizzle tempizzle tempor. Ma nizzle pellentesque nibh et fizzle. Shiznit izzle tortor. Pellentesque daahng dawg rhoncizzle pizzle. Pot hac pimpin' platea dictumst. Mammasay mammasa mamma oo sa dapibizzle. Pimpin' tellus urna, pretium bow wow wow, mattizzle mah nizzle, eleifend vitae, nunc. Crackalackin suscipizzle. Integizzle sempizzle its fo rizzle sizzle dope.</p>
 				<h2>Heading two</h2>
@@ -70,25 +71,25 @@
 				<h5>Heading five</h5>
 				<h6>Heading six</h6>
 		    </div>
-		    <div class="grid grid-8">
+		    <div class="column grid_6">
 		    	<img src="http://flickholdr.com/500/500/royal,wedding" alt="Placeholder image from flickholdr.com" />
 			</div>
 		</div>
 		
-		<div class="grids">
-			<div class="grid grid-4">
+		<div class="row">
+			<div class="column grid_3">
 				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 			</div>
-			<div class="grid grid-7">
+			<div class="column grid_6">
 				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 			</div>
-			<div class="grid grid-5">
+			<div class="column grid_3">
 				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-				<p>This is <a href="#" target="_blank" class="more-link">text</a></p>
+				<p>This is <a href="#" target="_blank" class="more-link">text link</a></p>
 			</div>
-		</div><!-- /grids -->
+		</div><!-- /row -->
 	
 		<dl>
 			<dt>Definition list</dt>
@@ -97,23 +98,23 @@
 			<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris	commodo consequat.</dd>
 		</dl>
 	
-		<blockquote class="grid grid-4">
+		<blockquote class="column grid_4">
 			<p>“This is a quote as left by me.”<b>—Zander Martineau</b></p>
 		</blockquote>
 
 		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 
-		<div class="grids">
-			<div class="grid grid-4">
+		<div class="row">
+			<div class="column grid_3">
 				<p>Pellentesque habitant <small>morbi tristique senectus et netus et malesuada fames</small> ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 			</div>
-			<div class="grid grid-4">
+			<div class="column grid_3">
 				<img src="http://flickholdr.com/500/400/sea,sun" alt="Sea, Sun">
 			</div>
-			<div class="grid grid-4">
+			<div class="column grid_3">
 				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 			</div>
-			<div class="grid grid-4">
+			<div class="column grid_3">
 				<ul class="message success">
 					<li>Lorem ipsum dolor</li>
 					<li>Lorem ipsum dolor</li>
@@ -123,7 +124,7 @@
 					<li>Lorem ipsum dolor</li>
 				</ul>
 			</div>
-		</div><!-- /grids -->
+		</div><!-- /row -->
 	
 		<ul>
 			<li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
@@ -182,26 +183,26 @@
 			<fieldset>
 			
 				<legend>Your form</legend>
-				<div class="grids">
-					<div class="grid grid-5">
+				<div class="row">
+					<div class="column grid_4">
 						<p>
 							<label for="name">Name</label>
-							<input type="text" id="name" class="text-input" placeholder="Zander Martineau" />
+							<input type="text" id="name" class="text-input input_full" placeholder="Zander Martineau" />
 						</p>
 					</div>
-					<div class="grid grid-5">
+					<div class="column grid_4">
 						<p>
 							<label for="email">Email</label>
-							<input type="email" id="email" class="text-input" placeholder="zander@martineau.tv" />
+							<input type="email" id="email" class="text-input input_full" placeholder="zander@martineau.tv" />
 						</p>
 					</div>	
-					<div class="grid grid-5">
+					<div class="column grid_4">
 						<p>
 							<label for="phone">Phone</label>
-							<input type="number" id="phone" class="text-input" placeholder="020 123 4567" />
+							<input type="number" id="phone" class="text-input input_full" placeholder="020 123 4567" />
 						</p>
 				   </div>
-				</div>			
+				</div><!-- /row -->
 			
 				<p>
 					<label for="comments">Comments</label>
@@ -228,13 +229,21 @@
 					<li>
 						<input type="checkbox" id="four" /> 
 						<label for="four" class="check-label">Four</label>
-					</li>				
+					</li>
 				</ul>
 			
-				<p>
-					<input type="radio" id="subscribe" /> 
-					<label for="subscribe" class="check-label">I want to subscribe</label>
-				</p>
+				<ul class="check-list">
+				
+					<li>
+						<input type="radio" name="subscribe" id="subscribe" checked />
+						<label for="subscribe" class="check-label">I want to subscribe</label>
+					</li>
+				
+					<li>
+						<input type="radio" name="subscribe" id="not_subscribe" /> 
+						<label for="not_subscribe" class="check-label">I do not want to subscribe</label>
+					</li>
+				</ul>
 			
 				<p>
 					<input type="submit" value="Submit" class="button" />
@@ -292,6 +301,7 @@
 	<!--scripts concatenated and minified via ant build script -->
 		<script src="js/plugins.js?v=1"></script>
 		<script src="js/script.js?v=1"></script>
+		<script src="js/polyfills/jquery.formalize.min.js?v=1"></script>
 		<!-- Mobile specific, remove if not needed
 		<script src="js/mylibs/helper.js"></script> -->
 	<!-- end concatenated and minified scripts-->
