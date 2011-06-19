@@ -64,9 +64,9 @@ input:invalid, textarea:invalid {
  -khtml-border-radius: 1px;
    -moz-border-radius: 1px;
 		border-radius: 1px;
-   -moz-box-shadow: 0px 0px 5px red;
--webkit-box-shadow: 0px 0px 5px red;
-		box-shadow: 0px 0px 5px red;
+   -moz-box-shadow: 0 0 5px red;
+-webkit-box-shadow: 0 0 5px red;
+		box-shadow: 0 0 5px red;
 }
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 ::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
@@ -175,14 +175,14 @@ ol ul{
 		margin:0 0 0 45px;
 }
 /*--- No margins on lists ---*/
-ul.ui_list,
-ol.ui_list{
+.ui_list,
+.ui_list{
 		margin: 0 0 1.5em;
 }
-ul.ui_list ul,
-ol.ui_list ol,
-ul.ui_list ol,
-ol.ui_list ul{
+.ui_list ul,
+.ui_list ol,
+.ui_list ol,
+.ui_list ul{
 		margin:0 0 0 45px;
 }
 dd{
@@ -218,7 +218,35 @@ dt::after{
 .keywords li:last-of-type::after{
 		content:".";
 }
-
+/* Create a breadcrumb list by adding a single class to a <ul>: */
+.breadcrumb{
+	margin:0;
+	list-style:none;
+}
+.breadcrumb li{
+	display:inline;
+	font-weight:bold;
+}
+.breadcrumb a{
+	display:inline-block;
+	font-weight:normal;
+}
+.breadcrumb li:before{
+	content:"\0020\00BB\0020";
+}
+.breadcrumb li:first-child:before{
+	content:normal;
+}
+/* IE7 support */
+/* Uncomment when supporting IE7
+.breadcrumb li{
+	background:url(/path/to/splitter/image) left center no-repeat;
+}
+/* Uncomment when supporting IE7
+.breadcrumb li:first-child{
+	background:none;
+}
+*/
 /*--- QUOTES ---*/
 blockquote{
 		text-indent:-0.4em;
@@ -273,9 +301,6 @@ code{
 /*--- IMAGES ---*/
 /*------------------------------------------*/
 img{
-		max-width:100%;
-		height:auto;
-	/* Give it some text styles to offset alt text */
 		font-style:italic;
 		color:#c00;
 }
@@ -283,6 +308,7 @@ img.left	{ margin:0 20px 0 0; }
 img.right	{ margin:0 0 0 20px; }
 
 /*--- FLASH/VIDEO ---*/
+img,
 object,
 embed,
 video{
@@ -300,13 +326,13 @@ video{
 		width:auto; /* Width of your logo in pixels (ideally a round grid-number) */
 		height:auto; /* Height of your logo in pixels */
 }
-/* Based on the fact that we need to use an <img /> in our markup, let’s hide the actual image and use a background on the <a>--this gives us sematically sound markup and the ability to use sprites for hover effects! */
+/* Based on the fact that we need to use an <img /> in our markup, let’s hide the actual image and use a background on the <a>--this gives us semantically sound markup and the ability to use sprites for hover effects! */
 #logo{
 		background:url(/path/to/logo);
 }
 #logo:hover{
 		/* Hover states */
-		background-position:0 -00px;
+		background-position:0 0;
 }
 #logo img{
 		position:absolute;
@@ -458,25 +484,11 @@ hhh {
 /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
 /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 
-#container {
-		width: 90%;
-		margin: 0 auto;
-}
-.grid{
-		width:auto;
-		float:none;
-}
-
 /*-------------------------------------------*/
 /*--- Media queries for responsive design ---*/
 /*-------------------------------------------*/
 /*--- 480> ---*/
 @media screen and (min-width: 480px) {
-
-/*--- Show Layout ---*/
-body.gridshow{
-		background:none;
-}
 html{
 		font-size:1.125em;
 }
@@ -489,22 +501,6 @@ html{
 #logo{
 		margin:0 auto 1.5em;
 }
-
-
-/*--- LISTS ---*/
-ul,
-ol{
-		margin:0 0 1.5em 25px;
-}
-ul ul,
-ol ol,
-ul ol,
-ol ul{
-		margin:0 0 0 25px;
-}
-dd{
-		margin-left:25px;
-}
 /*--- IMAGES ---*/
 img.left,
 img.right	{ max-width:50%; height:auto; }
@@ -512,163 +508,19 @@ img.right	{ max-width:50%; height:auto; }
 
 /*--- 768> ---*/
 @media screen and (min-width: 768px) {
-/*--- Show Layout ---*/
-body.gridshow{
-		background:url(http://griddle.it/720-16-20) top center repeat-y,
-		url(../img/css/baseline.gif) 0 4px #fff;
-}
-#container {
-		width:720px;
-}
 
-/*------------------------------------------*/
-/*--- GRIDS ---*/
-/*------------------------------------------*/
-/* To use a series just wrap them all in <div class="grids">...</div> */
-.grids {
-		margin-left:-20px;
-		overflow:hidden;
-		clear:both;
-}
-ul.grids {
-		/* So we can make grids out of lists */
-		margin:0 0 0 -20px;
-		list-style:none;
-}
-.grid {
-		float:left;
-		margin:0 20px 0 0;
-}
-.grids .grid{
-		margin:0 0 0 20px;
-}
-.grid-1		{ width:25px; }
-.grid-2		{ width:70px; }
-.grid-3		{ width:115px; }
-.grid-4		{ width:160px; }
-
-.grid-5		{ width:205px; }
-.grid-6		{ width:250px; }
-.grid-7		{ width:295px; }
-.grid-8		{ width:340px; }
-
-.grid-9		{ width:385px; }
-.grid-10	{ width:430px; }
-.grid-11	{ width:475px; }
-.grid-12	{ width:520px; }
-
-.grid-13	{ width:565px; }
-.grid-14	{ width:610px; }
-.grid-15	{ width:655px; }
-.grid-16	{ width:700px; }
-
-
-
-
-/*------------------------------------------*/
-/* TYPE */
-/*------------------------------------------*/
-/*--- LISTS ---*/
-ul,
-ol{
-		margin:0 0 1.5em 60px;
-}
-ul ul,
-ol ol,
-ul ol,
-ol ul{
-	/* Let’s take care of lists in lists */
-		margin:0 0 0 60px;
-}
-dd{
-		margin-left:60px;
-}
 }/*/mediaquery*/
 /*--- end 768> ---*/
 /*--- 992> ---*/
 @media screen and (min-width: 992px){
-/*------------------------------------------*/
-/*--- MAIN ---*/
-/*------------------------------------------*/
-
-/*--- Show Layout ---*/
-body.gridshow{
-		background:url(http://griddle.it/940-16-20) top center repeat-y,
-		url(../img/css/baseline.gif) 0 4px #fff;
-}
-#container {
-		width:940px;
-}
-/*------------------------------------------*/
-/*--- GRIDS ---*/
-/*------------------------------------------*/
-.grid-1		{ width:40px; }
-.grid-2		{ width:100px; }
-.grid-3		{ width:160px; }
-.grid-4		{ width:220px; }
-
-.grid-5		{ width:280px; }
-.grid-6		{ width:340px; }
-.grid-7		{ width:400px; }
-.grid-8		{ width:460px; }
-
-.grid-9		{ width:520px; }
-.grid-10	{ width:580px; }
-.grid-11	{ width:640px; }
-.grid-12	{ width:700px; }
-
-.grid-13	{ width:760px; }
-.grid-14	{ width:820px; }
-.grid-15	{ width:880px; }
-.grid-16	{ width:940px; margin:0; }
-/*------------------------------------------*/
-/*--- TYPE ---*/
-/*------------------------------------------*/
 
 }/*/mediaquery*/
 /*--- end 992> ---*/
 /*--- 1382> ---*/
 @media screen and (min-width: 1382px){
-/*------------------------------------------*/
-/*--- MAIN ---*/
-/*------------------------------------------*/
-
-/*--- Show Layout ---*/
-body.gridshow{
-		background:url(http://griddle.it/1180-16-20) top center repeat-y,
-		url(../img/css/baseline.gif) 0 4px #fff;
-}
-#container {
-		width:1180px;
-}
-/*--- GRIDS ---*/
-.grid-1		{ width:55px; }
-.grid-2		{ width:130px; }
-.grid-3		{ width:205px; }
-.grid-4		{ width:280px; }
-
-.grid-5		{ width:355px; }
-.grid-6		{ width:430px; }
-.grid-7		{ width:505px; }
-.grid-8		{ width:580px; }
-
-.grid-9		{ width:655px; }
-.grid-10	{ width:730px; }
-.grid-11	{ width:805px; }
-.grid-12	{ width:880px; }
-
-.grid-13	{ width:955px; }
-.grid-14	{ width:1030px; }
-.grid-15	{ width:1105px; }
-.grid-16	{ width:1180px; margin:0; }
-/*------------------------------------------*/
-/*--- TYPE ---*/
-/*------------------------------------------*/
 
 }/*/mediaquery*/
 /*--- end 1382> ---*/
-/*--- PORTRAIT ONLY ---*/
-
 
 
 /*------------------------------------------*/
