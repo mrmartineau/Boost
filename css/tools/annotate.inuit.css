@@ -1,0 +1,114 @@
+/*------------------------------------*\
+	ANNOTATE.INUIT.CSS
+\*------------------------------------*/
+
+
+
+
+
+/*
+annotate.inuit.css is an inuit.css igloo
+igloos are CSS plugins which extend the inuit.css framework
+They are released under the Apache License, Version 2.0 -- http://www.apache.org/licenses/LICENSE-2.0
+
+@inuitcss
+inuitcss.com
+*/
+
+
+
+
+
+/*------------------------------------*\
+	USAGE
+\*------------------------------------*/
+/*
+Delete this section before go-live:
+
+See http://csswizardry.com/2011/06/annotated-figures-in-html5-and-css/
+*/
+
+
+
+
+
+/*------------------------------------*\
+	ANNOTATE
+\*------------------------------------*/
+/*
+Apply a class of.annotate to any figure you would like, well,.annotate!
+*/
+.annotate{
+	position:relative;
+	/*display:inline-block; If you do not need to support IE7 and below uncomment this line and remove the inline width and height styles on the <figure> in your markup. */
+}
+.annotate img{ /* Set this to stop white-space appearing under the image. */
+	display:block;
+}
+.annotate b{ /* Hide the figcaption's title. */
+	position:absolute;
+	left:-99999px;
+}
+.annotate ul{ /* Set up the canvas for the annotations to sit on. */
+	list-style:none;
+	position:absolute; 
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+.annotate li{
+	display:block;
+	padding:0 5px;
+	/* Give them a width and a line-height suitable for your kind of images. I chose 50px. */
+	width:40px; /* 40px + 5px padding-right  + 5px padding-left = 50px */
+	line-height:50px;
+	position:absolute;
+	white-space:nowrap;
+	text-indent:-99999px; /* Hide the text */
+	cursor:default;
+}
+.annotate:hover li{ /* When we hover the figure show us where the annotations are. */
+	border:1px solid #fff;
+}
+.annotate li:hover{ /* Show the text on hover. */
+	background:#fff;
+	background:rgba(255,255,255,0.75);
+	z-index:2; /* Bring current annotation above others. */
+	/* Remove the width and text-indent to show us our text! */
+	width:auto;
+	text-indent:0;
+	
+	/* A bit o' progressive enhancement */
+	-moz-box-shadow:0 0 5px rgba(0,0,0,0.25);
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.25);
+	box-shadow:0 0 5px rgba(0,0,0,0.25);
+}
+
+/*
+Long-form/multiline annotations.
+*/
+.annotate.long li{
+	width:5px; /* 5px + 10px padding = 15px */
+	height:5px;
+	padding:5px;
+	line-height:1;
+	white-space:normal;
+}
+.annotate.long li:hover{ /* Show the text on hover. */
+	position:relative;
+	width:auto;
+	height:auto;
+	text-indent:0;
+	float:left; /* Make the list item hug its content. */
+}
+.annotate.long li:hover:before{ /* Create a little white arrow pointing to the subject. */
+	content:"";
+	width:0;
+	height:0;
+	border:5px solid #fff;
+	border-color:transparent #fff transparent transparent;
+	position:absolute;
+	top:5px;
+	right:100%;
+}
