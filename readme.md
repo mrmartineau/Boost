@@ -12,18 +12,30 @@ Let's get started
 
 ## CSS
 
-### style.css
-Mostly a mix of the HTML5 Boilerplate & Inuit.css. Watch out for the .keywords (line ~201), .message (line ~362) & the non-semantic but very useful helper classes (line ~674)
+### boost.css
+Mostly a mix of the HTML5 Boilerplate & Inuit.css. Watch out for the .keywords (lines ~201), .message (lines ~362) & the non-semantic but very useful helper classes (lines ~674)
 
-### forms.css
+### tools/1kbgrid.css
+Include this if you want to use the 1kb grid from http://1kbgrid.com
+
+### tools/inuitgrid.css
+Include this if you want to use the Inuit grid
+
+### tools/tinyfluidgrid.css
+Include this if you want to use the Tiny Fluid Grid from http://www.tinyfluidgrid.com/
+
+### tools/nogrid.css
+Include this if you do not want to use one of the grids provided & would like to use your own
+
+### tools/forms.css
 Mostly styles from http://formalize.me with a small amount from Inuit
 
-### handheld.css
+### tools/handheld.css
 Straight from the HTML5 Boilerplate
 
 ## HTML
 1.	Mixture of '320 and up' & HTML5 Boilerplate.
-2.	example.html has almost every 
+2.	example.html has almost every element
 
 ## Javascript 
 
