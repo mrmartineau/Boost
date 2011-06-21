@@ -477,7 +477,7 @@ hhh {
 
 /*------------------------------------------*/
 /*------------------------------------------*/
-/*--- SITE SPECIFIC STYLES ---*/
+/*---        SITE SPECIFIC STYLES        ---*/
 /*------------------------------------------*/
 /*------------------------------------------*/
 /*I'm using the mobile first/'320 and Up' methodology, put your base mobile styles here & then modify them if each particular Media qeury below - http://stuffandnonsense.co.uk/projects/320andup/ */
@@ -505,17 +505,23 @@ html{
 img.left,
 img.right	{ max-width:50%; height:auto; }
 }/*/mediaquery*/
+/*--- end 480> ---*/
+
 
 /*--- 768> ---*/
 @media screen and (min-width: 768px) {
 
 }/*/mediaquery*/
 /*--- end 768> ---*/
+
+
 /*--- 992> ---*/
 @media screen and (min-width: 992px){
 
 }/*/mediaquery*/
 /*--- end 992> ---*/
+
+
 /*--- 1382> ---*/
 @media screen and (min-width: 1382px){
 

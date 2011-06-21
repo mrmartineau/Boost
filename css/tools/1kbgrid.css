@@ -43,6 +43,8 @@ dd{
 img.left,
 img.right	{ max-width:50%; height:auto; }
 }/*/mediaquery*/
+/*--- end 480> ---*/
+
 
 /*--- 768> ---*/
 @media screen and (min-width: 768px) {
@@ -105,6 +107,8 @@ dd{
 }
 }/*/mediaquery*/
 /*--- end 768> ---*/
+
+
 /*--- 992> ---*/
 @media screen and (min-width: 992px){
 /*--- Show Layout ---*/
@@ -132,6 +136,8 @@ body.gridshow{
 .grid_12 { width:940px; }
 }/*/mediaquery*/
 /*--- end 992> ---*/
+
+
 /*--- 1382> ---*/
 @media screen and (min-width: 1382px){
 body.gridshow{
@@ -159,6 +165,8 @@ body.gridshow{
 
 }/*/mediaquery*/
 /*--- end 1382> ---*/
+
+
 /* Clearfix specifically for the 1kbgrid */
 .column:before,.column:after,.row:before,.row:after { content: ""; display: table; }
 .column:after,.row:after { clear: both; }

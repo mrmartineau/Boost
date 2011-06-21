@@ -36,6 +36,8 @@ dd{
 img.left,
 img.right	{ max-width:50%; height:auto; }
 }/*/mediaquery*/
+/*--- end 480> ---*/
+
 
 /*--- 768> ---*/
 @media screen and (min-width: 768px) {
@@ -103,6 +105,8 @@ dd{
 }
 }/*/mediaquery*/
 /*--- end 768> ---*/
+
+
 /*--- 992> ---*/
 @media screen and (min-width: 992px){
 /*--- Show Layout ---*/
@@ -136,6 +140,8 @@ body.gridshow{
 
 }/*/mediaquery*/
 /*--- end 992> ---*/
+
+
 /*--- 1382> ---*/
 @media screen and (min-width: 1382px){
 body.gridshow{
