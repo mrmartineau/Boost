@@ -47,8 +47,5 @@ Mobile related fixes & utilities
 
 
 ### Polyfills
-1.	respond.js - get mediaqueries working in older browsers
-2.	imgsizer.js - better responsive images in Internet Explorer (Find out more: )
-3.	dd_belatedpng.js - transparent png support in IE6
-
-
+1.	imgsizer.js - better responsive images in Internet Explorer (Find out more: http://unstoppablerobotninja.com/entry/fluid-images/)
+2.	dd_belatedpng.js - transparent png support in IE6
