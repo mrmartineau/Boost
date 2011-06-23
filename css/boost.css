@@ -1,4 +1,4 @@
-/*------------------------------------------*/
+s/*------------------------------------------*/
 /*--- BASE & RESET STYLES ---*/
 /*------------------------------------------*/
 html, body, div, span, object, iframe,
@@ -176,7 +176,7 @@ ol ul{
 }
 /*--- No margins on lists ---*/
 .ui_list,
-.ui_list{
+.ui_list .ui_list{
 		margin: 0 0 1.5em;
 }
 .ui_list ul,
