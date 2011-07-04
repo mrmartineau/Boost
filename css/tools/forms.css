@@ -10,6 +10,7 @@ label{
 		display:block;
 		cursor:pointer;
 }
+label, input[type=button], input[type=submit], button { cursor: pointer }
 label:after,
 label::after{
 		content:":";
@@ -49,7 +50,31 @@ textarea{
 fieldset > :last-child{
 		margin:0;
 }
-
+textarea { overflow: auto; }
+.ie6 legend, .ie7 legend { margin-left: -7px; }
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+input:valid, textarea:valid	  {
+-webkit-border-radius: 1px;
+ -khtml-border-radius: 1px;
+   -moz-border-radius: 1px;
+		border-radius: 1px;
+   -moz-box-shadow: 0 0 5px green;
+-webkit-box-shadow: 0 0 5px green;
+		box-shadow: 0 0 5px green;
+}
+input:invalid, textarea:invalid {
+-webkit-border-radius: 1px;
+ -khtml-border-radius: 1px;
+   -moz-border-radius: 1px;
+		border-radius: 1px;
+   -moz-box-shadow: 0 0 5px red;
+-webkit-box-shadow: 0 0 5px red;
+		box-shadow: 0 0 5px red;
+}
 /*------------------------------------------*/
 /*--- WIDTHS ---*/
 /*------------------------------------------*/
