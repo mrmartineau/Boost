@@ -14,10 +14,6 @@ html{
 		-webkit-text-size-adjust:none;
 		margin: 0 auto;
 }
-#logo{
-		margin:0 auto 1.5em;
-}
-
 /*--- LISTS ---*/
 ul,
 ol{
