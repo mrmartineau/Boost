@@ -51,7 +51,6 @@ pre {
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 ::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
 ::selection { background:#FF5E99; color:#fff; text-shadow: none; }
-button {  width: auto; overflow: visible; }
 q:before,q:after{ content:''; }
 
 /*------------------------------------------*/
@@ -99,10 +98,10 @@ h6{
 p{
 	margin-bottom:1.5em;
 }
-p+p{
+/*p+p{
 	text-indent:2em;
 	margin-top:-1.5em;
-}
+}*/
 small { font-size: 85%; }
 sub, sup { font-size: 75%; line-height: 0; position: relative; }
 sup {	top: -0.5em; }
@@ -133,8 +132,8 @@ a:focus {
 		text-shadow: #61a0ff 0 0 7px;
 		outline:none;
 }
-.more-link:after,
-.more-link::after{
+.more_link:after,
+.more_link::after{
 		content:" »";
 }
 /*------------------------------------------*/
@@ -513,12 +512,12 @@ a {
 		transition: all 0.12s ease-in-out;
 }
 /*Border Radius*/
-hhh {
+radius {
 -webkit-border-radius: 5px;
  -khtml-border-radius: 5px;
    -moz-border-radius: 5px;
 		border-radius: 5px;
-	}
+}
 
 /*------------------------------------------*/
 /*------------------------------------------*/
@@ -529,26 +528,18 @@ hhh {
 /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
 /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 
+
+
+
 /*-------------------------------------------*/
 /*--- Media queries for responsive design ---*/
 /*-------------------------------------------*/
 /*--- 480> ---*/
 @media screen and (min-width: 480px) {
-html{
-		font-size:1.125em;
-}
-#container{
-		padding:20px;
-		width:auto;
-		-webkit-text-size-adjust:none;
-		margin: 0 auto;
-}
+
 #logo{
 		margin:0 auto 1.5em;
 }
-/*--- IMAGES ---*/
-img.left,
-img.right	{ max-width:50%; height:auto; }
 }/*/mediaquery*/
 /*--- end 480> ---*/
 
