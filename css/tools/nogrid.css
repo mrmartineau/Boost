@@ -5,7 +5,6 @@
 /*--- 480> ---*/
 @media screen and (min-width: 480px) {
 #container{
-		padding:20px;
 		width:auto;
 		-webkit-text-size-adjust:none;
 		margin: 0 auto;
