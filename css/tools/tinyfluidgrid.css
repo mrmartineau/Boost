@@ -20,16 +20,7 @@
 }
 /*--- 480> ---*/
 @media screen and (min-width: 480px) {
-
-/*--- Show Layout ---*/
-body.gridshow{
-		background:none;
-}
-html{
-		font-size:1.125em;
-}
 #container{
-		padding:20px;
 		width:auto;
 		-webkit-text-size-adjust:none;
 		margin: 0 auto;

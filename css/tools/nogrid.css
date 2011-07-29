@@ -4,14 +4,6 @@
 }
 /*--- 480> ---*/
 @media screen and (min-width: 480px) {
-
-/*--- Show Layout ---*/
-body.gridshow{
-		background:none;
-}
-html{
-		font-size:1.125em;
-}
 #container{
 		padding:20px;
 		width:auto;
@@ -44,11 +36,6 @@ img.right	{ max-width:50%; height:auto; }
 
 /*--- 768> ---*/
 @media screen and (min-width: 768px) {
-/*--- Show Layout ---*/
-body.gridshow{
-		background:url(http://griddle.it/720-16-20) top center repeat-y,
-		url(../img/css/baseline.gif) 0 4px #fff;
-}
 #container {
 		width:720px;
 }
@@ -74,11 +61,6 @@ dd{
 
 /*--- 992> ---*/
 @media screen and (min-width: 992px){
-/*--- Show Layout ---*/
-body.gridshow{
-		background:url(http://griddle.it/960-12-20) top center repeat-y,
-		url(../img/css/baseline.gif) 0 4px #fff;
-}
 #container {
 		width:960px;
 }
@@ -89,10 +71,6 @@ body.gridshow{
 
 /*--- 1382> ---*/
 @media screen and (min-width: 1382px){
-body.gridshow{
-		background:url(http://griddle.it/1200-12-20) top center repeat-y,
-		url(../img/css/baseline.gif) 0 4px #fff;
-}
 #container {
 		width:1200px;
 }
