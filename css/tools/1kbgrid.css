@@ -8,16 +8,7 @@
 }
 /*--- 480> ---*/
 @media screen and (min-width: 480px) {
-
-/*--- Show Layout ---*/
-body.gridshow{
-		background:none;
-}
-html{
-		font-size:1.125em;
-}
 #container{
-		padding:20px;
 		width:auto;
 		-webkit-text-size-adjust:none;
 		margin: 0 auto;
@@ -47,7 +38,7 @@ img.right	{ max-width:50%; height:auto; }
 @media screen and (min-width: 768px) {
 /*--- Show Layout ---*/
 body.gridshow{
-		background:url(http://griddle.it/720-16-20) top center repeat-y,
+		background:url(http://griddle.it/720-12-20) top center repeat-y,
 		url(../img/css/baseline.gif) 0 4px #fff;
 }
 #container,
