@@ -39,6 +39,7 @@ textarea{
 }
 .check-label{
 		display:inline;
+		vertical-align:middle;
 }
 .check-label:after,
 .check-label::after{
@@ -52,8 +53,7 @@ fieldset > :last-child{
 }
 textarea { overflow: auto; }
 .ie6 legend, .ie7 legend { margin-left: -7px; }
-input[type="radio"] { vertical-align: text-bottom; }
-input[type="checkbox"] { vertical-align: bottom; }
+input[type="radio"], input[type="checkbox"] { vertical-align: text-bottom; }
 .ie7 input[type="checkbox"] { vertical-align: baseline; }
 .ie6 input { vertical-align: text-bottom; }
 label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
@@ -118,6 +118,8 @@ textarea {
 		margin: 0;
 		vertical-align: middle;
 }
+
+button {  width: auto; overflow: visible; }
 a.button,
 button,
 input[type="reset"],
