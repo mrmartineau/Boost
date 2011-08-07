@@ -1,6 +1,10 @@
-/*------------------------------------------*/
-/* INUIT.css form styles */
-/*------------------------------------------*/
+/* @override 
+	http://prometheus.local/admin/css/tools/forms.css?v=2
+	http://boost/css/tools/forms.css?v=2
+*/
+
+form {
+}
 fieldset{
 		padding:10px;
 		border:1px solid #ccc;
@@ -9,16 +13,12 @@ fieldset{
 label{
 		display:block;
 		cursor:pointer;
+		position: relative;
 }
 label, input[type=button], input[type=submit], button { cursor: pointer }
 label:after,
 label::after{
 		content:":";
-}
-input,
-textarea{
-		font-family:inherit;
-		font-size:1em;
 }
 [placeholder]{
 		cursor:pointer;
@@ -27,22 +27,61 @@ textarea{
 [placeholder]:focus{
 		cursor:text;
 }
-.check-list{
-		width:100%;
-		overflow:hidden;
+/*------------------------------------------*/
+/*--- LAYOUT ---*/
+/*------------------------------------------*/
+.form_items {
 		list-style:none;
 		margin:0 0 1.5em 0;
 }
-.check-list li{
-		width:25%;
-		float:left;
+.form_items li,
+.form_item {
+		margin-bottom: 15px;
+		padding: 14px;
+-webkit-border-radius: 5px;
+ -khtml-border-radius: 5px;
+   -moz-border-radius: 5px;
+		border-radius: 5px;
 }
-.check-label{
+.form_items li:hover,
+.form_item:hover {
+		background-color: #f6f6f6;
+}
+.focused {
+		background-color: #eee;
+}
+.form_items.floated li {
+		display: inline-block;
+		margin-bottom: 5px;
+}
+.form_items.inlined {
+		text-align: right;
+}
+.form_items.inlined > li {
+		display: inline;
+}
+/*--- RADIO/CHECKBOX HORIZONTAL LIST ---*/
+.form_items.inlined .check_list {
+		display: inline;
+}
+.check_list {
+		list-style:none;
+		margin:0;
+}
+.check_list li{
+		float:left;
+		margin-right: 15px;
+		margin-bottom: 0;
+}
+.check_list input {
+		margin-right: 5px;
+}
+.check_list label{
 		display:inline;
 		vertical-align:middle;
 }
-.check-label:after,
-.check-label::after{
+.check_list label:after,
+.check_list label::after{
 		content:normal;
 }
 .button{
@@ -66,6 +105,48 @@ input:invalid, textarea:invalid {
    -moz-box-shadow: 0 0 5px red;
 -webkit-box-shadow: 0 0 5px red;
 		box-shadow: 0 0 5px red;
+}
+/*--- FORM NOTES ---*/
+.form_note {
+		position: relative;
+-webkit-border-radius: 10px;
+ -khtml-border-radius: 10px;
+   -moz-border-radius: 10px;
+		border-radius: 10px;
+		background-color: #cfcfcf;
+		display: inline-block;
+		width: 20px;
+		text-align: center;
+		color: white;
+		height: 20px;
+		line-height: 20px;
+		float: right;
+		font-weight: bold;
+		font-size: 14px;
+}
+.form_note:hover{
+		background-color: #888;
+}
+.form_note span {
+		position: absolute;
+		display: none;
+		background-color: #f7f7f7;
+		color: #808080;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 11px;
+-webkit-border-radius: 3px;
+ -khtml-border-radius: 3px;
+   -moz-border-radius: 3px;
+		border-radius: 3px;
+		text-align: right;
+		z-index: 2000;
+		width: 125px;
+		right: 25px;
+		top: -1px;
+}
+.form_note:hover span {
+		display: inline;
 }
 /*------------------------------------------*/
 /*--- WIDTHS ---*/
@@ -117,6 +198,8 @@ select,
 textarea {
 		margin: 0;
 		vertical-align: middle;
+		font-family:inherit;
+		font-size:1em;
 }
 
 button {  width: auto; overflow: visible; }
@@ -149,13 +232,13 @@ input[type="button"] {
 		text-decoration: none;
 		text-shadow: 0 1px rgba(255, 255, 255, .75);
 		cursor: pointer;
-		margin-bottom: 20px;
 		line-height: 21px;
 		width: auto;
 		font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		/* IE7 */
 		*padding-top: 2px;
 		*padding-bottom: 0px;
+		padding: 0 15px 1px;
 }
 a.button:hover, 
 button:hover,
@@ -221,15 +304,15 @@ input[type="text"],
 input[type="time"],
 input[type="url"],
 input[type="week"] {
-		-webkit-appearance: none;
-		-moz-border-radius: 0;
-		-webkit-border-radius: 0;
-		border-radius: 0;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
+-webkit-appearance: none;
+   -moz-border-radius: 1px;
+-webkit-border-radius: 1px;
+		border-radius: 1px;
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
 		box-sizing: border-box;
-		-moz-background-clip: padding;
-		-webkit-background-clip: padding;
+   -moz-background-clip: padding;
+-webkit-background-clip: padding;
 		background-clip: padding-box;
 		background-color: #fff;
 		border: 1px solid;
@@ -246,7 +329,13 @@ input[type="week"] {
 		*padding-bottom: 1px;
 		*height: auto;
 }
-
+input[type=search] {
+		height: 28px;
+   -moz-border-radius: 30px;
+-webkit-border-radius: 30px;
+		border-radius: 30px;
+		padding-left: 10px;
+}
 /*
 		Separate rule for Firefox.
 		Separate rule for IE, too.
@@ -332,13 +421,14 @@ select[size],
 select[multiple] {
 		height: auto;
 }
-
+.hidden_submit {
+		position: absolute;
+		left: -99999em;
+}
 /* Tweaks for Safari + Chrome. */
 @media (-webkit-min-device-pixel-ratio: 0) {
 		select {
-	background-image: url(../css/img/forms/select_arrow.gif);
-	background-repeat: no-repeat;
-	background-position: right center;
+	background: #fff url(../../img/css/forms/select_arrow.gif) no-repeat right center;
 	padding-right: 20px;
 		}
 
@@ -360,6 +450,12 @@ optgroup {
 		color: #000;
 		font-style: normal;
 		font-weight: normal;
+}
+/*--- IMAGE UPLOAD RESULT ---*/
+#image_upload_result {
+		padding: 10px;
+		margin-top: 10px;
+		border: 1px solid #eee;
 }
 /*------------------------------------------*/
 /* IE6 */
@@ -430,4 +526,30 @@ optgroup {
 
 .ie6_input_disabled {
 		background: #eee;
+}
+/*--- CLEARFIX ---*/
+.group:after,
+.form_items:after,
+.check_list:after
+ { 
+  content: "."; 
+  display: block; 
+  height: 0; 
+  clear: both; 
+  visibility: hidden; 
+}
+.group,
+.form_items,
+.check_list { 
+  display: inline-block;  
+}
+* html .group,
+* html .form_items,
+* html .check_list {  
+  height: 1%;  
+} /* Hides from IE-mac \*/
+.group,
+.form_items,
+.check_list {  
+  display: block;  
 }
