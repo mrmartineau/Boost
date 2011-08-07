@@ -137,12 +137,118 @@ a:focus {
 		content:" »";
 }
 /*------------------------------------------*/
+/*--- NAV ---*/
+/*------------------------------------------*/
+.navi.centred,
+.navi.centered{
+		text-align:center;
+}
+.navi.centred li,
+.navi.centered li{
+		display:inline;
+		float:none;
+}
+.navi.centred a,
+.navi.centered a{
+		display:inline-block;
+}
+.navi.horiz,
+.navi.vert {
+		overflow: hidden;
+		border: 1px solid #dcdcdc;
+		border-radius:3px;
+}
+.navi.horiz li {
+		float: left;
+}
+.navi.horiz a {
+		border-right: 1px solid #dcdcdc;
+}
+.navi.horiz a,
+.navi.vert a {
+		display: block;
+		padding: 5px 10px;
+		background: #f5f5f5;
+}
+.navi.vert a {
+		padding-left: 10px;
+		border-bottom: 1px solid #ddd;
+}
+.navi.horiz li:last-child a,
+.navi.vert li:last-child a{
+		border: none;
+}
+.navi.horiz,
+.navi.vert,
+.tabs a {
+		background: #f5f5f5;
+}
+.navi.horiz a,
+.navi.vert a,
+.tabs a {
+		font-size: .9em;
+}
+/*--- TABBED NAV ---*/
+ul.tabs {
+		display: block;
+		margin: 0 0 1.5em 0;
+		padding: 0;
+		border-bottom: solid 1px #ddd; }
+ul.tabs li {
+		display: block;
+		width: auto;
+		height: 30px;
+		padding: 0;
+		float: left;
+		margin-bottom: 0; }
+ul.tabs li a {
+		display: block;
+		text-decoration: none;
+		width: auto;
+		height: 29px;
+		padding: 0px 20px;
+		line-height: 30px;
+		border: solid 1px #ddd;
+		border-width: 1px 0 0 1px;
+		margin: 0; }
+ul.tabs li a.active {
+		background: #fff;
+		height: 30px;
+		position: relative;
+		top: -4px;
+		padding-top: 4px;
+		border-right-width: 1px;
+		margin: 0 -1px 0 0;
+		color: #111;
+   -moz-border-radius-topleft: 3px;
+   -moz-border-radius-topright: 3px;
+-webkit-border-top-left-radius: 3px;
+-webkit-border-top-right-radius: 3px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px; }
+ul.tabs li:first-child a {
+   -moz-border-radius-topleft: 2px;
+-webkit-border-top-left-radius: 2px;
+		border-top-left-radius: 2px; }
+ul.tabs li:last-child a {
+		border-width: 1px 1px 0 1px;
+   -moz-border-radius-topright: 2px;
+-webkit-border-top-right-radius: 2px;
+		border-top-right-radius: 2px; }
+/*------------------------------------------*/
 /*--- LISTS ---*/
 /*------------------------------------------*/
 ol { list-style-type: decimal; }
 nav ul,
 nav li,
-.ui_list { margin: 0; list-style:none; list-style-image: none; }
+.ui_list,
+.navi.horiz,
+.navi.vert,
+ul.floated { margin: 0; list-style:none; list-style-image: none;
+}
+.navi.vert {
+		margin-bottom: 1.5em;
+}
 ul,
 ol{
 		margin:0 0 1.5em 45px;
@@ -164,6 +270,7 @@ ol ul{
 .ui_list ul{
 		margin:0 0 0 45px;
 }
+/*--- DEFINITION LISTS ---*/
 dd{
 		margin-left:45px;
 }
@@ -177,7 +284,29 @@ dt:after,
 dt::after{
 		content:":";
 }
-/* Create a list of keywords by adding a single class to a <ul>: */
+/*--- FLOATED LISTS ---*/
+.floated li {
+		float: left;
+		display: inline-block;
+}
+.floated.half li {
+		/* 50% width with a bit of padding */
+		width: 46%;
+		padding: 2%;
+}
+.floated.thirds.nopad li {
+		/* 33% width */
+		width: 33.3333333333333333%;
+}
+.floated.thirds li {
+		/* 33% width with padding */
+		width: 29%;
+		padding: 1.2% 2% 2%;
+}
+.floated li:hover {
+		background-color: #f6f6f6;
+}
+/*--- KEYWORDS - Create a list of keywords by adding a single class to a <ul>: ---*/
 .keywords{
 		list-style:none;
 		margin:0 0 1.5em;
@@ -197,7 +326,7 @@ dt::after{
 .keywords li:last-of-type::after{
 		content:".";
 }
-/* Create a breadcrumb list by adding a single class to a <ul>: */
+/*--- BREADCRUMBS - Create a breadcrumb list by adding a single class to a <ul>: ---*/
 .breadcrumb{
 	margin:0;
 	list-style:none;
@@ -272,6 +401,25 @@ pre{
 		overflow:auto;
 		margin-bottom:1.5em;
 		line-height:24px; /* Having to define explicit pixel values :( */
+		padding: 10px;
+		line-height: 1.2;
+		overflow-x: scroll;
+-webkit-box-shadow: inset 0px 4px 7px rgba(0,0,0,.4);
+   -moz-box-shadow: inset 0px 4px 7px rgba(0,0,0,.4);
+	 -o-box-shadow: inset 0px 4px 7px rgba(0,0,0,.4);
+		box-shadow: inset 0px 4px 7px rgba(0,0,0,.4);
+-webkit-border-radius: 4px;
+ -khtml-border-radius: 4px;
+   -moz-border-radius: 4px;
+		border-radius: 4px;
+		margin-bottom: 20px;
+		margin-top: 10px;
+		background: #7E7E7E no-repeat;
+}
+pre code {
+		color:#fff;
+		line-height:1.5;
+		
 }
 code{
 		line-height:1;
@@ -331,55 +479,6 @@ video{
 /*------------------------------------------*/
 /*--- TABS ---*/
 /*------------------------------------------*/
-ul.tabs {
-		display: block;
-		margin: 0 0 20px 0;
-		padding: 0;
-		border-bottom: solid 1px #ddd; }
-ul.tabs li {
-		display: block;
-		width: auto;
-		height: 30px;
-		padding: 0;
-		float: left;
-		margin-bottom: 0; }
-ul.tabs li a {
-		display: block;
-		text-decoration: none;
-		width: auto;
-		height: 29px;
-		padding: 0px 20px;
-		line-height: 30px;
-		border: solid 1px #ddd;
-		border-width: 1px 0 0 1px;
-		margin: 0;
-		background: #f5f5f5;
-		font-size: 13px; }
-ul.tabs li a.active {
-		background: #fff;
-		height: 30px;
-		position: relative;
-		top: -4px;
-		padding-top: 4px;
-		border-right-width: 1px;
-		margin: 0 -1px 0 0;
-		color: #111;
-   -moz-border-radius-topleft: 2px;
--webkit-border-top-left-radius: 2px;
-		border-top-left-radius: 2px;
-   -moz-border-radius-topright: 2px;
--webkit-border-top-right-radius: 2px;
-		border-top-right-radius: 2px; }
-ul.tabs li:first-child a {
-   -moz-border-radius-topleft: 2px;
--webkit-border-top-left-radius: 2px;
-		border-top-left-radius: 2px; }
-ul.tabs li:last-child a {
-		border-width: 1px 1px 0 1px;
-   -moz-border-radius-topright: 2px;
--webkit-border-top-right-radius: 2px;
-		border-top-right-radius: 2px; }
-
 ul.tabs_content { margin: 0; display: block; }
 ul.tabs_content > li { display:none; }
 ul.tabs_content > li.active { display: block; }
@@ -468,38 +567,7 @@ ul.message{
 		border-color:#d8d566;
 		background:url(../img/css/icons/warning.png) 10px center no-repeat #fef8c4;
 }
-/*------------------------------------------*/
-/*--- NAV ---*/
-/*------------------------------------------*/
-#nav{
-		list-style:none;
-		width:100%;
-		overflow:hidden;
-		margin:0 0 1.5em 0;
-}
-#nav li{
-		float:left;
-}
-#nav a{
-		display:block;
-}
-/*
-http://csswizardry.com/2011/01/create-a-centred-horizontal-navigation/
-Add a class of centred/centered to create a centred nav.
-*/
-#nav.centred,
-#nav.centered{
-		text-align:center;
-}
-#nav.centred li,
-#nav.centered li{
-		display:inline;
-		float:none;
-}
-#nav.centred a,
-#nav.centered a{
-		display:inline-block;
-}
+
 
 /*------------------------------------------*/
 /*--- CSS3 ---*/
@@ -512,7 +580,7 @@ a {
 		transition: all 0.12s ease-in-out;
 }
 /*Border Radius*/
-radius {
+.floated li {
 -webkit-border-radius: 5px;
  -khtml-border-radius: 5px;
    -moz-border-radius: 5px;
@@ -582,9 +650,13 @@ radius {
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible { visibility: hidden; }
 /* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations. nicolasgallagher.com/micro-clearfix-hack/ */
-.group:before, .group:after { content: ""; display: table; }
-.group:after { clear: both; }
-.group { zoom: 1; }
+.group:before, .group:after,
+.navi:before,.navi:after,
+ul.floated:before,ul.floated:after { content: ""; display: table; }
+.group:after,
+.navi:after,
+ul.floated:after { clear: both; }
+.group,.navi,ul.floated { zoom: 1; }
 
 .left	{ float:left; }
 .right	{ float:right; }
