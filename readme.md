@@ -28,7 +28,7 @@ Include this if you want to use the Tiny Fluid Grid from http://www.tinyfluidgri
 Include this if you do not want to use one of the grids provided & would like to use your own
 
 ### tools/forms.css
-Mostly styles from http://formalize.me with a small amount from Inuit
+Mostly styles from http://formalize.me with a small amount from Inuit & a bunch from me!
 
 ### tools/handheld.css
 Straight from the HTML5 Boilerplate
@@ -41,9 +41,6 @@ Straight from the HTML5 Boilerplate
 
 ### script.js
 Fix for orientation change glitch in iOS
-
-### helper.js
-Mobile related fixes & utilities
 
 
 ### Polyfills
