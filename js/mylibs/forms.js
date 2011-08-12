@@ -156,8 +156,8 @@ var FORMALIZE = (function($, window, document, undefined) {
 jQuery(document).ready(function() {
 	FORMALIZE.go();
 	$("input,textarea").focus(function() {
-		$(this).parent().addClass('focused');
+		$(this).parent('p,li,div').addClass('focused');
 	}).blur(function() {
-		$(this).parent().removeClass('focused');
+		$(this).parent('p,li,div').removeClass('focused');
 	});
 });
