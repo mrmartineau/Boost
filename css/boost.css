@@ -10,14 +10,14 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section { display: block }
 blockquote, q { quotes: none }
 blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
@@ -30,24 +30,23 @@ table { border-collapse: collapse; border-spacing: 0; }
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+/*--- HTML5 MEDIA ---*/
+audio,canvas,video {display: inline-block;*display: inline;*zoom: 1;}
+audio:not([controls]) {display: none;}
 /*--- MINIMAL BASE STYLES ---*/
 html{
-	overflow-y:scroll;
+		font-size: 100%; /* 1 */
+	    overflow-y: scroll; /* 2 */
+	    -webkit-text-size-adjust: 100%; /* 3 */
+	    -ms-text-size-adjust: 100%; /* 3 */
 }
 body{
-	min-height:100%;
-	padding:10px;
-	margin:0 auto;
+		min-height:100%;
+		padding:10px;
+		margin:0 auto;
 }
 strong, th { font-weight: bold; }
 td { vertical-align: top; }
-pre {
-		padding: 15px;
-		white-space: pre;
-		white-space: pre-wrap;
-		white-space: pre-line;
-		word-wrap: break-word;
-}
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 ::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
 ::selection { background:#FF5E99; color:#fff; text-shadow: none; }
@@ -106,6 +105,9 @@ small { font-size: 85%; }
 sub, sup { font-size: 75%; line-height: 0; position: relative; }
 sup {	top: -0.5em; }
 sub {	bottom: -0.25em; }
+dfn { font-style: italic; }
+
+
 /*------------------------------------------*/
 /*--- LINK STYLES ---*/
 /*------------------------------------------*/
@@ -130,7 +132,7 @@ a:active, a:focus {
 }
 a:focus {
 		text-shadow: #61a0ff 0 0 7px;
-		outline:none;
+		outline: thin dotted;
 }
 .more_link:after,
 .more_link::after{
@@ -367,23 +369,16 @@ blockquote .source{
 }
 
 /*--- GENERAL ---*/
-q,
-i,
-em,
-cite{
+q,i,em,cite{
 		font-style:italic;
 		font-weight:inherit;
 }
-b,
-strong{
+b,strong{
 		font-weight:bold;
 		font-style:inherit;
 }
-mark{
-		background:#ffc;
-}
-s,
-del{
+mark { background: #ff0; color: #000; }
+s,del{
 		text-decoration:line-through;
 }
 small{
@@ -392,11 +387,7 @@ small{
 }
 
 /*--- CODE ---*/
-pre,
-code{
-		font-family:monospace;
-		font-size:1em;
-}
+pre, code{ font-family:monospace;font-size:1em; }
 pre{
 		overflow:auto;
 		margin-bottom:1.5em;
@@ -416,32 +407,23 @@ pre{
 		margin-top: 10px;
 		background: #7E7E7E no-repeat;
 }
-pre code {
-		color:#fff;
-		line-height:1.5;
-		
-}
-code{
-		line-height:1;
+pre code { color:#fff; line-height:1.5; }
+code{ line-height:1; }
+pre,code,kbd,samp {
+	    font-family: monospace, serif;
+	    _font-family: 'courier new', monospace;
+	    font-size: 1em;
 }
 /*------------------------------------------*/
-/*--- IMAGES ---*/
+/*--- EMBEDDED CONTENT ---*/
 /*------------------------------------------*/
-img{
-		font-style:italic;
-		color:#c00;
-}
-img.left	{ margin:0 20px 0 0; }
-img.right	{ margin:0 0 0 20px; }
+img{ font-style:italic;	color:#c00; border: 0; -ms-interpolation-mode: bicubic; }
+img.left { margin:0 20px 0 0; }
+img.right { margin:0 0 0 20px; }
+svg:not(:root) { overflow: hidden; }
 
 /*--- FLASH/VIDEO ---*/
-img,
-object,
-embed,
-video{
-		max-width:100%;
-		height:auto;
-}
+img,object,embed,video{	max-width:100%; height:auto; }
 
 
 /*------------------------------------------*/
@@ -632,24 +614,21 @@ a {
 }/*/mediaquery*/
 /*--- end 1382> ---*/
 
-
 /*------------------------------------------*/
 /*--- Non-semantic helper classes ---*/
 /*------------------------------------------*/
 /* For image replacement */
-.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
-/* Hide for both screenreaders and browsers:
-   css-discuss.incutio.com/wiki/Screenreader_Visibility */
-.hidden { display: none; visibility: hidden; }
-/* Hide only visually, but have it available for screenreaders: by Jon Neal.
-  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible { visibility: hidden; }
-/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations. nicolasgallagher.com/micro-clearfix-hack/ */
+/* Contain floats: h5bp.com/q */ 
 .group:before, .group:after,
 .navi:before,.navi:after,
 ul.floated:before,ul.floated:after { content: ""; display: table; }
@@ -666,8 +645,6 @@ ul.floated:after { clear: both; }
 .text-right		{ text-align:right; }
 .text-center,
 .text-centre	{ text-align:center; }
-
-
 
 /*------------------------------------------*/
 /*--- Print styles ---*/
@@ -687,26 +664,14 @@ ul.floated:after { clear: both; }
 	}
 	/* A list of things you don’t want printing. */
 	#nav,
-	#footer{
-		display:none;
-	}
-	#logo img{
-		position:static;
-	}
-	/*--- Linearise ---*/
-	.grid{
-		width:auto;
-		float:none;
-		clear:both;
-	}
-	img{
-		max-width:100%;
-		height:auto;
-	}
+	#footer{ display:none; }
+	#logo img{ position:static;	}
+	/*--- Linearise ---*/ .column{ width:auto; float:none; }
+	img{ max-width:100%;height:auto; }
 	a, a:visited { color: #444 !important; text-decoration: underline; }
 	a[href]:after { content: " (" attr(href) ")"; font-size:smaller;}
 	abbr[title]:after { content: " (" attr(title) ")"; font-size:smaller;}
-	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }	/* Don't show links for images, or javascript/internal links */
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 	/* Don't show links for images, or javascript/internal links */
 	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
 	thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
 	tr, img { page-break-inside: avoid; }

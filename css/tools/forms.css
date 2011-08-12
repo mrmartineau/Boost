@@ -3,30 +3,17 @@
 	http://boost/css/tools/forms.css?v=2
 */
 
-form {
-}
-fieldset{
-		padding:10px;
-		border:1px solid #ccc;
-		margin-bottom:1.5em;
-}
+form { margin: 0; }
+fieldset{ padding:10px; border:1px solid #ccc; margin-bottom:1.5em; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
 label{
 		display:block;
 		cursor:pointer;
 		position: relative;
 }
-label, input[type=button], input[type=submit], button { cursor: pointer }
-label:after,
-label::after{
-		content:":";
-}
-[placeholder]{
-		cursor:pointer;
-}
-[placeholder]:active,
-[placeholder]:focus{
-		cursor:text;
-}
+label, input[type=button], input[type=submit], button, input[type="reset"], [placeholder] { cursor: pointer }
+label:after, label::after{ content:":"; }
+[placeholder]:active, [placeholder]:focus{ cursor:text; }
 /*------------------------------------------*/
 /*--- LAYOUT ---*/
 /*------------------------------------------*/
@@ -84,9 +71,6 @@ label::after{
 .check_list label::after{
 		content:normal;
 }
-.button{
-		cursor:pointer;
-}
 fieldset > :last-child{
 		margin:0;
 }
@@ -95,7 +79,7 @@ textarea { overflow: auto; }
 input[type="radio"], input[type="checkbox"] { vertical-align: text-bottom; }
 .ie7 input[type="checkbox"] { vertical-align: baseline; }
 .ie6 input { vertical-align: text-bottom; }
-label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; }
+label, input[type="button"], input[type="submit"], input[type="image"], button, .button { cursor: pointer; }
 input:valid, textarea:valid	  {}
 input:invalid, textarea:invalid {
 -webkit-border-radius: 1px;
@@ -172,10 +156,7 @@ input:invalid, textarea:invalid {
 .input_full {
 		width: 100%;
 }
-/*
-		Added via JS to <textarea> and class="input_full".
-		Applies only to IE7. Other browsers don't need it.
-*/
+/* Added via JS to <textarea> and class="input_full". Applies only to IE7. Other browsers don't need it. */
 .input_full_wrap {
 		display: block;
 		padding-right: 8px;
@@ -183,15 +164,9 @@ input:invalid, textarea:invalid {
 /*------------------------------------------*/
 /*--- UI CONSISTENCY ---*/
 /*------------------------------------------*/
-::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-}
-
-input[type="search"]::-webkit-search-decoration {
-		display: none;
-}
-
+::-moz-focus-inner {border: 0;padding: 0;}
+input[type="search"]::-webkit-search-decoration {display: none;}
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 input,
 button,
 select,
@@ -202,7 +177,7 @@ textarea {
 		font-size:1em;
 }
 
-button {  width: auto; overflow: visible; }
+button { width: auto; overflow: visible; }
 a.button,
 button,
 input[type="reset"],
@@ -231,7 +206,6 @@ input[type="button"] {
 		font-weight: bold;
 		text-decoration: none;
 		text-shadow: 0 1px rgba(255, 255, 255, .75);
-		cursor: pointer;
 		line-height: 21px;
 		width: auto;
 		font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
