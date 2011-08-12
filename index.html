@@ -64,23 +64,17 @@
 		</section><!-- /main -->
 		
 		<footer role="contentinfo">
-			<p class="text-centre">a blend of <a href="http://twitter.com/h5bp">@h5bp</a>, <a href="http://stuffandnonsense.co.uk/projects/320andup/">'320 and up'</a> by <a href="http://twitter.com/malarkey">@malarkey</a>, <a href="http://twitter.com/inuitcss">@inuitcss</a>, <a href="http://formalize.me/">formalize</a> by <a href="http://twitter.com/nathansmith">@nathansmith</a> - Boost  by <a href="http://twitter.com/MrMartineau">@MrMartineau</a></p>
+			
 		</footer><!-- /footer -->
 	</div><!--!/#container -->
 		<!-- !Javascript - at the bottom for fast page loading -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script>
-			window.jQuery || document.write("<script src='js/libs/jquery.min.js'>\x3C/script>")
-		</script>
-		<!--scripts concatenated and minified via ant build script -->
-			<script src="js/plugins.js?v=1"></script>
-			<script src="js/script.js?v=1"></script>
-			<!-- Mobile specific, remove if not needed -->
-			<script src="js/mylibs/helper.js"></script>
-		<!-- end concatenated and minified scripts-->
+		<script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
 
-		<script>
-			// iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
+		<script src="js/plugins.js?v=1"></script>
+		<script src="js/script.js?v=1"></script>
+
+		<script>// iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
 			MBP.scaleFix();
 		</script>
 
@@ -99,13 +93,20 @@
 			<script>DD_belatedPNG.fix("img, .png_bg");</script>
 		<![endif]-->
 
-		<!-- Asynchronous Google Analytics: mathiasbynens.be/notes/async-analytics-snippet -->
 		<script>
-			var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-			g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-			s.parentNode.insertBefore(g,s)}(document,"script"));
+			window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+		    Modernizr.load({
+				load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+		    });
 		</script>
+
+		<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+			 chromium.org/developers/how-tos/chrome-frame-getting-started -->
+		<!--[if lt IE 7 ]>
+		<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+		<script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+		<![endif]-->
+
 		<noscript>Your browser does not support JavaScript. Please turn it on for the best experience.</noscript>
 		</body>
 	</html>
