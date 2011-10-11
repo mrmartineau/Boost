@@ -37,7 +37,7 @@ var Site = window.Site || {};
 		//			<p>Lorem ipsum</li>
 		//	</ul>
 		var tabs = $('ul.tabs');
-		
+
 		tabs.each(function (i) {
 			//Get all tabs
 			var tab = $(this).find('> li > a');
@@ -48,13 +48,13 @@ var Site = window.Site || {};
 					$('#' + newTabid).each(function (i) {
 						$(this).attr('aria-labelledby', newTabid + '_tab');
 					});
-		
+
 					$(this).attr({
 						role: 'tab',
 						id: newTabid + '_tab'
 					}).attr('aria-describedby', newTabid);
 				}
-		
+
 			}).click(function (e) {
 				var contentLocation = $(this).attr('href');
 				if (contentLocation.charAt(0) === "#") {
