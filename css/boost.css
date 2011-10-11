@@ -9,7 +9,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+time, mark, audio, vid	eo {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -36,9 +36,9 @@ audio:not([controls]) {display: none;}
 /*--- MINIMAL BASE STYLES ---*/
 html{
 		font-size: 100%; /* 1 */
-	    overflow-y: scroll; /* 2 */
-	    -webkit-text-size-adjust: 100%; /* 3 */
-	    -ms-text-size-adjust: 100%; /* 3 */
+		overflow-y: scroll; /* 2 */
+-webkit-text-size-adjust: 100%; /* 3 */
+	-ms-text-size-adjust: 100%; /* 3 */
 }
 body{
 		min-height:100%;
@@ -628,7 +628,7 @@ a {
 .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible { visibility: hidden; }
-/* Contain floats: h5bp.com/q */ 
+/* Contain floats: h5bp.com/q */
 .group:before, .group:after,
 .navi:before,.navi:after,
 ul.floated:before,ul.floated:after { content: ""; display: table; }
