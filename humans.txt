@@ -5,15 +5,16 @@
 /* TEAM */
 	Zander Martineau
 	Site: http://boost.martineau.tv
-	Twitter: MrMartineau
+	Twitter: @MrMartineau
 	Location: Peckham, South-East London
 
 /* THANKS */
-  'Boost' could not be made possible without the help of these legendary people:
+	'Boost' could not be made possible without the help of these legendary people/projects:
 	@h5bp - reset, base styles & any other HTML5 related stuff
 	@inuitcss - awesome CSS to enhance my base stylesheet
 	@malarkey - 320 & Up media queries.
 	@nathansmith (Formalize.me) - amazing form styles
+	@zurb foundation framework
 
 /* SITE */
   Standards: HTML5, CSS3
