@@ -8,6 +8,7 @@
 :: Pagination
 :: Lists
 :: Panels
+:: Block grids
 */
 
 
@@ -260,9 +261,9 @@ div.panel {
 		margin: 0 0 20px 0;
 }
 
-/*	--------------------------------------------------
-	:: Block grids
-
+/*------------------------------------------*/
+/*--- BLOCK GRIDS ---*/
+/*------------------------------------------
 	These are 2-up, 3-up, 4-up and 5-up ULs, suited
 	for repeating blocks of content. Add 'mobile' to
 	them to switch them just like the layout grid
