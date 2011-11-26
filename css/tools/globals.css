@@ -7,6 +7,7 @@
 :: Lists
 :: Code
 :: Embedded Content
+:: Logo
 :: Tables
 */
 /*------------------------------------------*/
@@ -269,6 +270,30 @@ svg:not(:root) { overflow: hidden; }
 
 /*--- FLASH/VIDEO ---*/
 img,object,embed,video{	max-width:100%; height:auto; }
+
+
+/*------------------------------------------*/
+/*--- LOGO ---*/
+/*------------------------------------------*/
+#logo,
+#logo img{
+		display:block;
+		width:auto; /* Width of your logo in pixels (ideally a round grid-number) */
+		height:auto; /* Height of your logo in pixels */
+}
+/* Based on the fact that we need to use an <img /> in our markup, let’s hide the actual image and use a background on the <a>--this gives us semantically sound markup and the ability to use sprites for hover effects! */
+#logo{
+		background:url(/path/to/logo);
+}
+#logo:hover{
+		/* Hover states */
+		background-position:0 0;
+}
+#logo img{
+		position:absolute;
+		left:-99999px;
+}
+
 
 
 /*------------------------------------------*/
