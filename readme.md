@@ -31,19 +31,19 @@ Mostly styles from http://formalize.me with a small amount from Inuit & a bunch 
 ### tools/tools.css
 Non-semantic helper classes & Print styles (Use this file last in your source
 
-### tools/1kbgrid.css
+### tools/grids/1kbgrid.css
 Include this if you want to use the 1kb grid from http://1kbgrid.com
 
-### tools/zurbgrid.css
+### tools/grids/zurbgrid.css
 Include this if you want to use the grid from Zurb's Foundation framework http://foundation.zurb.com/
 
-### tools/inuitgrid.css
+### tools/grids/inuitgrid.css
 Include this if you want to use the Inuit grid
 
-### tools/tinyfluidgrid.css
+### tools/grids/tinyfluidgrid.css
 Include this if you want to use the Tiny Fluid Grid from http://www.tinyfluidgrid.com/
 
-### tools/nogrid.css
+### tools/grids/nogrid.css
 Include this if you do not want to use one of the grids provided & would like to use your own
 
 ### tools/handheld.css
