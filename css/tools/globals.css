@@ -1,0 +1,299 @@
+/*------------------------------------------*/
+/*--- TABLE OF CONTENTS ---*/
+/*------------------------------------------
+:: Reset
+:: Links
+:: Nav
+:: Lists
+:: Code
+:: Embedded Content
+:: Tables
+*/
+/*------------------------------------------*/
+/*--- RESET ---*/
+/*------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, vid	eo {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section { display: block }
+blockquote, q { quotes: none }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+ins { background-color: #ff9; color: #000; text-decoration: none; }
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del { text-decoration: line-through }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+/*--- tables still need cellspacing="0" in the markup ---*/
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+/*--- HTML5 MEDIA ---*/
+audio,canvas,video {display: inline-block;*display: inline;*zoom: 1;}
+audio:not([controls]) {display: none;}
+/*--- MINIMAL BASE STYLES ---*/
+html{
+		overflow-y: scroll;
+-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body{
+		min-height:100%;
+		padding:10px;
+		margin:0 auto;
+}
+strong, th { font-weight: bold; }
+td { vertical-align: top; }
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+q:before,q:after{ content:''; }
+
+/*------------------------------------------*/
+/*--- LINKS ---*/
+/*------------------------------------------*/
+a:link,a:visited{
+		color: #666666;
+		font-weight: bold;
+		text-decoration: none;
+}
+a:visited {
+		opacity:0.8;
+}
+p a:link,p a:visited {
+		border-bottom-style: dotted;
+		border-bottom-width: 1px;
+	}
+a:hover {color: #a5a5a5;}
+a:hover, a:active { outline: none; }
+a:link { -webkit-tap-highlight-color: #FF5E99; }
+a:active, a:focus {
+		position:relative;
+		top:1px;
+}
+a:focus {
+		text-shadow: #61a0ff 0 0 7px;
+		outline: thin dotted;
+}
+.more_link:after,
+.more_link::after{
+		content:" »";
+}
+/*------------------------------------------*/
+/*--- NAV ---*/
+/*------------------------------------------*/
+.navi.centred,
+.navi.centered { text-align: center }
+.navi.centred li,
+.navi.centered li {
+	display: inline;
+	float: none;
+}
+.navi.centred a,
+.navi.centered a { display: inline-block }
+.navi.horiz,
+.navi.vert {
+	overflow: hidden;
+	border: 1px solid #dcdcdc;
+	border-radius: 3px;
+}
+.navi.horiz li { float: left }
+.navi.horiz a { border-right: 1px solid #dcdcdc }
+.navi.horiz a,
+.navi.vert a {
+	display: block;
+	padding: 5px 10px;
+	background: #f5f5f5;
+}
+.navi.vert a {
+	padding-left: 10px;
+	border-bottom: 1px solid #ddd;
+}
+.navi.horiz li:last-child a,
+.navi.vert li:last-child a { border: none }
+.navi.horiz,
+.navi.vert { background: #f5f5f5 }
+.navi.horiz a,
+.navi.vert a { font-size: .9em }
+
+
+
+/*------------------------------------------*/
+/*--- LISTS ---*/
+/*------------------------------------------*/
+ol { list-style-type: decimal }
+nav ul,
+nav li,
+.ui_list,
+.navi.horiz,
+.navi.vert,
+ul.floated {
+	margin: 0;
+	list-style: none;
+	list-style-image: none;
+}
+.navi.vert { margin-bottom: 1.5em }
+ul,
+ol { margin: 0 0 1.5em 45px }
+ul ul,
+ol ol,
+ul ol,
+ol ul { margin: 0 0 0 45px }
+/*--- No margins on lists ---*/
+.ui_list,
+.ui_list .ui_list { margin: 0 0 1.5em }
+.ui_list ul,
+.ui_list ol,
+.ui_list ol,
+.ui_list ul { margin: 0 0 0 45px }
+/*--- DEFINITION LISTS ---*/
+dd { margin-left: 45px }
+dl { margin-bottom: 1.5em }
+dt { font-weight: bold }
+dt:after,
+dt::after { content: ":" }
+/*--- FLOATED LISTS ---*/
+.floated li {
+	float: left;
+	display: inline-block;
+}
+.floated.half li {
+	/* 50% width with a bit of padding */
+	width: 46%;
+	padding: 2%;
+}
+.floated.thirds.nopad li {
+	/* 33% width */
+	width: 33.3333333333333333%;
+}
+.floated.thirds li {
+	/* 33% width with padding */
+	width: 29%;
+	padding: 1.2% 2% 2%;
+}
+.floated li:hover { background-color: #f6f6f6 }
+
+/*--- KEYWORDS - Create a list of keywords by adding a single class to a <ul>: ---*/
+.keywords {
+	list-style: none;
+	margin: 0 0 1.5em;
+}
+.keywords li {
+	display: inline;
+	text-transform: lowercase;
+}
+.keywords li:first-of-type { text-transform: capitalize }
+.keywords li:after,
+.keywords li::after { content: ", " }
+.keywords li:last-of-type:after,
+.keywords li:last-of-type::after { content: "." }
+
+/*--- BREADCRUMBS - Create a breadcrumb list by adding a single class to a <ul>: ---*/
+.breadcrumb {
+	margin: 0;
+	list-style: none;
+}
+.breadcrumb li {
+	display: inline;
+	font-weight: bold;
+}
+.breadcrumb a {
+	display: inline-block;
+	font-weight: normal;
+}
+.breadcrumb li:before { content: "\0020\00BB\0020" }
+.breadcrumb li:first-child:before { content: normal }
+/* IE7 support */
+/* Uncomment when supporting IE7
+.breadcrumb li{
+	background:url(/path/to/splitter/image) left center no-repeat;
+}
+/* Uncomment when supporting IE7
+.breadcrumb li:first-child{
+	background:none;
+}
+*/
+
+/*------------------------------------------*/
+/*--- CODE ---*/
+/*------------------------------------------*/
+pre, code{ font-family:monospace;font-size:1em; }
+pre{
+		overflow:auto;
+		margin-bottom:1.5em;
+		line-height:24px; /* Having to define explicit pixel values :( */
+		padding: 10px;
+		line-height: 1.2;
+		overflow-x: scroll;
+-webkit-box-shadow: inset 0px 4px 7px rgba(0,0,0,.4);
+   -moz-box-shadow: inset 0px 4px 7px rgba(0,0,0,.4);
+	 -o-box-shadow: inset 0px 4px 7px rgba(0,0,0,.4);
+		box-shadow: inset 0px 4px 7px rgba(0,0,0,.4);
+-webkit-border-radius: 4px;
+ -khtml-border-radius: 4px;
+   -moz-border-radius: 4px;
+		border-radius: 4px;
+		margin-bottom: 20px;
+		margin-top: 10px;
+		background: #7E7E7E no-repeat;
+}
+pre code { color:#fff; line-height:1.5; }
+code{ line-height:1; }
+pre,code,kbd,samp {
+		font-family: monospace, serif;
+		_font-family: 'courier new', monospace;
+		font-size: 1em;
+}
+
+
+/*------------------------------------------*/
+/*--- EMBEDDED CONTENT ---*/
+/*------------------------------------------*/
+img{ font-style:italic;	color:#c00; border: 0; -ms-interpolation-mode: bicubic; }
+img.left { margin:0 20px 0 0; }
+img.right { margin:0 0 0 20px; }
+svg:not(:root) { overflow: hidden; }
+
+/*--- FLASH/VIDEO ---*/
+img,object,embed,video{	max-width:100%; height:auto; }
+
+
+/*------------------------------------------*/
+/*--- TABLES ---*/
+/*------------------------------------------*/
+table {
+	margin-bottom: 1.5em;
+	width: 100%;
+	max-width: 100%;
+}
+thead tr:last-of-type th { border-bottom-width: 2px }
+tbody th { border-right-width: 2px }
+th:empty { border: none }
+th,
+td {
+	vertical-align: top;
+	padding: 0.75em;
+	border: 1px solid #ccc;
+}
+th {
+	font-weight: bold;
+	text-align: center;
+}
+td[colspan] { text-align: center }
+td[rowspan] { vertical-align: middle }
+tbody tr:nth-of-type(odd) { background: rgba(0,0,0,0.05) }
+tfoot { text-align: center }
+tfoot td { border-top-width: 2px }

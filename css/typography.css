@@ -1,0 +1,87 @@
+/*------------------------------------------*/
+/*--- TABLE OF CONTENTS ---*/
+/*------------------------------------------
+:: BASE
+:: HEADINGS
+:: PARAGRAPHS
+:: QUOTES
+*/
+
+html{
+		font-size:100%;
+		font-family:Cambria, Georgia, "Times New Roman", serif; /* Swap these two lines around to switch between serif and sans */
+		font-family:Calibri, "Helvetica Neue", Arial, sans-serif; /* Swap these two lines around to switch between serif and sans */
+		line-height:1.5;
+		background:#fff;
+}
+body, select, input, textarea {
+		color: #444;
+}
+/*--- HEADINGS ---*/
+h1, h2, h3, h4, h5, h6,.h1,.h2,.h3,.h4,.h5,.h6 { font-weight: bold; }
+h1,.h1{
+		font-size:2em;			/* 32px */
+		margin-bottom:0.75em;	/* 24px */
+		line-height:1.5;		/* 48px */
+}
+h2,.h2{
+		font-size:1.5em;		/* 24px */
+		margin-bottom:1em;		/* 24px */
+		line-height:1;			/* 24px */
+}
+h3,.h3{
+		font-size:1.25em;		/* 20px */
+		margin-bottom:1.2em;	/* 24px */
+		line-height:1.2;		/* 24px */
+}
+h4,.h4{
+		font-size:1.125em;		/* 18px */
+		margin-bottom:1.333em;	/* 24px */
+		line-height:1.333;		/* 24px */
+}
+h5,.h5,
+h6,.h6{
+		font-size:1em;			/* 16px */
+		margin-bottom:1.5em;	/* 24px */
+		line-height:1.5;		/* 24px */
+}
+/*--- PARAGRAPHS ---*/
+p,.p{
+	margin-bottom:1.5em;
+}
+/*p+p{
+	text-indent:2em;
+	margin-top:-1.5em;
+}*/
+
+b,strong{
+		font-weight:bold;
+		font-style:inherit;
+}
+q,i,em,cite{
+		font-style:italic;
+		font-weight:inherit;
+}
+small,.small {
+		font-size: 87.5%;
+		line-height:1;
+}
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+dfn { font-style: italic; }
+mark { background: #ff0; color: #000; }
+s,del{ text-decoration:line-through; }
+
+/*------------------------------------------*/
+/*--- QUOTES ---*/
+/*------------------------------------------*/
+blockquote{
+		text-indent:-0.4em;
+}
+blockquote b,
+blockquote .source{
+	/* Mark the source up with either a <b> or another element of your choice with a class of source. */
+		display:block;
+		text-indent:0;
+}
