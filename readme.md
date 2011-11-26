@@ -14,39 +14,39 @@ Let's get started
 26/11/2011 - Fairly major update: Separated boost.css into component parts for better manageability
 
 ### app.css
-For your website's page-specific styles
+For your website's page-specific styles (Use this file 2nd last in your source)
 
 ### typography.css
 For your website's typography styles
 
-### tools/globals.css
+### globals.css
 Include this if you want to use the 1kb grid from http://1kbgrid.com
 
-### tools/ui.css
+### ui.css
 Buttons, Alerts, Notices/Alerts, Tabs, Pagination, Lists, Panels
 
-### tools/forms.css
+### forms.css
 Mostly styles from http://formalize.me with a small amount from Inuit & a bunch from me!
 
-### tools/tools.css
-Non-semantic helper classes & Print styles (Use this file last in your source
+### tools.css
+Non-semantic helper classes & Print styles (Use this file last in your source)
 
-### tools/grids/1kbgrid.css
+### grids/1kbgrid.css
 Include this if you want to use the 1kb grid from http://1kbgrid.com
 
-### tools/grids/zurbgrid.css
+### grids/zurbgrid.css
 Include this if you want to use the grid from Zurb's Foundation framework http://foundation.zurb.com/
 
-### tools/grids/inuitgrid.css
+### grids/inuitgrid.css
 Include this if you want to use the Inuit grid
 
-### tools/grids/tinyfluidgrid.css
+### grids/tinyfluidgrid.css
 Include this if you want to use the Tiny Fluid Grid from http://www.tinyfluidgrid.com/
 
-### tools/grids/nogrid.css
+### grids/nogrid.css
 Include this if you do not want to use one of the grids provided & would like to use your own
 
-### tools/handheld.css
+### handheld.css
 Straight from the HTML5 Boilerplate
 
 ## HTML
