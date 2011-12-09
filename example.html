@@ -21,11 +21,7 @@
 	<meta name="DC.creator" content="Who made this site.">
 
 	<!-- !CSS -->
-	<link rel="stylesheet" href="css/globals.css?v=2">
-	<link rel="stylesheet" href="css/grids/1kbgrid.css?v=2">
-	<link rel="stylesheet" href="css/ui.css?v=2">
-	<link rel="stylesheet" href="css/forms.css?v=2">
-	<link rel="stylesheet" href="css/typography.css?v=2">
+	<link rel="stylesheet" href="css/boost.css?v=2">
 	<link rel="stylesheet" href="css/app.css?v=2">
 	<link rel="stylesheet" href="css/tools.css?v=2">
 	<!-- !Modernizr - All other JS at bottom -->
@@ -75,8 +71,8 @@
 				<h1>Heading one</h1>
 				<p>Lorem sheezy dolizzle yo mamma amizzle, cool adipiscing gangster. Nullam sapien velizzle, aliquet volutpizzle, shizzlin dizzle check it out, gravida vel, doggy. Pellentesque owned tortor. Sizzle erizzle. Sizzle i'm in the shizzle dolor dapibus that's the shizzle tempizzle tempor. Ma nizzle pellentesque nibh et fizzle. Shiznit izzle tortor. Pellentesque daahng dawg rhoncizzle pizzle. Pot hac pimpin' platea dictumst. Mammasay mammasa mamma oo sa dapibizzle. Pimpin' tellus urna, pretium bow wow wow, mattizzle mah nizzle, eleifend vitae, nunc. Crackalackin suscipizzle. Integizzle sempizzle its fo rizzle sizzle dope.</p>
 				<h2>Heading two</h2>
-				<h3>Heading three</h3>
-				<h4>Heading four</h4>
+				<h3>Heading three <small>this is small</small></h3>
+				<h4>Heading four <small>this is small</small></h4>
 				<h5>Heading five</h5>
 				<h6>Heading six</h6>
 			</div>
@@ -107,7 +103,7 @@
 			<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris commodo consequat.</dd>
 		</dl>
 
-		<blockquote class="column grid_4">
+		<blockquote class="column grid_12">
 			<p>“I like you. You have the boldness of a much younger woman.<b>&mdash; Jack Donaghy</b></p>
 		</blockquote>
 		<div class="row">
@@ -130,13 +126,29 @@
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</li>
 				</ul>
+				<h2>Javascript plugins</h2>
+				<a href="" title="Modal" class="button" data-controls-modal="modal-from-dom" data-backdrop="true" data-keyboard="true">Modal</a>
+
+				<div id="modal-from-dom" class="modal hide fade">
+					<div class="modal-header">
+						<a href="#" class="close">&times;</a>
+						<h3>Modal Heading</h3>
+					</div>
+					<div class="modal-body">
+						<p>One fine body…</p>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="btn primary">Primary</a>
+						<a href="#" class="btn secondary">Secondary</a>
+					</div>
+				</div>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 			</div>
 		</div>
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 
 		<div class="row">
 			<div class="column grid_3">
-				<p>Pellentesque habitant <small>morbi tristique senectus et netus et malesuada fames</small> ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 			</div>
 			<div class="column grid_3">
 				<img src="http://flickholdr.com/500/400/sea,sun" alt="Sea, Sun">
@@ -156,177 +168,184 @@
 			</div>
 		</div><!-- /row -->
 
-		<ul>
-			<li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
-			<li>
-			   Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+		<div class="row">
+			<div class="column grid_12">
+				<ul>
+					<li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+					<li>
+						Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+						<ul>
+							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+							<li>
+								Aliquam tincidunt mauris eu risus:
+								<ol>
+									<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+									<li>Aliquam tincidunt mauris eu risus.</li>
+									<li>Vestibulum auctor dapibus neque.</li>
+								</ol>
+							</li>
+							<li>Vestibulum auctor dapibus neque.</li>
+						</ul>
+					</li>
+					<li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+					<li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+				</ul>
+				<ul class="keywords">
+					<li><a href="" title="">Tag</a></li>
+					<li><a href="" title="">Tag</a></li>
+					<li><a href="" title="">Tag</a></li>
+					<li><a href="" title="">Tag</a></li>
+					<li><a href="" title="">Tag</a></li>
+					<li><a href="" title="">Tag</a></li>
+				</ul><!-- /keywords -->
+				<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+				<h2>Header Level 2</h2>
+
+				<ol>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+					<li>Aliquam tincidunt mauris eu risus.</li>
+				</ol>
+
+				<blockquote><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”</p></blockquote>
+
+				<h3>Header Level 3</h3>
+
 				<ul>
 					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-					<li>
-						Aliquam tincidunt mauris eu risus:
-						<ol>
-							<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-							<li>Aliquam tincidunt mauris eu risus.</li>
-							<li>Vestibulum auctor dapibus neque.</li>
-						</ol>
-					</li>
-					<li>Vestibulum auctor dapibus neque.</li>
-				</ul>
-			</li>
-			<li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-			<li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-		</ul>
-		<ul class="keywords">
-			<li><a href="" title="">Tag</a></li>
-			<li><a href="" title="">Tag</a></li>
-			<li><a href="" title="">Tag</a></li>
-			<li><a href="" title="">Tag</a></li>
-			<li><a href="" title="">Tag</a></li>
-			<li><a href="" title="">Tag</a></li>
-		</ul><!-- /keywords -->
-		<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-		<h2>Header Level 2</h2>
-
-		<ol>
-		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-		   <li>Aliquam tincidunt mauris eu risus.</li>
-		</ol>
-
-		<blockquote><p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.”</p></blockquote>
-
-		<h3>Header Level 3</h3>
-
-		<ul>
-		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-		   <li>Aliquam tincidunt mauris eu risus.</li>
-		</ul>
-
-	<pre>
-		<code>
-			#header h1 a{
-				display:block;
-				width:300px;
-				height:80px;
-			}
-		</code>
-	</pre>
-
-		<form action="#">
-
-			<fieldset>
-				<legend>Your form</legend>
-				<ul class="form_items floated thirds">
-					<li>
-						<label for="name">Name<span class="form_note">?<span>First name &amp; last name</span></span></label>
-						<input type="text" id="name" class="text-input input_full" placeholder="Zander Martineau" />
-
-					</li>
-					<li>
-						<label for="email">Email</label>
-						<input type="email" id="email" class="text-input input_full" placeholder="zander@martineau.tv" />
-					</li>
-					<li>
-						<label for="phone">Phone</label>
-						<input type="number" id="phone" class="text-input input_full" placeholder="020 123 4567" />
-					</li>
+					<li>Aliquam tincidunt mauris eu risus.</li>
 				</ul>
 
-				<p class="form_item">
-					<label for="comments">Comments</label>
-					<textarea id="comments" rows="10" cols="50"></textarea>
-				</p>
+			<pre>
+<code>#header h1 a{
+	display:block;
+	width:300px;
+	height:80px;
+}</code>
+			</pre>
 
-				<ul class="check_list form_item">
+			<form action="#">
 
-					<li>
-						<input type="checkbox" id="one" />
-						<label for="one">One</label>
-					</li>
+				<fieldset>
+					<legend>Your form</legend>
+					<ul class="form_items floated thirds">
+						<li>
+							<label for="name">Name<span class="form_note">?<span>First name &amp; last name</span></span></label>
+							<input type="text" id="name" class="text-input input_full" placeholder="Zander Martineau" />
 
-					<li>
-						<input type="checkbox" id="two" />
-						<label for="two">Two</label>
-					</li>
+						</li>
+						<li>
+							<label for="email">Email</label>
+							<input type="email" id="email" class="text-input input_full" placeholder="zander@martineau.tv" />
+						</li>
+						<li>
+							<label for="phone">Phone</label>
+							<input type="number" id="phone" class="text-input input_full" placeholder="020 123 4567" />
+						</li>
+					</ul>
 
-					<li>
-						<input type="checkbox" id="three" />
-						<label for="three">Three</label>
-					</li>
+					<p class="form_item">
+						<label for="comments">Comments</label>
+						<textarea id="comments" rows="10" cols="50"></textarea>
+					</p>
 
-					<li>
-						<input type="checkbox" id="four" />
-						<label for="four">Four</label>
-					</li>
-				</ul>
+					<ul class="check_list form_item">
 
-				<ul class="check_list form_item">
+						<li>
+							<input type="checkbox" id="one" />
+							<label for="one">One</label>
+						</li>
 
-					<li>
-						<input type="radio" name="subscribe" id="subscribe" checked />
-						<label for="subscribe">I want to subscribe</label>
-					</li>
+						<li>
+							<input type="checkbox" id="two" />
+							<label for="two">Two</label>
+						</li>
 
-					<li>
-						<input type="radio" name="subscribe" id="not_subscribe" />
-						<label for="not_subscribe">I do not want to subscribe</label>
-					</li>
-				</ul>
+						<li>
+							<input type="checkbox" id="three" />
+							<label for="three">Three</label>
+						</li>
 
-				<p class="form_item">
-					<input type="submit" value="Submit" class="button" />
-				</p>
+						<li>
+							<input type="checkbox" id="four" />
+							<label for="four">Four</label>
+						</li>
+					</ul>
 
-			</fieldset>
+					<ul class="check_list form_item">
 
-		</form>
+						<li>
+							<input type="radio" name="subscribe" id="subscribe" checked />
+							<label for="subscribe">I want to subscribe</label>
+						</li>
 
-		<p class="row">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+						<li>
+							<input type="radio" name="subscribe" id="not_subscribe" />
+							<label for="not_subscribe">I do not want to subscribe</label>
+						</li>
+					</ul>
 
-		<table>
-			<thead>
-				<tr>
-					<th></th>
-					<th>Heading</th>
-					<th>Heading</th>
-					<th>Heading</th>
-				</tr>
-			</thead>
-			<tfoot>
-				<tr>
-					<td colspan="4">.</td>
-				</tr>
-			</tfoot>
-			<tbody>
-				<tr>
-					<th>Lorem</th>
-					<td>ipsum</td>
-					<td>dolor</td>
-					<td>sit</td>
-				</tr>
-				<tr>
-					<th>Lorem</th>
-					<td colspan="2">ipsum</td>
-					<td>sit</td>
-				</tr>
-				<tr>
-					<th>Lorem</th>
-					<td>ipsum</td>
-					<td>dolor</td>
-					<td>sit</td>
-				</tr>
-			</tbody>
-		</table>
+					<p class="form_item">
+						<input type="submit" value="Submit" class="button" />
+					</p>
+
+				</fieldset>
+
+			</form>
+
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="4">.</td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<th>Lorem</th>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+						</tr>
+						<tr>
+							<th>Lorem</th>
+							<td colspan="2">ipsum</td>
+							<td>sit</td>
+						</tr>
+						<tr>
+							<th>Lorem</th>
+							<td>ipsum</td>
+							<td>dolor</td>
+							<td>sit</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
 		<footer role="contentinfo">
 			<p class="text-centre">a blend of <a href="http://twitter.com/h5bp">@h5bp</a>, <a href="http://stuffandnonsense.co.uk/projects/320andup/">'320 and up'</a> by <a href="http://twitter.com/malarkey">@malarkey</a>, <a href="http://twitter.com/inuitcss">@inuitcss</a>, <a href="http://formalize.me/">formalize</a> by <a href="http://twitter.com/nathansmith">@nathansmith</a> - Boost  by <a href="http://twitter.com/MrMartineau">@MrMartineau</a></p>
 		</footer>
 	</div><!-- /#container -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script
-
-	<script src="js/script.js?v=1"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
+	<script src="js/libs/bootstrap-plugins/bootstrap-modal.js?v=1"></script>
+	<!-- <script src="js/libs/bootstrap-plugins/bootstrap-alerts.js?v=1"></script>
+	<script src="js/libs/bootstrap-plugins/bootstrap-buttons.js?v=1"></script> -->
+	<!-- <script src="js/libs/bootstrap-plugins/bootstrap-popover.js?v=1"></script>
+	<script src="js/libs/bootstrap-plugins/bootstrap-twipsy.js?v=1"></script> -->
 	<!--script src="js/mylibs/navconvert.js?v=1"></script-->
 	<script src="js/mylibs/forms.min.js?v=1"></script>
+	<script src="js/script.js?v=1"></script>
 	<!-- Mobile specific, remove if not needed
 	<script src="js/mylibs/helper.js"></script> -->
 
