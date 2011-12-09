@@ -1,0 +1,79 @@
+#container {
+		width: 90%;
+		margin: 0 auto;
+}
+/*--- 480> ---*/
+@media screen and (min-width: 480px) {
+#container{
+		width:auto;
+		-webkit-text-size-adjust:none;
+		margin: 0 auto;
+}
+#logo{
+		margin:0 auto 1.5em;
+}
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 25px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+		margin:0 0 0 25px;
+}
+dd{
+		margin-left:25px;
+}
+/*--- IMAGES ---*/
+img.left,
+img.right	{ max-width:50%; height:auto; }
+}/*/mediaquery*/
+/*--- end 480> ---*/
+
+
+/*--- 768> ---*/
+@media screen and (min-width: 768px) {
+#container {
+		width:720px;
+}
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 60px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+		/* Let’s take care of lists in lists */
+		margin:0 0 0 60px;
+}
+dd{
+		margin-left:60px;
+}
+
+}/*/mediaquery*/
+/*--- end 768> ---*/
+
+
+/*--- 992> ---*/
+@media screen and (min-width: 992px){
+#container {
+		width:960px;
+}
+
+}/*/mediaquery*/
+/*--- end 992> ---*/
+
+
+/*--- 1382> ---*/
+@media screen and (min-width: 1382px){
+#container {
+		width:1200px;
+}
+
+
+}/*/mediaquery*/
+/*--- end 1382> ---*/

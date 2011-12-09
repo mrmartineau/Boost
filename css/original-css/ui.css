@@ -1,0 +1,288 @@
+/*------------------------------------------*/
+/*--- TABLE OF CONTENTS ---*/
+/*------------------------------------------
+:: Buttons
+:: Alerts
+:: Notices/Alerts
+:: Tabs
+:: Pagination
+:: Lists
+:: Panels
+:: Block grids
+*/
+
+
+
+/*------------------------------------------*/
+/*--- BUTTONS ---*/
+/*------------------------------------------*/
+.button {
+		background: #00a6fc;
+		display: inline-block;
+		text-align: center;
+		padding: 9px 34px 11px;
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		line-height: 1;
+		font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+		position: relative;
+		cursor: pointer;
+		border: none;
+}
+
+/* Don't use native buttons on iOS */
+input[type=submit].button { -webkit-appearance: none; }
+
+.button.nice {
+		background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -34px;
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
+		background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -34px, -moz-linear-gradient(top, rgba(255,255,255,.4) 0%, transparent 100%);
+		background: #00a6fc url(../images/misc/button-gloss.png) repeat-x 0 -34px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.4)), color-stop(100%,transparent));
+		border: 1px solid #0593dc;
+		-webkit-transition: background-color .15s ease-in-out;
+		-moz-transition: background-color .15s ease-in-out;
+		-o-transition: background-color .15s ease-in-out;
+}
+
+.button.radius {
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+}
+.button.round {
+		-moz-border-radius: 1000px;
+		-webkit-border-radius: 1000px;
+		border-radius: 1000px;
+}
+
+.button.full-width {
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center;
+}
+
+.button.left-align {
+		text-align: left;
+		text-indent: 12px;
+}
+
+/* Sizes ---------- */
+.small.button 			{ font-size: 11px; padding: 8px 20px 10px; width: auto; }
+.medium.button 			{ font-size: 13px; width: auto; }
+.large.button 			{ font-size: 18px; padding: 11px 48px 13px; width: auto; }
+
+/* Nice Sizes ---------- */
+.nice.small.button 		{ background-position: 0 -36px; }
+.nice.large.button 		{ background-position: 0 -30px; }
+
+/* Colors ---------- */
+.blue.button			{ background-color: #00a6fc;  }
+.red.button				{ background-color: #e91c21; }
+.white.button			{ background-color: #e9e9e9; color: #333; }
+.black.button			{ background-color: #141414; }
+
+/* Nice Colors ---------- */
+.nice.blue.button		{ border: 1px solid #0593dc;  }
+.nice.red.button		{ border: 1px solid #b90b0b;  }
+.nice.white.button		{ border: 1px solid #cacaca; text-shadow: none !important; }
+.nice.black.button		{ border: 1px solid #000; }
+
+/* Hovers ---------- */
+.button:hover, .button:focus 				{ background-color: #0192dd; color: #fff; }
+.blue.button:hover, .blue.button:focus		{ background-color: #0192dd; 	}
+.red.button:hover, .red.button:focus 		{ background-color: #d01217; 	}
+.white.button:hover, .white.button:focus	{ background-color: #dadada; color: #333; }
+.black.button:hover, .black.button:focus	{ background-color: #000; }
+
+/* Disabled ---------- */
+.button.disabled, .button[disabled] { opacity: 0.6; cursor: default; }
+
+
+/*------------------------------------------*/
+/*--- MESSAGES/ALERTS ---*/
+/*------------------------------------------*/
+/*e.g. div.message.success */
+.message{
+		font-weight:normal;
+		display:block;
+		padding:10px 10px 10px 36px;
+		border:1px solid #ccc;
+		margin:0 0 1.5em 0;
+-webkit-border-radius: 3px;
+ -khtml-border-radius: 3px;
+   -moz-border-radius: 3px;
+		border-radius: 3px;
+-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+   -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+	 -o-box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+		box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset;
+}
+.error{
+		border-color:#fb5766;
+		background:url(../img/css/icons/error.png) 10px center no-repeat #fab;
+}
+.success{
+		border-color:#83ba77;
+		background:url(../img/css/icons/success.png) 10px center no-repeat #d1feba;
+}
+.info{
+		border-color:#85a5be;
+		background:url(../img/css/icons/info.png) 10px center no-repeat #c4dbec;
+}
+.warning{
+		border-color:#d8d566;
+		background:url(../img/css/icons/warning.png) 10px center no-repeat #fef8c4;
+}
+/*--- With multiple errors it’s nice to group them. ---*/
+ul.message{
+		list-style:decimal outside;
+		padding:10px 10px 10px 56px;
+}
+
+
+/*------------------------------------------*/
+/*--- TABS ---*/
+/*------------------------------------------*/
+ul.tabs {
+		display: block;
+		margin: 0 0 1.5em 0;
+		padding: 0;
+		border-bottom: solid 1px #ddd;
+}
+ul.tabs li {
+		display: block;
+		width: auto;
+		height: 30px;
+		padding: 0;
+		float: left;
+		margin-bottom: 0;
+}
+ul.tabs li a {
+		display: block;
+		text-decoration: none;
+		width: auto;
+		height: 29px;
+		padding: 0px 20px;
+		line-height: 30px;
+		border: solid 1px #ddd;
+		border-width: 1px 0 0 1px;
+		margin: 0;
+		background: #f5f5f5;
+		font-size: .9em;
+}
+ul.tabs li a.active {
+		background: #fff;
+		height: 30px;
+		position: relative;
+		top: -4px;
+		padding-top: 4px;
+		border-right-width: 1px;
+		margin: 0 -1px 0 0;
+		color: #111;
+   -moz-border-radius-topleft: 3px;
+   -moz-border-radius-topright: 3px;
+-webkit-border-top-left-radius: 3px;
+-webkit-border-top-right-radius: 3px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px; }
+ul.tabs li:first-child a {
+   -moz-border-radius-topleft: 2px;
+-webkit-border-top-left-radius: 2px;
+		border-top-left-radius: 2px; }
+ul.tabs li:last-child a {
+		border-width: 1px 1px 0 1px;
+   -moz-border-radius-topright: 2px;
+-webkit-border-top-right-radius: 2px;
+		border-top-right-radius: 2px;
+}
+
+ul.tabs_content { margin: 0; display: block; }
+ul.tabs_content > li { display:none; }
+ul.tabs_content > li.active { display: block; }
+
+
+/*------------------------------------------*/
+/*--- PAGINATION ---*/
+/*------------------------------------------*/
+ul.pagination {
+	display: block;
+	height: 24px;
+	margin-left: -5px;
+}
+ul.pagination li {
+	float: left;
+	display: block;
+	height: 24px;
+	color: #999;
+	font-size: 15px;
+	margin-left: 5px;
+}
+ul.pagination li a {
+	display: block;
+	padding: 6px 7px 4px;
+	color: #555;
+}
+ul.pagination li.current a,
+ul.pagination li:hover a,
+ul.pagination li a:focus {
+	border-bottom: solid 2px #00a6fc;
+	color: #141414;
+}
+ul.pagination li.unavailable a {
+	cursor: default;
+	color: #999;
+}
+ul.pagination li.unavailable:hover a,
+ul.pagination li.unavailable a:focus {    border-bottom: none }
+
+/*------------------------------------------*/
+/*--- LISTS ---*/
+/*------------------------------------------*/
+ul.nice, ol.nice { list-style: none; margin: 0; }
+ul.nice li, ol.nice li { padding-left: 13px; position: relative }
+ul.nice li span.bullet, ol.nice li span.number { position: absolute; left: 0px; top: 0px; color: #ccc; }
+
+/*------------------------------------------*/
+/*--- PANELS ---*/
+/*------------------------------------------*/
+div.panel {
+		padding: 20px 20px 2px 20px;
+		background: #efefef;
+		background: -moz-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(100%,#F4F4F4));
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#F4F4F4',GradientType=0 );
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+		-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+		-moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
+		margin: 0 0 20px 0;
+}
+
+/*------------------------------------------*/
+/*--- BLOCK GRIDS ---*/
+/*------------------------------------------
+	These are 2-up, 3-up, 4-up and 5-up ULs, suited
+	for repeating blocks of content. Add 'mobile' to
+	them to switch them just like the layout grid
+	(one item per line) on phones
+	-------------------------------------------------- */
+
+	.block-grid { display: block; overflow: hidden; }
+	.block-grid>li { display: block; height: auto; float: left; }
+
+	.block-grid.two-up { margin-left: -4% }
+	.block-grid.two-up>li { margin-left: 4%; width: 46%; }
+
+	.block-grid.three-up { margin-left: -2% }
+	.block-grid.three-up>li { margin-left: 2%; width: 31.3%; }
+
+	.block-grid.four-up { margin-left: -2% }
+	.block-grid.four-up>li { margin-left: 2%; width: 23%; }
+
+	.block-grid.five-up { margin-left: -1.5% }
+	.block-grid.five-up>li { margin-left: 1.5%; width: 18.5%; }
+
+

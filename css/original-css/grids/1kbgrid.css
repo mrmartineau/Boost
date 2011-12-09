@@ -1,0 +1,161 @@
+#container {
+		width: 90%;
+		margin: 0 auto;
+}
+.column{
+		width:auto;
+		float:none;
+}
+/*--- 480> ---*/
+@media screen and (min-width: 480px) {
+#container{
+		width:auto;
+		-webkit-text-size-adjust:none;
+		margin: 0 auto;
+}
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 25px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+		margin:0 0 0 25px;
+}
+dd{
+		margin-left:25px;
+}
+/*--- IMAGES ---*/
+img.left,
+img.right	{ max-width:50%; height:auto; }
+}/*/mediaquery*/
+/*--- end 480> ---*/
+
+
+/*--- 768> ---*/
+@media screen and (min-width: 768px) {
+/*--- Show Layout ---*/
+body.gridshow{
+		background:url(http://griddle.it/720-12-20) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+#container,
+.row {
+		width:720px;
+}
+/*--- GRIDS ---*/
+/*--- See http://1kbgrid.com/ for more info ---*/
+/*--- 12 columns, 40 pixels each, with 20 pixel gutter ---*/
+ul.column {
+		/* So we can make grids out of lists */
+		margin: 0 10px;
+		list-style:none;
+}
+.grid_1 { width:40px; }
+.grid_2 { width:100px; }
+.grid_3 { width:160px; }
+.grid_4 { width:220px; }
+.grid_5 { width:280px; }
+.grid_6 { width:340px; }
+.grid_7 { width:400px; }
+.grid_8 { width:460px; }
+.grid_9 { width:520px; }
+.grid_10 { width:580px; }
+.grid_11 { width:640px; }
+.grid_12 { width:700px; }
+.column {
+		margin: 0 10px;
+		float: left;
+		display: inline;
+}
+.row {
+		margin: 0 auto;
+}
+.row .row {
+		margin: 0 -10px;
+		width: auto;
+		display: inline-block;
+}
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 60px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+		/* Let’s take care of lists in lists */
+		margin:0 0 0 60px;
+}
+dd{
+		margin-left:60px;
+}
+}/*/mediaquery*/
+/*--- end 768> ---*/
+
+
+/*--- 992> ---*/
+@media screen and (min-width: 992px){
+/*--- Show Layout ---*/
+body.gridshow{
+		background:url(http://griddle.it/960-12-20) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+#container,
+.row {
+		width:960px;
+}
+/*--- GRIDS ---*/
+/*--- 12 columns, 60 pixels each, with 20 pixel gutter ---*/
+.grid_1 { width:60px; }
+.grid_2 { width:140px; }
+.grid_3 { width:220px; }
+.grid_4 { width:300px; }
+.grid_5 { width:380px; }
+.grid_6 { width:460px; }
+.grid_7 { width:540px; }
+.grid_8 { width:620px; }
+.grid_9 { width:700px; }
+.grid_10 { width:780px; }
+.grid_11 { width:860px; }
+.grid_12 { width:940px; }
+}/*/mediaquery*/
+/*--- end 992> ---*/
+
+
+/*--- 1382> ---*/
+@media screen and (min-width: 1382px){
+body.gridshow{
+		background:url(http://griddle.it/1200-12-20) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+#container,
+.row {
+		width:1200px;
+}
+/*--- GRIDS ---*/
+/*--- 12 columns, 80 pixels each, with 20 pixel gutter ---*/
+.grid_1 { width:80px; }
+.grid_2 { width:180px; }
+.grid_3 { width:280px; }
+.grid_4 { width:380px; }
+.grid_5 { width:480px; }
+.grid_6 { width:580px; }
+.grid_7 { width:680px; }
+.grid_8 { width:780px; }
+.grid_9 { width:880px; }
+.grid_10 { width:980px; }
+.grid_11 { width:1080px; }
+.grid_12 { width:1180px; }
+
+}/*/mediaquery*/
+/*--- end 1382> ---*/
+
+
+/* Clearfix specifically for the 1kbgrid */
+.column:before,.column:after,.row:before,.row:after { content: ""; display: table; }
+.column:after,.row:after { clear: both; }
+.column,.row { zoom: 1; }

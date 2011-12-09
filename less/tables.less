@@ -1,0 +1,26 @@
+/*------------------------------------------*/
+/*--- TABLES ---*/
+/*------------------------------------------*/
+table {
+	margin-bottom: 1.5em;
+	width: 100%;
+	max-width: 100%;
+}
+thead tr:last-of-type th { border-bottom-width: 2px }
+tbody th { border-right-width: 2px }
+th:empty { border: none }
+th,
+td {
+	vertical-align: top;
+	padding: 0.75em;
+	border: 1px solid #ccc;
+}
+th {
+	font-weight: bold;
+	text-align: center;
+}
+td[colspan] { text-align: center }
+td[rowspan] { vertical-align: middle }
+tbody tr:nth-of-type(odd) { background: rgba(0,0,0,0.05) }
+tfoot { text-align: center }
+tfoot td { border-top-width: 2px }

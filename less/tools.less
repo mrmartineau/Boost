@@ -1,0 +1,100 @@
+/*------------------------------------------*/
+/*--- Non-semantic helper classes ---*/
+/*------------------------------------------*/
+/* For image replacement */
+.ir {
+		display: block;
+		border: 0;
+		text-indent: -999em;
+		overflow: hidden;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		text-align: left;
+		direction: ltr;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden,.hide {
+		display: none !important;
+		visibility: hidden;
+}
+.show { display: block; }
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+/* Contain floats: h5bp.com/q */
+.group:before, .group:after,
+.navi:before,.navi:after,
+ul.floated:before,ul.floated:after { content: ""; display: table; }
+.group:after,
+.navi:after,
+ul.floated:after { clear: both; }
+.group,.navi,ul.floated { zoom: 1; }
+
+.left	{ float:left; }
+.right	{ float:right; }
+.clear	{ clear:both; float:none; }
+
+.text_left		{ text-align:left; }
+.text_right		{ text-align:right; }
+.text_center,
+.text_centre	{ text-align:center; }
+
+.mb1 { margin-bottom: 1em !important;} /*16px*/
+.mb2 { margin-bottom: 1.5em !important;} /*24px*/
+.mb3 { margin-bottom: 1.875em !important;}/*30px*/
+
+.mt1 { margin-top: 1em !important;} /*16px*/
+.mt2 { margin-top: 1.5em !important;} /*24px*/
+.mt3 { margin-top: 1.875em !important;}/*30px*/
+
+/*------------------------------------------*/
+/*--- Print styles ---*/
+/*------------------------------------------*/
+@media print {
+	*{
+		background:#fff;
+		color:#000;
+		text-shadow:none!important;
+		filter:none !important;
+		-ms-filter: none !important;
+	}
+	#container{
+		width:75%;
+		margin:0 auto;
+		font-size:0.75em; /* 12px (if base font-size was 16px) */
+	}
+	/* A list of things you don’t want printing. */
+	#nav,
+	#footer{ display:none; }
+	#logo img{ position:static;	}
+	/*--- Linearise ---*/ .column{ width:auto; float:none; }
+	img{ max-width:100%;height:auto; }
+	a, a:visited { color: #444 !important; text-decoration: underline; }
+	a[href]:after { content: " (" attr(href) ")"; font-size:smaller;}
+	abbr[title]:after { content: " (" attr(title) ")"; font-size:smaller;}
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 	/* Don't show links for images, or javascript/internal links */
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+	tr, img { page-break-inside: avoid; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3, table{ page-break-after: avoid; }
+}

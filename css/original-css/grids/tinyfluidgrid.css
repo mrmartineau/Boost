@@ -1,0 +1,127 @@
+#container {
+		width: 90%;
+		margin: 0 auto;
+}
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	width:auto;
+	float: none;
+	display: block;
+}
+/*--- 480> ---*/
+@media screen and (min-width: 480px) {
+#container{
+		width:auto;
+		-webkit-text-size-adjust:none;
+		margin: 0 auto;
+}
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 25px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+		margin:0 0 0 25px;
+}
+dd{
+		margin-left:25px;
+}
+/*--- IMAGES ---*/
+img.left,
+img.right	{ max-width:50%; height:auto; }
+}/*/mediaquery*/
+/*--- end 480> ---*/
+
+
+/*--- 768> ---*/
+@media screen and (min-width: 768px) {
+
+#container{
+	min-width: 720px; 
+	max-width: 1200px; 
+	margin: auto;
+}
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 60px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+		/* Let’s take care of lists in lists */
+		margin:0 0 0 60px;
+}
+dd{
+		margin-left:60px;
+}
+/*--- GRID ---*/
+/*--- http://www.tinyfluidgrid.com/ ---*/
+/*--- Columns : 12 & Gutter %: 30% & MinWidth: 800px & MaxWidth: 1200px ---*/
+.grid_1 { width: 5.8333333333333%; }
+.grid_2 { width: 14.166666666667%; }
+.grid_3 { width: 22.5%; }
+.grid_4 { width: 30.833333333333%; }
+.grid_5 { width: 39.166666666667%; }
+.grid_6 { width: 47.5%; }
+.grid_7 { width: 55.833333333333%; }
+.grid_8 { width: 64.166666666667%; }
+.grid_9 { width: 72.5%; }
+.grid_10 { width: 80.833333333333%; }
+.grid_11 { width: 89.166666666667%; }
+.grid_12 { width: 97.5%; }
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	margin-left: 1.25%;
+	margin-right: 1.25%;
+	float: left;
+	display: block;
+}
+
+.alpha{margin-left:0px;}
+.omega{margin-right:0px;}
+
+
+}/*/mediaquery*/
+/*--- end 768> ---*/
+
+
+/*--- 992> ---*/
+@media screen and (min-width: 992px){
+
+
+}/*/mediaquery*/
+/*--- end 992> ---*/
+
+
+/*--- 1382> ---*/
+@media screen and (min-width: 1382px){
+
+
+}/*/mediaquery*/
+/*--- end 1382> ---*/

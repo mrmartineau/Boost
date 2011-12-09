@@ -45,6 +45,16 @@ h6,.h6{
 		margin-bottom:1.5em;	/* 24px */
 		line-height:1.5;		/* 24px */
 }
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+	color: #bfbfbf;
+	font-weight: normal;
+	font-size:75%;
+}
 /*--- PARAGRAPHS ---*/
 p,.p{
 	margin-bottom:1.5em;

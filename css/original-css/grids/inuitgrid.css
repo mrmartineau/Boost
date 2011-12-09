@@ -1,0 +1,168 @@
+/*--- 480> ---*/
+@media screen and (min-width: 480px) {
+
+/*--- Show Layout ---*/
+body.gridshow{
+		background:none;
+}
+#container{
+		width:auto;
+		-webkit-text-size-adjust:none;
+		margin: 0 auto;
+}
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 25px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+		margin:0 0 0 25px;
+}
+dd{
+		margin-left:25px;
+}
+/*--- IMAGES ---*/
+img.left,
+img.right	{ max-width:50%; height:auto; }
+}/*/mediaquery*/
+/*--- end 480> ---*/
+
+
+/*--- 768> ---*/
+@media screen and (min-width: 768px) {
+/*--- Show Layout ---*/
+body.gridshow{
+		background:url(http://griddle.it/720-16-20) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+#container {
+		width:720px;
+}
+
+/*--- GRIDS ---*/
+/* To use a series just wrap them all in <div class="grids">...</div> */
+.grids {
+		margin-left:-20px;
+		overflow:hidden;
+		clear:both;
+}
+ul.grids {
+		/* So we can make grids out of lists */
+		margin:0 0 0 -20px;
+		list-style:none;
+}
+.grid {
+		float:left;
+		margin:0 20px 0 0;
+}
+.grids .grid{
+		margin:0 0 0 20px;
+}
+.grid-1		{ width:25px; }
+.grid-2		{ width:70px; }
+.grid-3		{ width:115px; }
+.grid-4		{ width:160px; }
+
+.grid-5		{ width:205px; }
+.grid-6		{ width:250px; }
+.grid-7		{ width:295px; }
+.grid-8		{ width:340px; }
+
+.grid-9		{ width:385px; }
+.grid-10	{ width:430px; }
+.grid-11	{ width:475px; }
+.grid-12	{ width:520px; }
+
+.grid-13	{ width:565px; }
+.grid-14	{ width:610px; }
+.grid-15	{ width:655px; }
+.grid-16	{ width:700px; }
+/*--- LISTS ---*/
+ul,
+ol{
+		margin:0 0 1.5em 60px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul{
+	/* Let’s take care of lists in lists */
+		margin:0 0 0 60px;
+}
+dd{
+		margin-left:60px;
+}
+}/*/mediaquery*/
+/*--- end 768> ---*/
+
+
+/*--- 992> ---*/
+@media screen and (min-width: 992px){
+/*--- Show Layout ---*/
+body.gridshow{
+		background:url(http://griddle.it/940-16-20) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+#container {
+		width:940px;
+}
+/*--- GRIDS ---*/
+.grid-1		{ width:40px; }
+.grid-2		{ width:100px; }
+.grid-3		{ width:160px; }
+.grid-4		{ width:220px; }
+
+.grid-5		{ width:280px; }
+.grid-6		{ width:340px; }
+.grid-7		{ width:400px; }
+.grid-8		{ width:460px; }
+
+.grid-9		{ width:520px; }
+.grid-10	{ width:580px; }
+.grid-11	{ width:640px; }
+.grid-12	{ width:700px; }
+
+.grid-13	{ width:760px; }
+.grid-14	{ width:820px; }
+.grid-15	{ width:880px; }
+.grid-16	{ width:940px; margin:0; }
+
+}/*/mediaquery*/
+/*--- end 992> ---*/
+
+
+/*--- 1382> ---*/
+@media screen and (min-width: 1382px){
+body.gridshow{
+		background:url(http://griddle.it/1180-16-20) top center repeat-y,
+		url(../img/css/baseline.gif) 0 4px #fff;
+}
+#container {
+		width:1180px;
+}
+/*--- GRIDS ---*/
+.grid-1		{ width:55px; }
+.grid-2		{ width:130px; }
+.grid-3		{ width:205px; }
+.grid-4		{ width:280px; }
+
+.grid-5		{ width:355px; }
+.grid-6		{ width:430px; }
+.grid-7		{ width:505px; }
+.grid-8		{ width:580px; }
+
+.grid-9		{ width:655px; }
+.grid-10	{ width:730px; }
+.grid-11	{ width:805px; }
+.grid-12	{ width:880px; }
+
+.grid-13	{ width:955px; }
+.grid-14	{ width:1030px; }
+.grid-15	{ width:1105px; }
+.grid-16	{ width:1180px; margin:0; }
+
+}/*/mediaquery*/
+/*--- end 1382> ---*/
