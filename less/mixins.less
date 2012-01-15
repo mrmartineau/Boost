@@ -1,16 +1,38 @@
-/*------------------------------------------*/
-/*--- MIXINS TABLE OF CONTENTS ---*/
-/*------------------------------------------
+/*==========================================*/
+/*=== MIXINS.less ===*/
+/*=== TABLE OF CONTENTS ===*/
+/*==========================================
+:: GRID CALCULATIONS
 :: CSS3
 :: CLEARFIX
 :: FONT-STACKS
 :: COLOURS / OPACITY ETC
 :: RESET
---------------------------------------------*/
+==========================================--*/
 
-/*------------------------------------------*/
-/*--- CSS3 ---*/
-/*------------------------------------------*/
+
+/*==========================================*/
+/*=== GRID CALCULATIONS ===*/
+/*==========================================*/
+.columns(@columnSpan: 1) {
+	width: (@gridColumnWidth * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1));
+}
+.offset(@columnOffset: 1) {
+	margin-left: (@gridColumnWidth * @columnOffset) + (@gridGutterWidth * (@columnOffset - 1)) + @gridGutterWidth + (@gridGutterWidth/2);
+}
+.push(@pushOffset: 1) {
+	left: (@gridColumnWidth * @pushOffset) + (@gridGutterWidth * (@pushOffset - 1) + @gridGutterWidth);
+}
+.pull(@pullOffset: 1) {
+	right: (@gridColumnWidth * @pullOffset) + (@gridGutterWidth * (@pullOffset - 1) + @gridGutterWidth);
+}
+
+
+
+
+/*==========================================*/
+/*=== CSS3 ===*/
+/*==========================================*/
 
 /*=== Border Radius ===*/
 .border-radius(@radius: 5px) {
@@ -46,52 +68,12 @@
 		column-gap:   @columnGap;
 }
 
-/*=== Gradients ===*/
-#gradient {
-	.horizontal (@startColor: #555, @endColor: #333) {
-		background-color: @endColor;
-		background-repeat: repeat-x;
-		background-image: -khtml-gradient(linear, left top, right top, from(@startColor), to(@endColor)); /* Konqueror */
-		background-image: -moz-linear-gradient(left, @startColor, @endColor); /* FF 3.6+ */
-		background-image: -ms-linear-gradient(left, @startColor, @endColor); /* IE10 */
-		background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, @startColor), color-stop(100%, @endColor)); /* Safari 4+, Chrome 2+ */
-		background-image: -webkit-linear-gradient(left, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
-		background-image: -o-linear-gradient(left, @startColor, @endColor); /* Opera 11.10 */
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); /* IE6 & IE7 */
-		-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor); /* IE8+ */
-		background-image: linear-gradient(left, @startColor, @endColor); /* the standard */
-	}
-	.vertical (@startColor: #555, @endColor: #333) {
-		background-color: @endColor;
-		background-repeat: repeat-x;
-		background-image: -khtml-gradient(linear, left top, left bottom, from(@startColor), to(@endColor)); /* Konqueror */
-		background-image: -moz-linear-gradient(@startColor, @endColor); /* FF 3.6+ */
-		background-image: -ms-linear-gradient(@startColor, @endColor); /* IE10 */
-		background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor)); /* Safari 4+, Chrome 2+ */
-		background-image: -webkit-linear-gradient(@startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
-		background-image: -o-linear-gradient(@startColor, @endColor); /* Opera 11.10 */
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); /* IE6 & IE7 */
-		-ms-filter: %("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor); /* IE8+ */
-		background-image: linear-gradient(@startColor, @endColor); /* the standard */
-	}
-	.directional (@startColor: #555, @endColor: #333, @deg: 45deg) {
-		background-color: @endColor;
-		background-repeat: repeat-x;
-		background-image: -moz-linear-gradient(@deg, @startColor, @endColor); /* FF 3.6+ */
-		background-image: -ms-linear-gradient(@deg, @startColor, @endColor); /* IE10 */
-		background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); /* Safari 5.1+, Chrome 10+ */
-		background-image: -o-linear-gradient(@deg, @startColor, @endColor); /* Opera 11.10 */
-		background-image: linear-gradient(@deg, @startColor, @endColor); /* the standard */
-	}
-	.vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 0.5, @endColor: #c3325f) {
-		background-color: @endColor;
-		background-repeat: no-repeat;
-		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
-		background-image: -webkit-linear-gradient(@startColor, color-stop(@colorStop, @midColor), @endColor);
-		background-image: -moz-linear-gradient(@startColor, color-stop(@midColor, @colorStop), @endColor);
-	}
+/*=== Background clipping ===*/
+.background-clip(@clip) {
+  -webkit-background-clip: @clip;
+	 -moz-background-clip: @clip;
+		  background-clip: @clip;
 }
-
 
 /*=== Opacity ===*/
 .opacity(@opacity: 100) {
@@ -101,24 +83,6 @@
 		opacity: @opacity / 100;
 }
 
-/*=== Buttons ===*/
-.button(@color: #f5f5f5, @textColor: #333, @textShadow: 0 1px 1px rgba(255,255,255,.75), @fontSize: 13px, @padding: 9px 15px 10px, @borderRadius: 6px) {
-	display: inline-block;
-	#gradient > .vertical(@color,darken(saturate(@color,10),10));
-	padding: @padding;
-	text-shadow: @textShadow;
-	color: @textColor;
-	font-size: @fontSize;
-	line-height: 20px;
-	.border-radius(@borderRadius);
-	@shadow: inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(0,0,0,.2), 0 1px 2px rgba(0,0,0,.25);
-	.box-shadow(@shadow);
-	&:hover {
-		background-position: 0 -15px;
-		color: @textColor;
-		text-decoration: none;
-	}
-}
 
 /*=== Add an alphatransparency value to any background or border color (via Elyse Holladay) ===*/
 #translucent {
@@ -135,19 +99,21 @@
 
 
 
-/*------------------------------------------*/
-/*--- VARIOUS MIXINS ---*/
-/*------------------------------------------*/
+/*==========================================*/
+/*=== VARIOUS MIXINS ===*/
+/*==========================================*/
 
 /*=== CLEARFIX ===*/
-.clearfix {
+.group() {
 	zoom: 1;
+	&:before,
 	&:after {
-		display: block;
-		visibility: hidden;
-		height: 0;
+		display: table;
+		content: "";
+		zoom: 1;
+	}
+	&:after {
 		clear: both;
-		content: ".";
 	}
 }
 
@@ -175,6 +141,19 @@
 		color: @color;
 	}
 }
+
+// Make any element resizable for prototyping
+.resizable(@direction: both) {
+		resize: @direction; // Options are horizontal, vertical, both
+		overflow: auto; // Safari fix
+}
+
+.gridColumn() {
+	display: inline;
+	float: left;
+	margin-left: @gridGutterWidth;
+}
+
 
 /*=== Based on Eric Meyers' reset 2.0 - http://meyerweb.com/eric/tools/css/reset/index.html ===*/
 /*=== & the Compass Reset utility - http://compass-style.org/reference/compass/reset/utilities/ ===*/

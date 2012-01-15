@@ -1,43 +1,60 @@
-/*------------------------------------------*/
-/*--- TABLE OF CONTENTS ---*/
-/*------------------------------------------
+/*==========================================*/
+/*=== APP.less ===*/
+/*=== TABLE OF CONTENTS ===*/
+/*==========================================
+:: LOGO
 :: CSS3
 :: HOME / LANDING
-:: Page Name 2
+:: ABOUT
+:: MEDIA QUERIES
 */
 
+/*==========================================*/
+/*=== LOGO ===*/
+/*==========================================*/
+#logo,
+#logo img{
+		display:block;
+		width:auto; /* Width of your logo in pixels (ideally a round grid-number) */
+		height:auto; /* Height of your logo in pixels */
+}
+/* Based on the fact that we need to use an <img /> in our markup, let’s hide the actual image and use a background on the <a>--this gives us semantically sound markup and the ability to use sprites for hover effects! */
+#logo{
+		background:url(/path/to/logo);
+}
+#logo:hover{
+		/* Hover states */
+		background-position:0 0;
+}
+#logo img{
+		position:absolute;
+		left:-99999px;
+}
 
-/*------------------------------------------*/
-/*--- CSS3 ---*/
-/*------------------------------------------*/
+/*==========================================*/
+/*=== CSS3 ===*/
+/*==========================================*/
 /*Transitions*/
 a {
--webkit-transition: all 0.12s ease-in-out;
-   -moz-transition: all 0.12s ease-in-out;
-	 -o-transition: all 0.12s ease-in-out;
-		transition: all 0.12s ease-in-out;
+		.transition(all 0.12s ease-in-out);
 }
 /*Border Radius*/
-.floated li {
--webkit-border-radius: 5px;
- -khtml-border-radius: 5px;
-   -moz-border-radius: 5px;
-		border-radius: 5px;
-}
+/*.floated li {
+		.border-radius(5px);
+}*/
 
-
-/*------------------------------------------*/
-/*--- HOME / LANDING ---*/
-/*------------------------------------------*/
+/*==========================================*/
+/*=== HOME / LANDING ===*/
+/*==========================================*/
 
 
 
 
 
 
-/*------------------------------------------*/
-/*--- ABOUT ---*/
-/*------------------------------------------*/
+/*==========================================*/
+/*=== ABOUT ===*/
+/*==========================================*/
 
 
 
@@ -46,37 +63,34 @@ a {
 
 
 
-/*-------------------------------------------*/
-/*--- Media queries for responsive design ---*/
-/*-------------------------------------------*/
-/*--- 480> ---*/
+/*===========================================*/
+/*=== Media queries for responsive design ===*/
+/*===========================================*/
+/*=== 480> ===*/
 @media screen and (min-width: 480px) {
 
-#logo{
-		margin:0 auto 1.5em;
 }
-}/*/mediaquery*/
-/*--- end 480> ---*/
+/*=== end 480> ===*/
 
 
 
-/*--- 768> ---*/
+/*=== 768> ===*/
 @media screen and (min-width: 768px) {
 
-}/*/mediaquery*/
-/*--- end 768> ---*/
+}
+/*=== end 768> ===*/
 
 
 
-/*--- 992> ---*/
+/*=== 992> ===*/
 @media screen and (min-width: 992px){
 
-}/*/mediaquery*/
-/*--- end 992> ---*/
+}
+/*=== end 992> ===*/
 
 
-/*--- 1382> ---*/
+/*=== 1382> ===*/
 @media screen and (min-width: 1382px){
 
-}/*/mediaquery*/
-/*--- end 1382> ---*/
+}
+/*=== end 1382> ===*/

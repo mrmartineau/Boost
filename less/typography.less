@@ -1,95 +1,233 @@
-/*------------------------------------------*/
-/*--- TABLE OF CONTENTS ---*/
-/*------------------------------------------
+/*==========================================*/
+/*=== TYPOGRAPHY.less ===*/
+/*=== TABLE OF CONTENTS ===*/
+/*==========================================
+:: FONT STACKS
 :: BASE
-:: HEADINGS
 :: PARAGRAPHS
+:: HEADINGS
+:: LISTS
 :: QUOTES
+:: LINKS
+:: HELPER CLASSES
 */
 
-html{
-		font-size:100%;
-		font-family:Cambria, Georgia, "Times New Roman", serif;
-		font-family:Calibri, "Helvetica Neue", Arial, sans-serif;
-		line-height:@baseline;
-		background:@white;
-}
-body, select, input, textarea {
-		color: @grayDark;
-}
-/*--- HEADINGS ---*/
-h1, h2, h3, h4, h5, h6,.h1,.h2,.h3,.h4,.h5,.h6 {
-	font-weight: bold;
-	color: @grayDark;
-	small {
-		color: @grayLight;
-		font-size:75%;
-		font-weight: normal;
+
+/*=== FONT STACKS ===*/
+#font {
+	.shorthand(@weight: normal, @size: 16px, @lineHeight: 24px) {
+		font-size: @size;
+		font-weight: @weight;
+		line-height: @lineHeight;
+	}
+	.sans-serif(@weight: normal, @size: 16px, @lineHeight: 24px) {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: @size;
+		font-weight: @weight;
+		line-height: @lineHeight;
+	}
+	.serif(@weight: normal, @size: 16px, @lineHeight: 24px) {
+		font-family: "Georgia", Times New Roman, Times, serif;
+		font-size: @size;
+		font-weight: @weight;
+		line-height: @lineHeight;
+	}
+	.monospace(@weight: normal, @size: 12px, @lineHeight: 24px) {
+		font-family: "Monaco", Courier New, monospace;
+		font-size: @size;
+		font-weight: @weight;
+		line-height: @lineHeight;
 	}
 }
-h1,.h1{
-		font-size: @basefont * 2;	/* 32px */
-		margin-bottom:@basefont * 0.75;		/* 24px */
-		line-height:@baseline;		/* 48px */
+
+/*=== BASE ===*/
+html {
+	#font > .sans-serif(normal, @baseFontSize, @baseline);
 }
-h2,.h2{
-		font-size:@basefont * 1.5;	/* 24px */
-		margin-bottom:@basefont;				/* 24px */
-		line-height:@baseline / 1.5;					/* 24px */
+body, select, input, textarea {
+		color: @gray;
 }
-h3,.h3{
-		font-size:@basefont * 1.25;		/* 20px */
-		margin-bottom:@basefont * 1.2;	/* 24px */
-		line-height:@baseline / 1.25;		/* 24px */
-}
-h4,.h4{
-		font-size:@basefont * 1.125;		/* 18px */
-		margin-bottom:@basefont * 1.333;	/* 24px */
-		line-height:@baseline / 1.333;		/* 24px */
-}
-h5,.h5,
-h6,.h6{
-		font-size:@basefont;			/* 16px */
-		margin-bottom:@basefont * 1.5;	/* 24px */
-		line-height:@baseline;		/* 24px */
-}
-/*--- PARAGRAPHS ---*/
-p,.p{
-	margin-bottom:1.5em;
+/*=== PARAGRAPHS ===*/
+p,.p {
+	#font > .sans-serif(normal, @baseFontSize, @baseline);
+	font-size: @baseFontSize;
+	line-height: @baseline;
+	margin-bottom: @baseFontSize * 1.5;
+	small,.small {
+		font-size: 87.5%;
+		line-height: 1;
+		font-weight: inherit;
+	}
 }
 /*p+p{
 	text-indent:2em;
 	margin-top:-1.5em;
 }*/
 
-b,strong{
+/*=== HEADINGS ===*/
+h1, h2, h3, h4, h5, h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+	font-weight: bold;
+	color: @accentColor;
+	small, .small {
+		color: @grayLight;
+		font-size:75%;
+		font-weight: normal;
+	}
+}
+h1,.h1{
+	font-size: @baseFontSize * 3;			/* 48px */
+	margin-top: @baseFontSize * 2;			/* 32px */
+	margin-bottom: @baseFontSize / 2;		/* 8px */
+	line-height: @baseline;					/* 72px */
+}
+h2,.h2{
+	font-size: @baseFontSize * 2;			/* 32px */
+	margin-top: @baseFontSize * 1.2;		/* 19.2px */
+	margin-bottom: @baseFontSize / 3.2;		/* 5px */
+	line-height: @baseFontSize * 2;			/* 32px */
+}
+h3,.h3{
+	font-size: @baseFontSize * 1.5;			/* 24px */
+	margin-top: @baseFontSize / 0.8;		/* 20px */
+	margin-bottom: @baseFontSize / 3.2;		/* 5px */
+	line-height: @baseline / 1.25;			/* 28px */
+}
+h4,.h4{
+	font-size: @baseFontSize / 0.8;			/* 19.2px */
+	margin-top: @baseFontSize;				/* 16px */
+	margin-bottom: @baseFontSize / 5;		/* 3.2px */
+	line-height: @baseline / 1.333;			/* 21px */
+}
+h5,.h5 {
+	font-size: @baseFontSize;				/* 16px */
+	margin-top: @baseFontSize;				/* 16px */
+	margin-bottom: @baseFontSize / 5;		/* 3px */
+	line-height: @baseline;					/* 24px */
+	font-weight:normal;
+}
+h6,.h6 {
+	font-size: 80%;							/* 13px */
+	margin-top: @baseFontSize;				/* 16px */
+	margin-bottom: @baseFontSize / 5;		/* 3.2px */
+	line-height: @baseline;					/* 19px */
+	text-transform: uppercase;
+}
+
+/*=== Set font for forms ===*/
+label,
+input,
+select,
+textarea {
+	#font > .sans-serif(normal,13px,normal);
+}
+
+b,strong {
 		font-weight:bold;
 		font-style:inherit;
 }
-q,i,em,cite{
-		font-style:italic;
+q,i,em,cite {
 		font-weight:inherit;
+		font-style:italic;
 }
-small,.small {
-		font-size: 87.5%;
-		line-height:1;
-}
-sub, sup { font-size: 75%; line-height: 0; position: relative; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
 dfn { font-style: italic; }
 mark { background: #ff0; color: #000; }
-s,del{ text-decoration:line-through; }
+ins,del{ text-decoration:line-through; }
 
-/*------------------------------------------*/
-/*--- QUOTES ---*/
-/*------------------------------------------*/
-blockquote{
-		text-indent:-0.4em;
-		b,
-		.source{
-		/* Mark the source up with either a <b> or another element of your choice with a class of source. */
-		display:block;
-		text-indent:0;
+
+
+/*==========================================*/
+/*=== LISTS ===*/
+/*==========================================*/
+/*=== Normal (for want of a better word, lists) ===*/
+ul.nrml, ol.nrml {
+	margin: 0 0 1.5em 45px;
+	font-size: @baseFontSize;
+	ul, ol {
+		margin: 0 0 0 45px;
+	}
+	ul {
+		list-style-type: circle;
+		ul {
+			list-style-type: square;
+		}
+	}
+	ol {
+		list-style-type: upper-roman;
+		ol {
+			list-style-type: lower-roman;
+		}
+	}
+	li {
+		line-height: @baseline;
+	}
 }
+
+ul.nrml { list-style-type: disc }
+ol.nrml { list-style-type: decimal }
+
+/*=== DEFINITION LISTS ===*/
+dl {
+	margin-bottom: @baseline;
+	dt, dd {
+		line-height: @baseline;
+	}
+	dt {
+		font-weight: bold;
+	}
+	dd {
+		margin-left: @baseline / 2;
+	}
 }
+
+
+
+/*==========================================*/
+/*=== QUOTES ===*/
+/*==========================================*/
+blockquote {
+	margin: @baseline 0;
+	border-left: 5px solid #eee;
+	padding: 15px;
+	p {
+		#font > .shorthand(300,20px,@baseline);
+		margin-bottom: 0;
+		b {
+			display: block;
+			&:before {
+				content: '\2014 \00A0 ';
+			}
+		}
+	}
+
+}
+
+
+
+/*==========================================*/
+/*=== LINKS ===*/
+/*==========================================*/
+a:link,
+a:visited {
+	color: @linkColor;
+	text-decoration: none;
+}
+a:link { -webkit-tap-highlight-color: @linkColor; }
+a:hover { color: @linkColorHover; }
+a:hover, a:active { outline: none; }
+a:focus {
+	text-shadow: #61a0ff 0 0 7px;
+	outline: thin dotted;
+}
+a.more_link:after,
+a.more_link::after{
+	content:" »";
+}
+
+
+
+/*==========================================*/
+/*=== HELPER CLASSES ===*/
+/*==========================================*/
+.text_left		{ text-align:left; }
+.text_right		{ text-align:right; }
+.text_center, .text_centre	{ text-align:center; }

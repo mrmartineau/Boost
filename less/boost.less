@@ -1,21 +1,31 @@
-/*
- * Boost
- */
+/*==========================================*/
+/*=== BOOST.less                         ===*/
+/*=== by Zander Martineau                ===*/
+/*=== @MrMartineau                       ===*/
+/*==========================================*/
 
+@import "reset.less";
 @import "variables.less";
-@import "globals.less";
 @import "mixins.less";
 
-@import "/grids/1kbgrid.less";
-@import "ui.less";
 @import "typography.less";
+
+/*=== Grid ===*/
+@import "grid-adaptive.less";
+
+/*=== UI - Buttons, tabs etc ===*/
+@import "ui.less";
 @import "forms.less";
 
-// Individual page's styles
+/*=== Individual page's styles ===*/
 @import "app.less";
 
-// @import "tables.less";
-// @import "code.less";
+/*=== Extra classes ===*/
+@import "tables.less";
+@import "code.less";
 
-// Final Overrides etc
+/*===  Mobile ===*/
+//@import "mobile.less";
+
+/*=== Final Overrides - Non-semantic helper classes etc ===*/
 @import "tools.less";

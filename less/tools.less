@@ -1,6 +1,7 @@
-/*------------------------------------------*/
-/*--- Non-semantic helper classes ---*/
-/*------------------------------------------*/
+/*==========================================*/
+/*=== TOOLS.less ===*/
+/*=== Non-semantic helper classes ===*/
+/*==========================================*/
 /* For image replacement */
 .ir {
 		display: block;
@@ -52,22 +53,17 @@ ul.floated:after { clear: both; }
 .right	{ float:right; }
 .clear	{ clear:both; float:none; }
 
-.text_left		{ text-align:left; }
-.text_right		{ text-align:right; }
-.text_center,
-.text_centre	{ text-align:center; }
+.mb1 { margin-bottom: @baseFontSize !important;}
+.mb2 { margin-bottom: @baseFontSize * 1.5 !important;}
+.mb3 { margin-bottom: @baseFontSize * 1.875 !important;}
 
-.mb1 { margin-bottom: 1em !important;} /*16px*/
-.mb2 { margin-bottom: 1.5em !important;} /*24px*/
-.mb3 { margin-bottom: 1.875em !important;}/*30px*/
+.mt1 { margin-top:    @baseFontSize !important;}
+.mt2 { margin-top:    @baseFontSize * 1.5 !important;}
+.mt3 { margin-top:    @baseFontSize * 1.875 !important;}
 
-.mt1 { margin-top: 1em !important;} /*16px*/
-.mt2 { margin-top: 1.5em !important;} /*24px*/
-.mt3 { margin-top: 1.875em !important;}/*30px*/
-
-/*------------------------------------------*/
-/*--- Print styles ---*/
-/*------------------------------------------*/
+/*==========================================*/
+/*=== Print styles ===*/
+/*==========================================*/
 @media print {
 	*{
 		background:#fff;
@@ -85,7 +81,7 @@ ul.floated:after { clear: both; }
 	#nav,
 	#footer{ display:none; }
 	#logo img{ position:static;	}
-	/*--- Linearise ---*/ .column{ width:auto; float:none; }
+	/*=== Linearise ---*/ .column{ width:auto; float:none; }
 	img{ max-width:100%;height:auto; }
 	a, a:visited { color: #444 !important; text-decoration: underline; }
 	a[href]:after { content: " (" attr(href) ")"; font-size:smaller;}
