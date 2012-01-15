@@ -5,6 +5,7 @@ BOOST enhanced boilerplate framework
 
 ### Updates
 15/01/2012 - Massive overhaul of the CSS; now LESS is used for everything. I added a new grid system, adapted from the 1kbgrid & Zurb's Foundation grid & LOADS more
+
 26/11/2011 - Fairly major update: Separated boost.css into component parts for better manageability
 
 ## CSS
@@ -16,7 +17,7 @@ BOOST enhanced boilerplate framework
 
 ## Javascript
 
-### Plugins
+### jQuery Plugins
 1. jQuery Geneology
 2. caroufredSel
 
