@@ -11,6 +11,9 @@ BOOST enhanced boilerplate framework
 ## CSS
 **BOOST** uses the 'mobile-first' methodology & to find out more, please read the excellent post 'Mobile First' by Luke Wroblewski at http://www.lukew.com/ff/entry.asp?933
 
+#### Grid calculations
+There are some nifty calculations (by LESS) for the Boost grid that make creating your own grid setup ridiculously easy. If you're not happy with the structure that I created, please visit http://grid.mindplay.dk & use the tool there to create your own version of the grid.
+
 ## HTML
 1.	Mixture of '320 and up' & HTML5 Boilerplate.
 2.	example.html has almost every element
