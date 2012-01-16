@@ -1,37 +1,76 @@
+@gridColumns: 12;
+@gridColumnWidth: 45px;
+@gridGutterWidth: 32px;
+@gridMargin: 32px; /*=== Space outside the grid  ===*/
+@siteWidth: (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1) + @gridMargin);
+
 #container {
-		width:960px;
-		-webkit-text-size-adjust:none;
-		margin: 0 auto;
+	width: @siteWidth;
+	padding: 0 (@gridMargin /2);
+	margin: 0 auto;
 }
 .row {
-		margin: 20px auto;
+	margin: 0 auto;
 }
 .row .row {
-		margin: 0 -10px;
-		width: auto;
-		display: inline-block;
+	margin: 0 -@gridGutterWidth;
+	width: auto;
+	display: inline-block;
 }
-/*--- GRIDS ---*/
-.grid_1 { width: 40px; }
-.grid_2 { width: 120px; }
-.grid_3 { width: 200px; }
-.grid_4 { width: 280px; }
-.grid_5 { width: 360px; }
-.grid_6 { width: 440px; }
-.grid_7 { width: 520px; }
-.grid_8 { width: 600px; }
-.grid_9 { width: 680px; }
-.grid_10 { width: 760px; }
-.grid_11 { width: 840px; }
-.grid_12 { width: 920px; }
 .column {
-		margin: 0 20px;
-		float: left;
-		display: inline;
+	margin: 0 (@gridGutterWidth/2);
+	float: left;
+	display: inline;
 }
+.grid_1  { .columns(1);  }
+.grid_2  { .columns(2);  }
+.grid_3  { .columns(3);  }
+.grid_4  { .columns(4);  }
+.grid_5  { .columns(5);  }
+.grid_6  { .columns(6);  }
+.grid_7  { .columns(7);  }
+.grid_8  { .columns(8);  }
+.grid_9  { .columns(9);  }
+.grid_10 { .columns(10); }
+.grid_11 { .columns(11); }
+.grid_12 { .columns(12); }
+
+.row {
+	> .offset1   { .offset(1);  }
+	> .offset2   { .offset(2);  }
+	> .offset3   { .offset(3);  }
+	> .offset4   { .offset(4);  }
+	> .offset5   { .offset(5);  }
+	> .offset6   { .offset(6);  }
+	> .offset7   { .offset(7);  }
+	> .offset8   { .offset(8);  }
+	> .offset9   { .offset(9);  }
+	> .offset10  { .offset(10); }
+	> .offset11  { .offset(11); }
+	> .offset12  { .offset(12); }
+
+	> .push2    { .push(2); }
+	> .push3 	{ .push(3); }
+	> .push4 	{ .push(4); }
+	> .push5 	{ .push(5); }
+	> .push6 	{ .push(6); }
+	> .push7 	{ .push(7); }
+	> .push8 	{ .push(8); }
+	> .push9 	{ .push(9); }
+	> .push10 	{ .push(10); }
+
+	> .pull2 	{ .pull(2); }
+	> .pull3 	{ .pull(3); }
+	> .pull4 	{ .pull(4); }
+	> .pull5 	{ .pull(5); }
+	> .pull6 	{ .pull(6); }
+	> .pull7 	{ .pull(7); }
+	> .pull8 	{ .pull(8); }
+	> .pull9 	{ .pull(9); }
+	> .pull10 	{ .pull(10); }
+}
+
 /* Clearfix specifically for the 1kbgrid */
 .column:before,.column:after,.row:before,.row:after { content: ""; display: table; }
 .column:after,.row:after { clear: both; }
 .column,.row { zoom: 1; }
-
-
