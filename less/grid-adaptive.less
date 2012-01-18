@@ -20,19 +20,17 @@
 	width: 90%;
 	margin: 0 auto;
 }
-
 .column{
 	width:auto;
 	float:none;
 }
 
 
-
 /*=== 480> ===*/
 @media screen and (min-width: 480px) {
 
 	#container{
-			-webkit-text-size-adjust:none;
+		-webkit-text-size-adjust:none;
 	}
 	/*=== LISTS ===*/
 	ul.nrml, ol.nrml{
@@ -65,7 +63,7 @@
 		padding: 0 (@gridMargin /2);
 	}
 	.row {
-		margin: 2px auto;
+		margin: 0 auto;
 	}
 	.row .row {
 		margin: 0 -@gridGutterWidth;
@@ -278,6 +276,8 @@
 }
 /*=== end 1382> ===*/
 
+/*=== CENTRED COLUMNS - only one column per row though.. :) ===*/
+.row .centered, .row .centred { float: none; margin: 0 auto; display: block; }
 
 /* Clearfix specifically for the 1kbgrid */
 .column:before,.column:after,.row:before,.row:after { content: ""; display: table; }
