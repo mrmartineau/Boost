@@ -17,6 +17,7 @@
 		}
 		.row {
 			text-align:center;
+			margin: 5px auto;
 		}
 		.column {
 			background: #fff;
@@ -29,7 +30,7 @@
 	<div id="container">
 
 		<header id="header" class="row" role="banner">
-			<h1><a href="/" class="column grid_7">Boost Front-end Framework</a></h1>
+			<h1><a href="/" class="column grid_7 text_left">Boost Front-end Framework</a></h1>
 			<nav class="grid_5 column" role="navigation">
 				<ul id="nav" class="navi horiz">
 					<li><a href="example.html">Example content</a></li>
@@ -42,6 +43,7 @@
 		<div class="row">
 			<div class="column grid_12">
 				<h1>Grids</h1>
+				<p>The 1kbgrid on roids (no longer 1kb of course). <br>There is a static version of this grid too, just include grid-static.less instead of grid-adaptive.less</p>
 				<h3>Basic grid</h3>
 			</div>
 		</div>
@@ -113,7 +115,10 @@
 
 
 		<div class="row">
-			<div class="column grid_12"><h3>Offsetting columns</h3></div>
+			<div class="column grid_12">
+				<h3>Offsetting columns </h3>
+				<p>Offsets allow you to create additional space between columns in a row.</p>
+			</div>
 		</div>
 
 		<div class="row">
@@ -140,7 +145,10 @@
 
 
 		<div class="row">
-			<div class="column grid_12"><h3>Changing source order</h3></div>
+			<div class="column grid_12">
+				<h3>Changing source order</h3>
+				<p> Using these source ordering classes you can shift columns around on desktops and tablets. <br>On phones the grid will still be linearized into the order of the markup.</p>
+			</div>
 		</div>
 
 		<div class="row">
@@ -159,6 +167,82 @@
 		<div class="row">
 			<div class="column grid_6 push6">6 push6</div>
 			<div class="column grid_6 pull6">6 pull6</div>
+		</div>
+		<div class="row">
+			<div class="grid_12 column">
+				<h3>Centred columns</h3>
+				<p>Add class .centred (or .centered)</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="grid_1 column centred">1</div>
+		</div>
+		<div class="row">
+			<div class="grid_2 column centred">2</div>
+		</div>
+		<div class="row">
+			<div class="grid_3 column centred">3</div>
+		</div>
+		<div class="row">
+			<div class="grid_4 column centred">4</div>
+		</div>
+		<div class="row">
+			<div class="grid_5 column centred">5</div>
+		</div>
+		<div class="row">
+			<div class="grid_6 column centred">6</div>
+		</div>
+		<div class="row">
+			<div class="grid_7 column centred">7</div>
+		</div>
+		<div class="row">
+			<div class="grid_8 column centred">8</div>
+		</div>
+		<div class="row">
+			<div class="grid_9 column centred">9</div>
+		</div>
+		<div class="row">
+			<div class="grid_10 column centred">10</div>
+		</div>
+		<div class="row">
+			<div class="grid_11 column centred">11</div>
+		</div>
+		<div class="row">
+			<div class="grid_12 column centred">12</div>
+		</div>
+		<div class="row">
+			<div class="grid_12 column">
+				<h3>Block Grids </h3>
+				<p>These are 2_up, 3-up, 4-up and 5-up ULs, suited for repeating blocks of content.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="grid_12 column">
+				<ul class="block_grid two_up">
+					<li>2-up</li>
+					<li>2-up</li>
+					<li>2-up</li>
+					<li>2-up</li>
+				</ul>
+				<ul class="block_grid three_up">
+					<li>3-up</li>
+					<li>3-up</li>
+					<li>3-up</li>
+					<li>3-up</li>
+					<li>3-up</li>
+					<li>3-up</li>
+				</ul>
+				<ul class="block_grid four_up">
+					<li>4-up</li>
+					<li>4-up</li>
+					<li>4-up</li>
+					<li>4-up</li>
+					<li>4-up</li>
+					<li>4-up</li>
+					<li>4-up</li>
+					<li>4-up</li>
+				</ul>
+			</div>
 		</div>
 
 	</div><!-- /#container -->
