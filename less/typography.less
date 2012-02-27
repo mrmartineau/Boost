@@ -52,7 +52,7 @@ p,.p {
 	#font > .sans-serif(normal, @baseFontSize, @baseline);
 	font-size: @baseFontSize;
 	line-height: @baseline;
-	margin-bottom: @baseFontSize * 1.5;
+	margin-bottom: @baseline;
 	small,.small {
 		font-size: 87.5%;
 		line-height: 1;
@@ -75,42 +75,48 @@ h1, h2, h3, h4, h5, h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 	}
 }
 h1,.h1{
-	font-size: @baseFontSize * 3;			/* 48px */
-	margin-top: @baseFontSize * 2;			/* 32px */
-	margin-bottom: @baseFontSize / 2;		/* 8px */
-	line-height: @baseline;					/* 72px */
+	font-size: round(@baseFontSize * 4.25);
+	line-height: @baseline * 3;
+	margin-top: @baseline;
+	margin-bottom: @baseline * 2;
+	&.lrg {
+		font-size: round(@baseFontSize * 6.875);
+		line-height: @baseline * 5;
+		margin-top: @baseline;
+		margin-bottom: @baseline * 2;
+	}
 }
 h2,.h2{
-	font-size: @baseFontSize * 2;			/* 32px */
-	margin-top: @baseFontSize * 1.2;		/* 19.2px */
-	margin-bottom: @baseFontSize / 3.2;		/* 5px */
-	line-height: @baseFontSize * 2;			/* 32px */
+	font-size: round(@baseFontSize * 2.625);
+	line-height: @baseline * 2;
+	margin-top: @baseline * 2;
+	margin-bottom: @baseline;
 }
 h3,.h3{
-	font-size: @baseFontSize * 1.5;			/* 24px */
-	margin-top: @baseFontSize / 0.8;		/* 20px */
-	margin-bottom: @baseFontSize / 3.2;		/* 5px */
-	line-height: @baseline / 1.25;			/* 28px */
+	font-size: round(@baseFontSize * 1.625);
+	line-height: @baseline *2;
+	margin-top: @baseline;
+	margin-bottom: 0;
 }
 h4,.h4{
-	font-size: @baseFontSize / 0.8;			/* 19.2px */
-	margin-top: @baseFontSize;				/* 16px */
-	margin-bottom: @baseFontSize / 5;		/* 3.2px */
-	line-height: @baseline / 1.333;			/* 21px */
+	font-size: round(@baseFontSize / 0.8);
+	line-height: @baseline;
+	margin-top: @baseline *2;
+	margin-bottom: 0;
 }
 h5,.h5 {
-	font-size: @baseFontSize;				/* 16px */
-	margin-top: @baseFontSize;				/* 16px */
-	margin-bottom: @baseFontSize / 5;		/* 3px */
-	line-height: @baseline;					/* 24px */
+	font-size: @baseFontSize;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: @baseline;
 	font-weight:normal;
 }
 h6,.h6 {
-	font-size: 80%;							/* 13px */
-	margin-top: @baseFontSize;				/* 16px */
-	margin-bottom: @baseFontSize / 5;		/* 3.2px */
-	line-height: @baseline;					/* 19px */
-	text-transform: uppercase;
+	font-size: round(80%);
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: @baseline;
+	font-weight:normal;
 }
 
 /*=== Set font for forms ===*/
