@@ -12,7 +12,6 @@
 @baseline:          24px;
 
 
-
 /*==========================================*/
 /*=== COLOURS ===*/
 /*==========================================*/
@@ -49,9 +48,18 @@
 @analog1:           spin(@accentColor, 22);   // Analogs colors
 @analog2:           spin(@accentColor, -22);
 
+
 /*=== LINKS ===*/
 @linkColor:         @complement;
 @linkColorHover:    lighten(@linkColor, 40%);
+
+
+/*=== IMAGE PATHS ===*/
+@imgPath: "/img";
+@imgUIPath: "@{imgPath}/ui";
+@iconSpritePath: "@{imgUIPath}/glyphicons-halflings.png";
+@iconWhiteSpritePath: "@{imgUIPath}/glyphicons-halflings-white.png";
+
 
 
 
