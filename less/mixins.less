@@ -189,7 +189,7 @@
 	.size(@size, @size);
 }
 
-/*=== Input placeholder text ===*/
+// Input placeholder text
 .placeholder(@color: @grayLight) {
 	:-moz-placeholder {
 		color: @color;
@@ -198,11 +198,17 @@
 		color: @color;
 	}
 }
-
+// User select
+.user-select(@select) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+       -o-user-select: @select;
+          user-select: @select;
+}
 // Make any element resizable for prototyping
 .resizable(@direction: both) {
-		resize: @direction; // Options are horizontal, vertical, both
-		overflow: auto; // Safari fix
+	resize: @direction; // Options are horizontal, vertical, both
+	overflow: auto; // Safari fix
 }
 
 .gridColumn() {
