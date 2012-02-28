@@ -1695,7 +1695,6 @@ object,
 embed,
 video {
   max-width: 100%;
-  height: auto;
 }
 .flex-video {
   position: relative;
