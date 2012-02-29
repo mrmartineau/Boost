@@ -1,0 +1,40 @@
+/*==========================================*/
+/*=== CAROUSEL.less ===*/
+/*==========================================*/
+/* Use these basic styles with the carouFredSel plugin */
+
+.carousel_wrapper {
+	position: relative;
+}
+#carousel {
+	overflow: hidden;
+	// Specify dimensions in app.less
+	.carousel_item {
+		float: left;
+		img {
+			display: block;
+		}
+	}
+}
+.carousel_paging {
+	&.numbers {
+		background-color: #fff;
+		.vertical-align(40px);
+		padding: 0 10px;
+		.border_all;
+		border-top: none;
+		a {
+			margin-right: 5px;
+			&.selected {
+				.border_bottom;
+			}
+		}
+	}
+	&.thumbs {
+		a {
+			.border_all;
+			padding: 2px;
+			background-color: #fff;
+		}
+	}
+}
