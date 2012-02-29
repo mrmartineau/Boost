@@ -1,7 +1,5 @@
-// Create a closure to maintain scope of the '$' and remain compatible with other frameworks.
 (function($) {
 
-	//same as $(document).ready();
 	$(function() {
 
 		///
@@ -25,23 +23,23 @@
 		//			<h3>Tab 2 content</h3>
 		//			<p>Lorem ipsum</li>
 		//	</ul>
-		$('body').on('click', 'ul.tabs > li > a', function(e) {
-		//Get Location of tab's content
-		var contentLocation = $(this).attr('href');
+		// $('body').on('click', 'ul.tabs > li > a', function(e) {
+		// //Get Location of tab's content
+		// var contentLocation = $(this).attr('href');
 
-		//Let go if not a hashed one
-		if(contentLocation.charAt(0)=="#") {
+		// //Let go if not a hashed one
+		// if(contentLocation.charAt(0)=="#") {
 
-			e.preventDefault();
+		// 	e.preventDefault();
 
-			//Make Tab Active
-			$(this).parent().siblings().children('a').removeClass('active');
-			$(this).addClass('active');
+		// 	//Make Tab Active
+		// 	$(this).parent().siblings().children('a').removeClass('active');
+		// 	$(this).addClass('active');
 
-			//Show Tab Content & add active class
-			$(contentLocation).show().addClass('active').siblings().hide().removeClass('active');
+		// 	//Show Tab Content & add active class
+		// 	$(contentLocation).show().addClass('active').siblings().hide().removeClass('active');
 
-		}
+		// }
 
 		///
 		// Fancybox: fancybox.net
@@ -68,6 +66,23 @@
 		//		}
 		//	});
 
+		///
+		// Carousel: caroufredsel
+		///
+		// $('#carousel').imagesLoaded( function() {
+		// 	$('#carousel').carouFredSel({
+		// 		items: 1,
+		// 		width: '584',
+		// 		height: '480',
+		// 		auto: false,
+		// 		scroll: {
+		// 			fx: 'scroll'
+		// 		},
+		// 		pagination: {
+		// 			container: '.carousel_paging'
+		// 		}
+		// 	}, {debug:true});
+		// });
 
 
 

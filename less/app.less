@@ -10,38 +10,29 @@
 */
 
 /*==========================================*/
-/*=== LOGO ===*/
+/*=== HEADER ===*/
 /*==========================================*/
-#logo,
-#logo img{
-		display:block;
-		width:auto; /* Width of your logo in pixels (ideally a round grid-number) */
-		height:auto; /* Height of your logo in pixels */
-}
-/* Based on the fact that we need to use an <img /> in our markup, let’s hide the actual image and use a background on the <a>--this gives us semantically sound markup and the ability to use sprites for hover effects! */
 #logo{
-		background:url(/path/to/logo);
+	display:block;
+	width:auto; /* Width of your logo in pixels (ideally a round grid-number) */
+	height:auto; /* Height of your logo in pixels */
+	background:url(/path/to/logo);
 }
 #logo:hover{
-		/* Hover states */
-		background-position:0 0;
+	background-position:0 0;
 }
-#logo img{
-		position:absolute;
-		left:-99999px;
-}
+
+/*==========================================*/
+/*=== FOOTER ===*/
+/*==========================================*/
 
 /*==========================================*/
 /*=== CSS3 ===*/
 /*==========================================*/
 /*Transitions*/
 a {
-		.transition(all 0.12s ease-in-out);
+	.transition(all 0.12s ease-in-out);
 }
-/*Border Radius*/
-/*.floated li {
-		.border-radius(5px);
-}*/
 
 /*==========================================*/
 /*=== HOME / LANDING ===*/
