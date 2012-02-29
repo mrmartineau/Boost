@@ -1,0 +1,29 @@
+/*==========================================*/
+/*=== CAROUSEL.less ===*/
+/*==========================================*/
+/* Use these basic styles with the carouFredSel plugin */
+
+.carousel_wrapper {
+	position: relative;
+}
+#carousel {
+	overflow: hidden;
+	// Specify dimensions in app.less
+	.carousel_item {
+		float: left;
+		img {
+			display: block;
+		}
+	}
+}
+.carousel_paging {
+	a {
+		.opacity(70);
+		.border-radius(40px);
+		background-color: #fff;
+		display: inline-block;
+		&.selected, &:hover {
+			.opacity(100);
+		}
+	}
+}

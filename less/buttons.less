@@ -1,0 +1,333 @@
+/*==========================================*/
+/*=== BUTTONS.less ===*/
+/*=== TABLE OF CONTENTS ===*/
+/*==========================================
+:: BASE
+:: BUTTON SIZES
+:: ALTERNATE
+:: BUTTON GROUPS
+============================================*/
+/*Taken from Twitter Bootstrap*/
+
+/*==========================================*/
+/*=== BASE ===*/
+/*==========================================*/
+.btn {
+	display: inline-block;
+	padding: 4px 10px 4px;
+	margin-bottom: 0; // For input.btn
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @grayDark;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255,255,255,.75);
+	vertical-align: middle;
+	.buttonBackground(@white, darken(@white, 10%));
+	border: 1px solid #ccc;
+	border-bottom-color: #bbb;
+	.border-radius(4px);
+	@shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	.box-shadow(@shadow);
+	cursor: pointer;
+
+	// Give IE7 some love
+	.reset-filter();
+	.ie7-restore-left-whitespace();
+}
+
+// Hover state
+.btn:hover {
+	color: @grayDark;
+	text-decoration: none;
+	background-color: darken(@white, 10%);
+	background-position: 0 -15px;
+
+	// transition is only when going to hover, otherwise the background
+	// behind the gradient (there for IE<=9 fallback) gets mismatched
+	.transition(background-position .1s linear);
+}
+
+// Focus state for keyboard and accessibility
+.btn:focus {
+	.tab-focus();
+}
+
+// Active state
+.btn.active,
+.btn:active {
+	background-image: none;
+	@shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+	.box-shadow(@shadow);
+	background-color: darken(@white, 10%);
+	background-color: darken(@white, 15%) e("\9");
+	outline: 0;
+}
+
+// Disabled state
+.btn.disabled,
+.btn[disabled] {
+	cursor: default;
+	background-image: none;
+	background-color: darken(@white, 10%);
+	.opacity(65);
+	.box-shadow(none);
+}
+
+/*==========================================*/
+/*=== BUTTON SIZES ===*/
+/*==========================================*/
+// Large
+.btn-large {
+	padding: 9px 14px;
+	font-size: @baseFontSize + 2px;
+	line-height: normal;
+	.border-radius(5px);
+}
+.btn-large [class^="icon-"] {
+	margin-top: 1px;
+}
+
+// Small
+.btn-small {
+	padding: 5px 9px;
+	font-size: @baseFontSize - 2px;
+	line-height: @baseLineHeight - 2px;
+}
+.btn-small [class^="icon-"] {
+	margin-top: -1px;
+}
+
+// Mini
+.btn-mini {
+	padding: 2px 6px;
+	font-size: @baseFontSize - 2px;
+	line-height: @baseLineHeight - 4px;
+}
+
+/*==========================================*/
+/*=== ALTERNATE BUTTONS ===*/
+/*==========================================*/
+
+// Set text color
+// -------------------------
+.btn-primary,
+.btn-primary:hover,
+.btn-warning,
+.btn-warning:hover,
+.btn-danger,
+.btn-danger:hover,
+.btn-success,
+.btn-success:hover,
+.btn-info,
+.btn-info:hover,
+.btn-inverse,
+.btn-inverse:hover {
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	color: @white;
+}
+// Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-dark.active {
+	color: rgba(255,255,255,.75);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary {
+	.buttonBackground(@primaryButtonBackground, spin(@primaryButtonBackground, 20));
+}
+// Warning appears are orange
+.btn-warning {
+	.buttonBackground(lighten(@orange, 15%), @orange);
+}
+// Danger and error appear as red
+.btn-danger {
+	.buttonBackground(#ee5f5b, #bd362f);
+}
+// Success appears as green
+.btn-success {
+	.buttonBackground(#62c462, #51a351);
+}
+// Info appears as a neutral blue
+.btn-info {
+	.buttonBackground(#5bc0de, #2f96b4);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+	.buttonBackground(#454545, #262626);
+}
+
+
+// Cross-browser Jank
+// --------------------------------------------------
+button.btn,
+input[type="submit"].btn {
+
+	// Firefox 3.6 only I believe
+	&::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+	}
+
+	// IE7 has some default padding on button controls
+	*padding-top: 2px;
+	*padding-bottom: 2px;
+	&.large {
+	*padding-top: 7px;
+	*padding-bottom: 7px;
+	}
+	&.small {
+	*padding-top: 3px;
+	*padding-bottom: 3px;
+	}
+}
+/*==========================================*/
+/*=== BUTTON GROUPS ===*/
+/*==========================================*/
+// Make the div behave like a button
+.btn-group {
+	position: relative;
+	.clearfix(); // clears the floated buttons
+	.ie7-restore-left-whitespace();
+}
+
+// Space out series of button groups
+.btn-group + .btn-group {
+	margin-left: 5px;
+}
+
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+	margin-top: @baseLineHeight / 2;
+	margin-bottom: @baseLineHeight / 2;
+	.btn-group {
+		display: inline-block;
+		.ie7-inline-block();
+	}
+}
+
+// Float them, remove border radius, then re-add to first and last elements
+.btn-group .btn {
+	position: relative;
+	float: left;
+	margin-left: -1px;
+	.border-radius(0);
+}
+// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+.btn-group .btn:first-child {
+	margin-left: 0;
+-webkit-border-top-left-radius: 4px;
+   -moz-border-radius-topleft: 4px;
+		border-top-left-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;
+   -moz-border-radius-bottomleft: 4px;
+		border-bottom-left-radius: 4px;
+}
+.btn-group .btn:last-child,
+.btn-group .dropdown-toggle {
+-webkit-border-top-right-radius: 4px;
+   -moz-border-radius-topright: 4px;
+						 border-top-right-radius: 4px;
+-webkit-border-bottom-right-radius: 4px;
+   -moz-border-radius-bottomright: 4px;
+					border-bottom-right-radius: 4px;
+}
+// Reset corners for large buttons
+.btn-group .btn.large:first-child {
+	margin-left: 0;
+-webkit-border-top-left-radius: 6px;
+   -moz-border-radius-topleft: 6px;
+		border-top-left-radius: 6px;
+-webkit-border-bottom-left-radius: 6px;
+   -moz-border-radius-bottomleft: 6px;
+		border-bottom-left-radius: 6px;
+}
+.btn-group .btn.large:last-child,
+.btn-group .large.dropdown-toggle {
+-webkit-border-top-right-radius: 6px;
+   -moz-border-radius-topright: 6px;
+		border-top-right-radius: 6px;
+-webkit-border-bottom-right-radius: 6px;
+   -moz-border-radius-bottomright: 6px;
+		border-bottom-right-radius: 6px;
+}
+
+// On hover/focus/active, bring the proper btn to front
+.btn-group .btn:hover,
+.btn-group .btn:focus,
+.btn-group .btn:active,
+.btn-group .btn.active {
+	z-index: 2;
+}
+
+// On active and open, don't show outline
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+	outline: 0;
+}
+
+
+
+// Split button dropdowns
+// ----------------------
+
+// Give the line between buttons some depth
+.btn-group .dropdown-toggle {
+	padding-left: 8px;
+	padding-right: 8px;
+	@shadow: inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	.box-shadow(@shadow);
+	*padding-top: 5px;
+	*padding-bottom: 5px;
+}
+
+.btn-group.open {
+	// IE7's z-index only goes to the nearest positioned ancestor, which would
+	// make the menu appear below buttons that appeared later on the page
+	*z-index: 1000;
+
+	// Reposition menu on open and round all corners
+	.dropdown-menu {
+		display: block;
+		margin-top: 1px;
+		.border-radius(5px);
+	}
+
+	.dropdown-toggle {
+		background-image: none;
+		@shadow: inset 0 1px 6px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+		.box-shadow(@shadow);
+	}
+}
+
+// Reposition the caret
+.btn .caret {
+	margin-top: 7px;
+	margin-left: 0;
+}
+.btn:hover .caret,
+.open.btn-group .caret {
+	.opacity(100);
+}
+
+
+// Account for other colors
+.btn-primary,
+.btn-danger,
+.btn-info,
+.btn-success,
+.btn-inverse {
+	.caret {
+		border-top-color: @white;
+		.opacity(75);
+	}
+}
+
+// Small button dropdowns
+.btn-small .caret {
+	margin-top: 4px;
+}

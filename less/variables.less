@@ -4,12 +4,13 @@
 /*==========================================
 :: BASELINE GRID
 :: COLOURS
-:: GRIDITUDE
+:: LINKS
+:: PATHS
 */
 
 /*=== BASELINE GRID ===*/
 @baseFontSize:      16px;
-@baseline:          24px;
+@baseLineHeight:    24px;
 
 
 /*==========================================*/
@@ -26,7 +27,7 @@
 
 /*=== COLOURS ===*/
 @blue:              #049CDB;
-@blueDark:          #0064CD;
+@blueDark:          darken(@blue, 20%);
 @green:             #46a546;
 @red:               #9d261d;
 @yellow:            #ffc40d;
@@ -34,10 +35,9 @@
 @pink:              #c3325f;
 @purple:            #7a43b6;
 
-@accentColor:        @blue;
+@accentColor:       @blue;
 
 /*=== COLOR SCHEME ===*/
-/*=== Use this to roll your own color schemes if you like (unused by Bootstrap by default) ===*/
 @complement:        spin(@accentColor, 180);  // Determine a complementary color
 @split1:            spin(@accentColor, 158);  // Split complements
 @split2:            spin(@accentColor, -158);
@@ -52,6 +52,17 @@
 /*=== LINKS ===*/
 @linkColor:         @complement;
 @linkColorHover:    lighten(@linkColor, 40%);
+@primaryButtonBackground:    @blue;
+
+
+/*==========================================*/
+/*=== PATHS ===*/
+/*==========================================*/
+@imgPath: "/img";
+@imgUIPath: "@{imgPath}/ui";
+@iconSpritePath: "@{imgUIPath}/glyphicons-halflings.png";
+@iconWhiteSpritePath: "@{imgUIPath}/glyphicons-halflings-white.png";
+
 
 
 /*=== IMAGE PATHS ===*/

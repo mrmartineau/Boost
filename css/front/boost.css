@@ -1695,7 +1695,10 @@ object,
 embed,
 video {
   max-width: 100%;
+<<<<<<< HEAD
   height: auto;
+=======
+>>>>>>> master
 }
 .flex-video {
   position: relative;
