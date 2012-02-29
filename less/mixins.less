@@ -8,7 +8,7 @@
 :: FONT-STACKS
 :: COLOURS / OPACITY ETC
 :: RESET
-==========================================--*/
+============================================*/
 
 /*==========================================*/
 /*=== GRID CALCULATIONS ===*/
@@ -160,23 +160,7 @@
 }
 
 
-// Mixin for generating button backgrounds
-.buttonBackground(@startColor, @endColor) {
-	// gradientBar will set the background to a pleasing blend of these, to support IE<=9
-	.gradientBar(@startColor, @endColor);
-	.reset-filter();
 
-	// in these cases the gradient won't cover the background, so we override
-	&:hover, &:active, &.active, &.disabled, &[disabled] {
-		background-color: @endColor;
-	}
-
-	// IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
-	&:active,
-	&.active {
-		background-color: darken(@endColor, 10%) e("\9");
-	}
-}
 
 
 // Gradient Bar Colors for buttons and alerts
@@ -231,7 +215,7 @@
 		background-repeat: no-repeat;
 		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
 	}
-	.radial(@innerColor: #555, @outerColor: #333 {
+	.radial(@innerColor: #555, @outerColor: #333) {
 		background-color: @outerColor;
 		background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
 		background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
@@ -255,14 +239,37 @@
 	filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
 
+// Mixin for generating button backgrounds
+.buttonBackground(@startColor, @endColor) {
+	// gradientBar will set the background to a pleasing blend of these, to support IE<=9
+	.gradientBar(@startColor, @endColor);
+	.reset-filter();
 
+	// in these cases the gradient won't cover the background, so we override
+	&:hover, &:active, &.active, &.disabled, &[disabled] {
+		background-color: @endColor;
+	}
+
+	// IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+	&:active,
+	&.active {
+		background-color: darken(@endColor, 10%) e("\9");
+	}
+}
+.tab-focus() {
+	// Default
+	outline: thin dotted #333;
+	// Webkit
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
 
 /*==========================================*/
 /*=== VARIOUS MIXINS ===*/
 /*==========================================*/
 
 /*=== CLEARFIX ===*/
-.group() {
+.clearfix() {
 	zoom: 1;
 	&:before,
 	&:after {
@@ -276,10 +283,10 @@
 }
 
 /*=== Center-align a block level element ===*/
-/*.center_block {
+.center_block {
 	display: block;
 	margin: 0 auto;
-}*/
+}
 
 /*=== Sizing shortcuts ===*/
 .size(@width: 5px, @height: 5px) {
