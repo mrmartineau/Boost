@@ -288,7 +288,7 @@ input[type="submit"].btn {
 .btn-group.open {
 	// IE7's z-index only goes to the nearest positioned ancestor, which would
 	// make the menu appear below buttons that appeared later on the page
-	*z-index: @zindexDropdown;
+	*z-index: 1000;
 
 	// Reposition menu on open and round all corners
 	.dropdown-menu {
